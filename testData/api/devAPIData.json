@@ -1,0 +1,5 @@
+{
+  "authorizeHeaders": {
+    "Content-Type": "application/json"
+  }
+}

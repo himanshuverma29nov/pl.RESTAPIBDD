@@ -1,0 +1,2 @@
+2021-12-16_16:24:32.515 [main] INFO  com.qc.qa.utils.TestDataReader - Reading Json data authorizeHeaders
+2021-12-16_16:24:32.551 [main] INFO  com.qc.qa.utils.TestDataReader - Reading json data from file @ testData/api/devAPIData.json
