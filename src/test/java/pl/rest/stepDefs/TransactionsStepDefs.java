@@ -1,6 +1,7 @@
 package pl.rest.stepDefs;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.google.gson.Gson;
 import com.qc.cuke.ScenarioContext;
 import com.qc.qa.ConfigPropertyException;
 import com.qc.qa.FrameworkException;
@@ -239,14 +240,18 @@ public class TransactionsStepDefs {
     @Then("the status code should be {int}")
     public void theStatusCodeShouldBe(int arg0) {
         Response response = context.previousResponse;
-        assertThat(response.statusCode()).isEqualTo(200);
+        assertThat(response.statusCode()).isEqualTo(arg0);
     }
 
     @And("i should see the following in the card list in the database")
     public void iShouldSeeTheFollowingInTheCardListInTheDatabase(DataTable table) throws FrameworkException, ConfigPropertyException, SQLException {
-        String referenceNumber = context.previousResponse.jsonPath().getString("$.cardDetailResponseList[0].referenceNumber");
-        logger.info("referenceNumber is" + referenceNumber);
-        Map<String, String> cardDetailMap = DBUtils.getCardDetails(referenceNumber);
+        //   ArrayList<Map<String, ?>> array = JsonPath.with(context.previousResponse.asString()).get("cardDetailResponseList");
+        Gson gson = new Gson();
+        CardIssueResponse cardIssueResponseObject = gson.fromJson(context.previousResponse.asString(), CardIssueResponse.class);
+        Long referenceNumber = cardIssueResponseObject.getCardDetailResponseList().get(0).getReferenceNumber();
+        String referenceNumberString = Long.toString((referenceNumber));
+        logger.info("referenceNumber is" + referenceNumberString);
+        Map<String, String> cardDetailMap = DBUtils.getCardDetails(referenceNumberString);
         cardDetailMap.get("referenceNumber");
 
         Response response = context.previousResponse;

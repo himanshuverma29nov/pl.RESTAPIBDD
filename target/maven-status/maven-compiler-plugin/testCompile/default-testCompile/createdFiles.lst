@@ -1,0 +1,4 @@
+pl\rest\stepDefs\AuthorizeStepDefs.class
+pl\rest\stepDefs\CardIssueStepDefs.class
+pl\rest\testRunners\TestRunner.class
+pl\rest\stepDefs\TransactionsStepDefs.class

@@ -3,7 +3,18 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2021-12-16T14:44:37.374Z",
+        "start_timestamp": "2021-12-20T03:24:32.681Z",
+        "before": [
+          {
+            "result": {
+              "duration": 127625700,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CustomHooks.getTagNamesForTestDataSet(Scenario)"
+            }
+          }
+        ],
         "line": 4,
         "name": "Issuing a instant non reloadable card",
         "description": "",
@@ -13,7 +24,7 @@
         "steps": [
           {
             "result": {
-              "duration": 2862467500,
+              "duration": 3027847500,
               "status": "passed"
             },
             "line": 5,
@@ -25,7 +36,7 @@
           },
           {
             "result": {
-              "duration": 478172500,
+              "duration": 817782800,
               "status": "passed"
             },
             "line": 6,
@@ -81,7 +92,7 @@
           },
           {
             "result": {
-              "duration": 64402400,
+              "duration": 42464000,
               "status": "passed"
             },
             "line": 13,
@@ -99,7 +110,7 @@
           },
           {
             "result": {
-              "duration": 289919300,
+              "duration": 245534600,
               "status": "passed"
             },
             "line": 14,
@@ -149,7 +160,7 @@
           },
           {
             "result": {
-              "duration": 6862900,
+              "duration": 6140300,
               "status": "passed"
             },
             "line": 21,
@@ -183,7 +194,7 @@
           },
           {
             "result": {
-              "duration": 868477500,
+              "duration": 1364520300,
               "status": "passed"
             },
             "line": 24,
@@ -215,7 +226,18 @@
         ]
       },
       {
-        "start_timestamp": "2021-12-16T14:44:41.947Z",
+        "start_timestamp": "2021-12-20T03:24:38.316Z",
+        "before": [
+          {
+            "result": {
+              "duration": 365400,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CustomHooks.getTagNamesForTestDataSet(Scenario)"
+            }
+          }
+        ],
         "line": 28,
         "name": "Issuing a instant non reloadable card",
         "description": "",
@@ -225,7 +247,7 @@
         "steps": [
           {
             "result": {
-              "duration": 415333000,
+              "duration": 464076700,
               "status": "passed"
             },
             "line": 29,
@@ -237,7 +259,7 @@
           },
           {
             "result": {
-              "duration": 480993501,
+              "duration": 730958200,
               "status": "passed"
             },
             "line": 30,
@@ -293,7 +315,7 @@
           },
           {
             "result": {
-              "duration": 219400,
+              "duration": 144700,
               "status": "passed"
             },
             "line": 37,
@@ -311,7 +333,7 @@
           },
           {
             "result": {
-              "duration": 38137800,
+              "duration": 46560100,
               "status": "passed"
             },
             "line": 38,
@@ -361,7 +383,7 @@
           },
           {
             "result": {
-              "duration": 6598900,
+              "duration": 4917800,
               "status": "passed"
             },
             "line": 45,
@@ -395,7 +417,7 @@
           },
           {
             "result": {
-              "duration": 61939500,
+              "duration": 52956300,
               "status": "passed"
             },
             "line": 48,
@@ -427,7 +449,18 @@
         ]
       },
       {
-        "start_timestamp": "2021-12-16T14:44:42.953Z",
+        "start_timestamp": "2021-12-20T03:24:39.618Z",
+        "before": [
+          {
+            "result": {
+              "duration": 927600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CustomHooks.getTagNamesForTestDataSet(Scenario)"
+            }
+          }
+        ],
         "line": 73,
         "name": "Validating the response code and messages.",
         "description": "",
@@ -437,7 +470,7 @@
         "steps": [
           {
             "result": {
-              "duration": 493574699,
+              "duration": 479248800,
               "status": "passed"
             },
             "line": 54,
@@ -449,7 +482,7 @@
           },
           {
             "result": {
-              "duration": 319747000,
+              "duration": 381029900,
               "status": "passed"
             },
             "line": 55,
@@ -505,7 +538,7 @@
           },
           {
             "result": {
-              "duration": 295000,
+              "duration": 210200,
               "status": "passed"
             },
             "line": 62,
@@ -523,7 +556,7 @@
           },
           {
             "result": {
-              "duration": 33911100,
+              "duration": 27228400,
               "status": "passed"
             },
             "line": 63,
@@ -561,7 +594,7 @@
           },
           {
             "result": {
-              "duration": 5482800,
+              "duration": 5141600,
               "status": "passed"
             },
             "line": 68,
@@ -593,7 +626,18 @@
         ]
       },
       {
-        "start_timestamp": "2021-12-16T14:44:43.806Z",
+        "start_timestamp": "2021-12-20T03:24:40.513Z",
+        "before": [
+          {
+            "result": {
+              "duration": 431500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CustomHooks.getTagNamesForTestDataSet(Scenario)"
+            }
+          }
+        ],
         "line": 74,
         "name": "Validating the response code and messages.",
         "description": "",
@@ -603,7 +647,7 @@
         "steps": [
           {
             "result": {
-              "duration": 337881000,
+              "duration": 479944200,
               "status": "passed"
             },
             "line": 54,
@@ -615,7 +659,7 @@
           },
           {
             "result": {
-              "duration": 331545099,
+              "duration": 349863200,
               "status": "passed"
             },
             "line": 55,
@@ -671,7 +715,7 @@
           },
           {
             "result": {
-              "duration": 255900,
+              "duration": 304400,
               "status": "passed"
             },
             "line": 62,
@@ -689,7 +733,7 @@
           },
           {
             "result": {
-              "duration": 30940900,
+              "duration": 29385000,
               "status": "passed"
             },
             "line": 63,
@@ -727,7 +771,7 @@
           },
           {
             "result": {
-              "duration": 3577000,
+              "duration": 6393900,
               "status": "passed"
             },
             "line": 68,
@@ -759,7 +803,18 @@
         ]
       },
       {
-        "start_timestamp": "2021-12-16T14:44:44.512Z",
+        "start_timestamp": "2021-12-20T03:24:41.380Z",
+        "before": [
+          {
+            "result": {
+              "duration": 331000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CustomHooks.getTagNamesForTestDataSet(Scenario)"
+            }
+          }
+        ],
         "line": 75,
         "name": "Validating the response code and messages.",
         "description": "",
@@ -769,7 +824,7 @@
         "steps": [
           {
             "result": {
-              "duration": 392156800,
+              "duration": 385500300,
               "status": "passed"
             },
             "line": 54,
@@ -781,7 +836,7 @@
           },
           {
             "result": {
-              "duration": 266142799,
+              "duration": 272524000,
               "status": "passed"
             },
             "line": 55,
@@ -837,7 +892,7 @@
           },
           {
             "result": {
-              "duration": 217100,
+              "duration": 179900,
               "status": "passed"
             },
             "line": 62,
@@ -855,7 +910,7 @@
           },
           {
             "result": {
-              "duration": 29747600,
+              "duration": 21623500,
               "status": "passed"
             },
             "line": 63,
@@ -893,7 +948,7 @@
           },
           {
             "result": {
-              "duration": 5617101,
+              "duration": 4376600,
               "status": "passed"
             },
             "line": 68,
@@ -925,186 +980,31 @@
         ]
       },
       {
-        "start_timestamp": "2021-12-16T14:44:45.207Z",
-        "line": 76,
-        "name": "Validating the response code and messages.",
-        "description": "",
-        "id": "issuing-instant-non-reloadable-cards;validating-the-response-code-and-messages.;;5",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
+        "start_timestamp": "2021-12-20T03:24:42.066Z",
+        "before": [
           {
             "result": {
-              "duration": 331551800,
+              "duration": 261600,
               "status": "passed"
             },
-            "line": 54,
-            "name": "i am an authorized corporate user",
             "match": {
-              "location": "AuthorizeStepDefs.IamAnAuthorizedUser()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 209226100,
-              "status": "passed"
-            },
-            "line": 55,
-            "name": "i am issuing an Instant Non Reloadable Digital Card using \"old\" header with V1 of API",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"old\"",
-                  "offset": 58
-                }
-              ],
-              "location": "CardIssueStepDefs.i_am_issuing_an_Instant_Non_Reloadable_Digital_Card_using_header(String,DataTable)"
-            },
-            "rows": [
-              {
-                "cells": [
-                  "cardSchemeId",
-                  "7"
-                ]
-              },
-              {
-                "cells": [
-                  "isLinkToBeSentOnMobile",
-                  "true"
-                ]
-              },
-              {
-                "cells": [
-                  "customerName",
-                  "afzal"
-                ]
-              },
-              {
-                "cells": [
-                  "mobileNumber",
-                  "8284854535"
-                ]
-              },
-              {
-                "cells": [
-                  "email",
-                  "afzal.ahmed@pinelabs.com"
-                ]
-              },
-              {
-                "cells": [
-                  "amount",
-                  "99999999"
-                ]
-              }
-            ],
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 207600,
-              "status": "passed"
-            },
-            "line": 62,
-            "name": "the status code should be 200",
-            "match": {
-              "arguments": [
-                {
-                  "val": "200",
-                  "offset": 26
-                }
-              ],
-              "location": "TransactionsStepDefs.theStatusCodeShouldBe(int)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 31999701,
-              "status": "passed"
-            },
-            "line": 63,
-            "name": "i should see the following in the header level",
-            "match": {
-              "location": "TransactionsStepDefs.iShouldSeeTheFollowingInTheHeaderLevel(DataTable)"
-            },
-            "rows": [
-              {
-                "cells": [
-                  "successCount",
-                  "0"
-                ]
-              },
-              {
-                "cells": [
-                  "failedCount",
-                  "1"
-                ]
-              },
-              {
-                "cells": [
-                  "responseCode",
-                  "216"
-                ]
-              },
-              {
-                "cells": [
-                  "responseMessage",
-                  "Insufficient Corporate balance."
-                ]
-              }
-            ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 4848400,
-              "status": "passed"
-            },
-            "line": 68,
-            "name": "i should see the following in the card list",
-            "match": {
-              "location": "TransactionsStepDefs.i_should_see_the_following_in_the_card_list(DataTable)"
-            },
-            "rows": [
-              {
-                "cells": [
-                  "responseCode",
-                  "responseMessage"
-                ]
-              },
-              {
-                "cells": [
-                  "216",
-                  "Insufficient Corporate balance."
-                ]
-              }
-            ],
-            "keyword": "And "
+              "location": "CustomHooks.getTagNamesForTestDataSet(Scenario)"
+            }
           }
         ],
-        "tags": [
-          {
-            "name": "@Regression"
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2021-12-16T14:44:45.786Z",
-        "line": 99,
-        "name": "Validating the response code and messages.",
+        "line": 97,
+        "name": "Validating the error response code and messages.",
         "description": "",
-        "id": "issuing-instant-non-reloadable-cards;validating-the-response-code-and-messages.;;2",
+        "id": "issuing-instant-non-reloadable-cards;validating-the-error-response-code-and-messages.;;2",
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 366767100,
+              "duration": 350978200,
               "status": "passed"
             },
-            "line": 80,
+            "line": 78,
             "name": "i am an authorized corporate user",
             "match": {
               "location": "AuthorizeStepDefs.IamAnAuthorizedUser()"
@@ -1113,10 +1013,10 @@
           },
           {
             "result": {
-              "duration": 312110599,
+              "duration": 386149000,
               "status": "passed"
             },
-            "line": 81,
+            "line": 79,
             "name": "i am issuing an Instant Non Reloadable Digital Card using \"new\" header with V2 of API",
             "match": {
               "arguments": [
@@ -1169,10 +1069,10 @@
           },
           {
             "result": {
-              "duration": 208700,
+              "duration": 247100,
               "status": "passed"
             },
-            "line": 88,
+            "line": 86,
             "name": "the status code should be 200",
             "match": {
               "arguments": [
@@ -1187,10 +1087,10 @@
           },
           {
             "result": {
-              "duration": 30184900,
+              "duration": 25737400,
               "status": "passed"
             },
-            "line": 89,
+            "line": 87,
             "name": "i should see the following in the header level",
             "match": {
               "location": "TransactionsStepDefs.iShouldSeeTheFollowingInTheHeaderLevel(DataTable)"
@@ -1225,10 +1125,10 @@
           },
           {
             "result": {
-              "duration": 4391300,
+              "duration": 4825400,
               "status": "passed"
             },
-            "line": 94,
+            "line": 92,
             "name": "i should see the following in the card list",
             "match": {
               "location": "TransactionsStepDefs.i_should_see_the_following_in_the_card_list(DataTable)"
@@ -1257,20 +1157,31 @@
         ]
       },
       {
-        "start_timestamp": "2021-12-16T14:44:46.500Z",
-        "line": 100,
-        "name": "Validating the response code and messages.",
+        "start_timestamp": "2021-12-20T03:24:42.835Z",
+        "before": [
+          {
+            "result": {
+              "duration": 451800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CustomHooks.getTagNamesForTestDataSet(Scenario)"
+            }
+          }
+        ],
+        "line": 98,
+        "name": "Validating the error response code and messages.",
         "description": "",
-        "id": "issuing-instant-non-reloadable-cards;validating-the-response-code-and-messages.;;3",
+        "id": "issuing-instant-non-reloadable-cards;validating-the-error-response-code-and-messages.;;3",
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 339157999,
+              "duration": 363798500,
               "status": "passed"
             },
-            "line": 80,
+            "line": 78,
             "name": "i am an authorized corporate user",
             "match": {
               "location": "AuthorizeStepDefs.IamAnAuthorizedUser()"
@@ -1279,10 +1190,10 @@
           },
           {
             "result": {
-              "duration": 263667801,
+              "duration": 247598300,
               "status": "passed"
             },
-            "line": 81,
+            "line": 79,
             "name": "i am issuing an Instant Non Reloadable Digital Card using \"new\" header with V2 of API",
             "match": {
               "arguments": [
@@ -1335,10 +1246,10 @@
           },
           {
             "result": {
-              "duration": 209201,
+              "duration": 213400,
               "status": "passed"
             },
-            "line": 88,
+            "line": 86,
             "name": "the status code should be 200",
             "match": {
               "arguments": [
@@ -1353,10 +1264,10 @@
           },
           {
             "result": {
-              "duration": 22502700,
+              "duration": 28572400,
               "status": "passed"
             },
-            "line": 89,
+            "line": 87,
             "name": "i should see the following in the header level",
             "match": {
               "location": "TransactionsStepDefs.iShouldSeeTheFollowingInTheHeaderLevel(DataTable)"
@@ -1391,10 +1302,10 @@
           },
           {
             "result": {
-              "duration": 3472200,
+              "duration": 5063000,
               "status": "passed"
             },
-            "line": 94,
+            "line": 92,
             "name": "i should see the following in the card list",
             "match": {
               "location": "TransactionsStepDefs.i_should_see_the_following_in_the_card_list(DataTable)"
@@ -1423,20 +1334,31 @@
         ]
       },
       {
-        "start_timestamp": "2021-12-16T14:44:47.130Z",
-        "line": 101,
-        "name": "Validating the response code and messages.",
+        "start_timestamp": "2021-12-20T03:24:43.482Z",
+        "before": [
+          {
+            "result": {
+              "duration": 266900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CustomHooks.getTagNamesForTestDataSet(Scenario)"
+            }
+          }
+        ],
+        "line": 99,
+        "name": "Validating the error response code and messages.",
         "description": "",
-        "id": "issuing-instant-non-reloadable-cards;validating-the-response-code-and-messages.;;4",
+        "id": "issuing-instant-non-reloadable-cards;validating-the-error-response-code-and-messages.;;4",
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 314051800,
+              "duration": 385186100,
               "status": "passed"
             },
-            "line": 80,
+            "line": 78,
             "name": "i am an authorized corporate user",
             "match": {
               "location": "AuthorizeStepDefs.IamAnAuthorizedUser()"
@@ -1445,10 +1367,10 @@
           },
           {
             "result": {
-              "duration": 216216900,
+              "duration": 330068100,
               "status": "passed"
             },
-            "line": 81,
+            "line": 79,
             "name": "i am issuing an Instant Non Reloadable Digital Card using \"new\" header with V2 of API",
             "match": {
               "arguments": [
@@ -1501,10 +1423,10 @@
           },
           {
             "result": {
-              "duration": 468400,
+              "duration": 306800,
               "status": "passed"
             },
-            "line": 88,
+            "line": 86,
             "name": "the status code should be 200",
             "match": {
               "arguments": [
@@ -1519,10 +1441,10 @@
           },
           {
             "result": {
-              "duration": 31026899,
+              "duration": 30529100,
               "status": "passed"
             },
-            "line": 89,
+            "line": 87,
             "name": "i should see the following in the header level",
             "match": {
               "location": "TransactionsStepDefs.iShouldSeeTheFollowingInTheHeaderLevel(DataTable)"
@@ -1557,10 +1479,10 @@
           },
           {
             "result": {
-              "duration": 4059101,
+              "duration": 4647400,
               "status": "passed"
             },
-            "line": 94,
+            "line": 92,
             "name": "i should see the following in the card list",
             "match": {
               "location": "TransactionsStepDefs.i_should_see_the_following_in_the_card_list(DataTable)"
@@ -1589,174 +1511,19 @@
         ]
       },
       {
-        "start_timestamp": "2021-12-16T14:44:47.697Z",
-        "line": 102,
-        "name": "Validating the response code and messages.",
-        "description": "",
-        "id": "issuing-instant-non-reloadable-cards;validating-the-response-code-and-messages.;;5",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
+        "start_timestamp": "2021-12-20T03:24:44.235Z",
+        "before": [
           {
             "result": {
-              "duration": 337084400,
+              "duration": 311200,
               "status": "passed"
             },
-            "line": 80,
-            "name": "i am an authorized corporate user",
             "match": {
-              "location": "AuthorizeStepDefs.IamAnAuthorizedUser()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 221601499,
-              "status": "passed"
-            },
-            "line": 81,
-            "name": "i am issuing an Instant Non Reloadable Digital Card using \"new\" header with V2 of API",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"new\"",
-                  "offset": 58
-                }
-              ],
-              "location": "CardIssueStepDefs.i_am_issuing_an_Instant_Non_Reloadable_Digital_Card_with_V2_API(String,DataTable)"
-            },
-            "rows": [
-              {
-                "cells": [
-                  "cardSchemeId",
-                  "7"
-                ]
-              },
-              {
-                "cells": [
-                  "isLinkToBeSentOnMobile",
-                  "true"
-                ]
-              },
-              {
-                "cells": [
-                  "customerName",
-                  "afzal"
-                ]
-              },
-              {
-                "cells": [
-                  "mobileNumber",
-                  "8284854535"
-                ]
-              },
-              {
-                "cells": [
-                  "email",
-                  "afzal.ahmed@pinelabs.com"
-                ]
-              },
-              {
-                "cells": [
-                  "amount",
-                  "99999999"
-                ]
-              }
-            ],
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 312400,
-              "status": "passed"
-            },
-            "line": 88,
-            "name": "the status code should be 200",
-            "match": {
-              "arguments": [
-                {
-                  "val": "200",
-                  "offset": 26
-                }
-              ],
-              "location": "TransactionsStepDefs.theStatusCodeShouldBe(int)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 32955400,
-              "status": "passed"
-            },
-            "line": 89,
-            "name": "i should see the following in the header level",
-            "match": {
-              "location": "TransactionsStepDefs.iShouldSeeTheFollowingInTheHeaderLevel(DataTable)"
-            },
-            "rows": [
-              {
-                "cells": [
-                  "successCount",
-                  "0"
-                ]
-              },
-              {
-                "cells": [
-                  "failedCount",
-                  "1"
-                ]
-              },
-              {
-                "cells": [
-                  "responseCode",
-                  "216"
-                ]
-              },
-              {
-                "cells": [
-                  "responseMessage",
-                  "Insufficient Corporate balance."
-                ]
-              }
-            ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 6803900,
-              "status": "passed"
-            },
-            "line": 94,
-            "name": "i should see the following in the card list",
-            "match": {
-              "location": "TransactionsStepDefs.i_should_see_the_following_in_the_card_list(DataTable)"
-            },
-            "rows": [
-              {
-                "cells": [
-                  "responseCode",
-                  "responseMessage"
-                ]
-              },
-              {
-                "cells": [
-                  "216",
-                  "Insufficient Corporate balance."
-                ]
-              }
-            ],
-            "keyword": "And "
+              "location": "CustomHooks.getTagNamesForTestDataSet(Scenario)"
+            }
           }
         ],
-        "tags": [
-          {
-            "name": "@Regression"
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2021-12-16T14:44:48.297Z",
-        "line": 104,
+        "line": 101,
         "name": "Issuing a card with Invalid Scheme id",
         "description": "",
         "id": "issuing-instant-non-reloadable-cards;issuing-a-card-with-invalid-scheme-id",
@@ -1765,10 +1532,10 @@
         "steps": [
           {
             "result": {
-              "duration": 369945200,
+              "duration": 392790500,
               "status": "passed"
             },
-            "line": 105,
+            "line": 102,
             "name": "i am an authorized corporate user",
             "match": {
               "location": "AuthorizeStepDefs.IamAnAuthorizedUser()"
@@ -1777,10 +1544,10 @@
           },
           {
             "result": {
-              "duration": 257985601,
+              "duration": 170125900,
               "status": "passed"
             },
-            "line": 106,
+            "line": 103,
             "name": "i am issuing an Instant Non Reloadable Digital Card using \"old\" header with V1 of API",
             "match": {
               "arguments": [
@@ -1833,10 +1600,10 @@
           },
           {
             "result": {
-              "duration": 223200,
+              "duration": 247700,
               "status": "passed"
             },
-            "line": 113,
+            "line": 110,
             "name": "the status code should be 200",
             "match": {
               "arguments": [
@@ -1851,10 +1618,10 @@
           },
           {
             "result": {
-              "duration": 16568900,
+              "duration": 15869300,
               "status": "passed"
             },
-            "line": 114,
+            "line": 111,
             "name": "i should see the following in the header level",
             "match": {
               "location": "TransactionsStepDefs.iShouldSeeTheFollowingInTheHeaderLevel(DataTable)"
@@ -1883,8 +1650,19 @@
         ]
       },
       {
-        "start_timestamp": "2021-12-16T14:44:48.943Z",
-        "line": 118,
+        "start_timestamp": "2021-12-20T03:24:44.816Z",
+        "before": [
+          {
+            "result": {
+              "duration": 399500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CustomHooks.getTagNamesForTestDataSet(Scenario)"
+            }
+          }
+        ],
+        "line": 115,
         "name": "Issuing a card with Invalid Scheme id",
         "description": "",
         "id": "issuing-instant-non-reloadable-cards;issuing-a-card-with-invalid-scheme-id",
@@ -1893,10 +1671,10 @@
         "steps": [
           {
             "result": {
-              "duration": 339092800,
+              "duration": 504634500,
               "status": "passed"
             },
-            "line": 119,
+            "line": 116,
             "name": "i am an authorized corporate user",
             "match": {
               "location": "AuthorizeStepDefs.IamAnAuthorizedUser()"
@@ -1905,10 +1683,10 @@
           },
           {
             "result": {
-              "duration": 172205201,
+              "duration": 163155100,
               "status": "passed"
             },
-            "line": 120,
+            "line": 117,
             "name": "i am issuing an Instant Non Reloadable Digital Card using \"new\" header with V2 of API",
             "match": {
               "arguments": [
@@ -1961,10 +1739,10 @@
           },
           {
             "result": {
-              "duration": 264299,
+              "duration": 231900,
               "status": "passed"
             },
-            "line": 127,
+            "line": 124,
             "name": "the status code should be 200",
             "match": {
               "arguments": [
@@ -1979,10 +1757,10 @@
           },
           {
             "result": {
-              "duration": 18954300,
+              "duration": 11534000,
               "status": "passed"
             },
-            "line": 128,
+            "line": 125,
             "name": "i should see the following in the header level",
             "match": {
               "location": "TransactionsStepDefs.iShouldSeeTheFollowingInTheHeaderLevel(DataTable)"
@@ -2023,6 +1801,3136 @@
         "location": {
           "line": 1,
           "column": 1
+        }
+      }
+    ]
+  },
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 182300,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "i fetch the mobile number from properties",
+            "match": {
+              "location": "PreCondition.iFetchTheMobileNumberFromProperties()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 67520900,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "de link from all the previously issued card",
+            "match": {
+              "location": "PreCondition.deLinkFromAllThePreviouslyIssuedCard()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-12-20T03:24:45.497Z",
+        "before": [
+          {
+            "result": {
+              "duration": 266300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CustomHooks.getTagNamesForTestDataSet(Scenario)"
+            }
+          }
+        ],
+        "line": 8,
+        "name": "Issuing a Reloadable Digital Card with V1 API",
+        "description": "",
+        "id": "issuing-reloadable-digital-cards-with-v1-and-v2-api;issuing-a-reloadable-digital-card-with-v1-api",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 352854200,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "i am an authorized corporate user",
+            "match": {
+              "location": "AuthorizeStepDefs.IamAnAuthorizedUser()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 650889900,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "i am issuing an Instant Reloadable Digital Card using \"old\" header with V1 of API",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"old\"",
+                  "offset": 54
+                }
+              ],
+              "location": "CardIssueStepDefs.iAmIssuingAnInstantReloadableDigitalCardUsingHeaderWithVOfAPI(String,DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "cardSchemeId",
+                  "12"
+                ]
+              },
+              {
+                "cells": [
+                  "isLinkToBeSentOnMobile",
+                  "true"
+                ]
+              },
+              {
+                "cells": [
+                  "customerName",
+                  "afzal"
+                ]
+              },
+              {
+                "cells": [
+                  "mobileNumber",
+                  "context"
+                ]
+              },
+              {
+                "cells": [
+                  "email",
+                  "afzal.ahmed@pinelabs.com"
+                ]
+              },
+              {
+                "cells": [
+                  "amount",
+                  "1000"
+                ]
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 261600,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "the status code should be 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 26
+                }
+              ],
+              "location": "TransactionsStepDefs.theStatusCodeShouldBe(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 32626500,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "i should see the following in the header level",
+            "match": {
+              "location": "TransactionsStepDefs.iShouldSeeTheFollowingInTheHeaderLevel(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "orderStatus",
+                  "6"
+                ]
+              },
+              {
+                "cells": [
+                  "successCount",
+                  "1"
+                ]
+              },
+              {
+                "cells": [
+                  "failedCount",
+                  "0"
+                ]
+              },
+              {
+                "cells": [
+                  "orderAmount",
+                  "1000"
+                ]
+              },
+              {
+                "cells": [
+                  "responseCode",
+                  "0"
+                ]
+              },
+              {
+                "cells": [
+                  "responseMessage",
+                  "Success"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 4844600,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "i should see the following in the card list",
+            "match": {
+              "location": "TransactionsStepDefs.i_should_see_the_following_in_the_card_list(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "customerName",
+                  "mobileNumber",
+                  "email",
+                  "amount",
+                  "responseCode",
+                  "responseMessage"
+                ]
+              },
+              {
+                "cells": [
+                  "afzal",
+                  "8284854535",
+                  "afzal.ahmed@pinelabs.com",
+                  "1000",
+                  "0",
+                  "Success"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 57671400,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "i should see the following in the card list in the database",
+            "match": {
+              "location": "TransactionsStepDefs.iShouldSeeTheFollowingInTheCardListInTheDatabase(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "ActivationEmail",
+                  "afzal.ahmed@pinelabs.com"
+                ]
+              },
+              {
+                "cells": [
+                  "ActivationMobileNumber",
+                  "context"
+                ]
+              }
+            ],
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@TestSet0"
+          },
+          {
+            "name": "@Regression"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 98200,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "i fetch the mobile number from properties",
+            "match": {
+              "location": "PreCondition.iFetchTheMobileNumberFromProperties()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 57720400,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "de link from all the previously issued card",
+            "match": {
+              "location": "PreCondition.deLinkFromAllThePreviouslyIssuedCard()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-12-20T03:24:46.665Z",
+        "before": [
+          {
+            "result": {
+              "duration": 307800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CustomHooks.getTagNamesForTestDataSet(Scenario)"
+            }
+          }
+        ],
+        "line": 32,
+        "name": "Issuing a Reloadable Digital Card with V2 API",
+        "description": "",
+        "id": "issuing-reloadable-digital-cards-with-v1-and-v2-api;issuing-a-reloadable-digital-card-with-v2-api",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 355265800,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "i am an authorized corporate user",
+            "match": {
+              "location": "AuthorizeStepDefs.IamAnAuthorizedUser()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 707285700,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "i am issuing an Instant Reloadable Digital Card using \"new\" header with V2 of API",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"new\"",
+                  "offset": 54
+                }
+              ],
+              "location": "CardIssueStepDefs.i_am_issuing_an_Instant_Reloadable_Digital_Card_with_V2_API(String,DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "cardSchemeId",
+                  "12"
+                ]
+              },
+              {
+                "cells": [
+                  "isLinkToBeSentOnMobile",
+                  "true"
+                ]
+              },
+              {
+                "cells": [
+                  "customerName",
+                  "afzal"
+                ]
+              },
+              {
+                "cells": [
+                  "mobileNumber",
+                  "context"
+                ]
+              },
+              {
+                "cells": [
+                  "email",
+                  "afzal.ahmed@pinelabs.com"
+                ]
+              },
+              {
+                "cells": [
+                  "amount",
+                  "1000"
+                ]
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 338200,
+              "status": "passed"
+            },
+            "line": 41,
+            "name": "the status code should be 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 26
+                }
+              ],
+              "location": "TransactionsStepDefs.theStatusCodeShouldBe(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 44410100,
+              "status": "passed"
+            },
+            "line": 42,
+            "name": "i should see the following in the header level",
+            "match": {
+              "location": "TransactionsStepDefs.iShouldSeeTheFollowingInTheHeaderLevel(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "orderStatus",
+                  "6"
+                ]
+              },
+              {
+                "cells": [
+                  "successCount",
+                  "1"
+                ]
+              },
+              {
+                "cells": [
+                  "failedCount",
+                  "0"
+                ]
+              },
+              {
+                "cells": [
+                  "orderAmount",
+                  "1000"
+                ]
+              },
+              {
+                "cells": [
+                  "responseCode",
+                  "0"
+                ]
+              },
+              {
+                "cells": [
+                  "responseMessage",
+                  "Success"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6029600,
+              "status": "passed"
+            },
+            "line": 49,
+            "name": "i should see the following in the card list",
+            "match": {
+              "location": "TransactionsStepDefs.i_should_see_the_following_in_the_card_list(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "customerName",
+                  "mobileNumber",
+                  "email",
+                  "amount",
+                  "responseCode",
+                  "responseMessage"
+                ]
+              },
+              {
+                "cells": [
+                  "afzal",
+                  "8284854535",
+                  "afzal.ahmed@pinelabs.com",
+                  "1000",
+                  "0",
+                  "Success"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 48750300,
+              "status": "passed"
+            },
+            "line": 52,
+            "name": "i should see the following in the card list in the database",
+            "match": {
+              "location": "TransactionsStepDefs.iShouldSeeTheFollowingInTheCardListInTheDatabase(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "ActivationEmail",
+                  "afzal.ahmed@pinelabs.com"
+                ]
+              },
+              {
+                "cells": [
+                  "ActivationMobileNumber",
+                  "context"
+                ]
+              }
+            ],
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@TestSet0"
+          },
+          {
+            "name": "@Regression"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 116500,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "i fetch the mobile number from properties",
+            "match": {
+              "location": "PreCondition.iFetchTheMobileNumberFromProperties()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 62080600,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "de link from all the previously issued card",
+            "match": {
+              "location": "PreCondition.deLinkFromAllThePreviouslyIssuedCard()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-12-20T03:24:47.887Z",
+        "before": [
+          {
+            "result": {
+              "duration": 293900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CustomHooks.getTagNamesForTestDataSet(Scenario)"
+            }
+          }
+        ],
+        "line": 75,
+        "name": "Validating the response code and messages for V1 API.",
+        "description": "",
+        "id": "issuing-reloadable-digital-cards-with-v1-and-v2-api;validating-the-response-code-and-messages-for-v1-api.;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 351626900,
+              "status": "passed"
+            },
+            "line": 57,
+            "name": "i am an authorized corporate user",
+            "match": {
+              "location": "AuthorizeStepDefs.IamAnAuthorizedUser()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 311255500,
+              "status": "passed"
+            },
+            "line": 58,
+            "name": "i am issuing an Instant Reloadable Digital Card using \"old\" header with V1 of API",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"old\"",
+                  "offset": 54
+                }
+              ],
+              "location": "CardIssueStepDefs.iAmIssuingAnInstantReloadableDigitalCardUsingHeaderWithVOfAPI(String,DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "cardSchemeId",
+                  "12"
+                ]
+              },
+              {
+                "cells": [
+                  "isLinkToBeSentOnMobile",
+                  "true"
+                ]
+              },
+              {
+                "cells": [
+                  "customerName",
+                  "123Afzal"
+                ]
+              },
+              {
+                "cells": [
+                  "mobileNumber",
+                  "context"
+                ]
+              },
+              {
+                "cells": [
+                  "email",
+                  "afzal.ahmed@pinelabs.com"
+                ]
+              },
+              {
+                "cells": [
+                  "amount",
+                  "1000"
+                ]
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 444300,
+              "status": "passed"
+            },
+            "line": 65,
+            "name": "the status code should be 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 26
+                }
+              ],
+              "location": "TransactionsStepDefs.theStatusCodeShouldBe(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 20508300,
+              "status": "passed"
+            },
+            "line": 66,
+            "name": "i should see the following in the header level",
+            "match": {
+              "location": "TransactionsStepDefs.iShouldSeeTheFollowingInTheHeaderLevel(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "successCount",
+                  "0"
+                ]
+              },
+              {
+                "cells": [
+                  "failedCount",
+                  "1"
+                ]
+              },
+              {
+                "cells": [
+                  "responseMessage",
+                  "Invalid card data"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 4435500,
+              "status": "passed"
+            },
+            "line": 70,
+            "name": "i should see the following in the card list",
+            "match": {
+              "location": "TransactionsStepDefs.i_should_see_the_following_in_the_card_list(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "responseCode",
+                  "responseMessage"
+                ]
+              },
+              {
+                "cells": [
+                  "13",
+                  "- firstName : Customer Name is not valid. It should start with an alphabet and could contain maximum 50 characters in form of alphabets, numbers, white space, dot(.)"
+                ]
+              }
+            ],
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@TestSet0"
+          },
+          {
+            "name": "@Regression"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 127600,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "i fetch the mobile number from properties",
+            "match": {
+              "location": "PreCondition.iFetchTheMobileNumberFromProperties()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 41787600,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "de link from all the previously issued card",
+            "match": {
+              "location": "PreCondition.deLinkFromAllThePreviouslyIssuedCard()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-12-20T03:24:48.638Z",
+        "before": [
+          {
+            "result": {
+              "duration": 236700,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CustomHooks.getTagNamesForTestDataSet(Scenario)"
+            }
+          }
+        ],
+        "line": 76,
+        "name": "Validating the response code and messages for V1 API.",
+        "description": "",
+        "id": "issuing-reloadable-digital-cards-with-v1-and-v2-api;validating-the-response-code-and-messages-for-v1-api.;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 595656200,
+              "status": "passed"
+            },
+            "line": 57,
+            "name": "i am an authorized corporate user",
+            "match": {
+              "location": "AuthorizeStepDefs.IamAnAuthorizedUser()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 344325200,
+              "status": "passed"
+            },
+            "line": 58,
+            "name": "i am issuing an Instant Reloadable Digital Card using \"old\" header with V1 of API",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"old\"",
+                  "offset": 54
+                }
+              ],
+              "location": "CardIssueStepDefs.iAmIssuingAnInstantReloadableDigitalCardUsingHeaderWithVOfAPI(String,DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "cardSchemeId",
+                  "12"
+                ]
+              },
+              {
+                "cells": [
+                  "isLinkToBeSentOnMobile",
+                  "true"
+                ]
+              },
+              {
+                "cells": [
+                  "customerName",
+                  "afzal"
+                ]
+              },
+              {
+                "cells": [
+                  "mobileNumber",
+                  "1111111111"
+                ]
+              },
+              {
+                "cells": [
+                  "email",
+                  "afzal.ahmed@pinelabs.com"
+                ]
+              },
+              {
+                "cells": [
+                  "amount",
+                  "1000"
+                ]
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 113700,
+              "status": "passed"
+            },
+            "line": 65,
+            "name": "the status code should be 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 26
+                }
+              ],
+              "location": "TransactionsStepDefs.theStatusCodeShouldBe(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 13815100,
+              "status": "passed"
+            },
+            "line": 66,
+            "name": "i should see the following in the header level",
+            "match": {
+              "location": "TransactionsStepDefs.iShouldSeeTheFollowingInTheHeaderLevel(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "successCount",
+                  "0"
+                ]
+              },
+              {
+                "cells": [
+                  "failedCount",
+                  "1"
+                ]
+              },
+              {
+                "cells": [
+                  "responseMessage",
+                  "Invalid card data"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3713900,
+              "status": "passed"
+            },
+            "line": 70,
+            "name": "i should see the following in the card list",
+            "match": {
+              "location": "TransactionsStepDefs.i_should_see_the_following_in_the_card_list(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "responseCode",
+                  "responseMessage"
+                ]
+              },
+              {
+                "cells": [
+                  "13",
+                  "- mobileNumber : Mobile Number is not valid"
+                ]
+              }
+            ],
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@TestSet0"
+          },
+          {
+            "name": "@Regression"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 74900,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "i fetch the mobile number from properties",
+            "match": {
+              "location": "PreCondition.iFetchTheMobileNumberFromProperties()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 34888300,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "de link from all the previously issued card",
+            "match": {
+              "location": "PreCondition.deLinkFromAllThePreviouslyIssuedCard()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-12-20T03:24:49.639Z",
+        "before": [
+          {
+            "result": {
+              "duration": 165300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CustomHooks.getTagNamesForTestDataSet(Scenario)"
+            }
+          }
+        ],
+        "line": 77,
+        "name": "Validating the response code and messages for V1 API.",
+        "description": "",
+        "id": "issuing-reloadable-digital-cards-with-v1-and-v2-api;validating-the-response-code-and-messages-for-v1-api.;;4",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 361861700,
+              "status": "passed"
+            },
+            "line": 57,
+            "name": "i am an authorized corporate user",
+            "match": {
+              "location": "AuthorizeStepDefs.IamAnAuthorizedUser()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 234535500,
+              "status": "passed"
+            },
+            "line": 58,
+            "name": "i am issuing an Instant Reloadable Digital Card using \"old\" header with V1 of API",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"old\"",
+                  "offset": 54
+                }
+              ],
+              "location": "CardIssueStepDefs.iAmIssuingAnInstantReloadableDigitalCardUsingHeaderWithVOfAPI(String,DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "cardSchemeId",
+                  "12"
+                ]
+              },
+              {
+                "cells": [
+                  "isLinkToBeSentOnMobile",
+                  "true"
+                ]
+              },
+              {
+                "cells": [
+                  "customerName",
+                  "afzal"
+                ]
+              },
+              {
+                "cells": [
+                  "mobileNumber",
+                  "context"
+                ]
+              },
+              {
+                "cells": [
+                  "email",
+                  "afzal.ahmed@"
+                ]
+              },
+              {
+                "cells": [
+                  "amount",
+                  "1000"
+                ]
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 200800,
+              "status": "passed"
+            },
+            "line": 65,
+            "name": "the status code should be 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 26
+                }
+              ],
+              "location": "TransactionsStepDefs.theStatusCodeShouldBe(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 25136200,
+              "status": "passed"
+            },
+            "line": 66,
+            "name": "i should see the following in the header level",
+            "match": {
+              "location": "TransactionsStepDefs.iShouldSeeTheFollowingInTheHeaderLevel(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "successCount",
+                  "0"
+                ]
+              },
+              {
+                "cells": [
+                  "failedCount",
+                  "1"
+                ]
+              },
+              {
+                "cells": [
+                  "responseMessage",
+                  "Invalid card data"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6167000,
+              "status": "passed"
+            },
+            "line": 70,
+            "name": "i should see the following in the card list",
+            "match": {
+              "location": "TransactionsStepDefs.i_should_see_the_following_in_the_card_list(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "responseCode",
+                  "responseMessage"
+                ]
+              },
+              {
+                "cells": [
+                  "13",
+                  "- email : Email Format is not valid"
+                ]
+              }
+            ],
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@TestSet0"
+          },
+          {
+            "name": "@Regression"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 84500,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "i fetch the mobile number from properties",
+            "match": {
+              "location": "PreCondition.iFetchTheMobileNumberFromProperties()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 43772500,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "de link from all the previously issued card",
+            "match": {
+              "location": "PreCondition.deLinkFromAllThePreviouslyIssuedCard()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-12-20T03:24:50.304Z",
+        "before": [
+          {
+            "result": {
+              "duration": 523800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CustomHooks.getTagNamesForTestDataSet(Scenario)"
+            }
+          }
+        ],
+        "line": 78,
+        "name": "Validating the response code and messages for V1 API.",
+        "description": "",
+        "id": "issuing-reloadable-digital-cards-with-v1-and-v2-api;validating-the-response-code-and-messages-for-v1-api.;;5",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 584489400,
+              "status": "passed"
+            },
+            "line": 57,
+            "name": "i am an authorized corporate user",
+            "match": {
+              "location": "AuthorizeStepDefs.IamAnAuthorizedUser()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 695546100,
+              "status": "passed"
+            },
+            "line": 58,
+            "name": "i am issuing an Instant Reloadable Digital Card using \"old\" header with V1 of API",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"old\"",
+                  "offset": 54
+                }
+              ],
+              "location": "CardIssueStepDefs.iAmIssuingAnInstantReloadableDigitalCardUsingHeaderWithVOfAPI(String,DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "cardSchemeId",
+                  "12"
+                ]
+              },
+              {
+                "cells": [
+                  "isLinkToBeSentOnMobile",
+                  "true"
+                ]
+              },
+              {
+                "cells": [
+                  "customerName",
+                  "afzal"
+                ]
+              },
+              {
+                "cells": [
+                  "mobileNumber",
+                  "context"
+                ]
+              },
+              {
+                "cells": [
+                  "email",
+                  "afzal.ahmed@pinelabs.com"
+                ]
+              },
+              {
+                "cells": [
+                  "amount",
+                  "99999999"
+                ]
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 389500,
+              "status": "passed"
+            },
+            "line": 65,
+            "name": "the status code should be 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 26
+                }
+              ],
+              "location": "TransactionsStepDefs.theStatusCodeShouldBe(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 12653100,
+              "status": "passed"
+            },
+            "line": 66,
+            "name": "i should see the following in the header level",
+            "match": {
+              "location": "TransactionsStepDefs.iShouldSeeTheFollowingInTheHeaderLevel(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "successCount",
+                  "0"
+                ]
+              },
+              {
+                "cells": [
+                  "failedCount",
+                  "1"
+                ]
+              },
+              {
+                "cells": [
+                  "responseMessage",
+                  "Success"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5116800,
+              "status": "passed"
+            },
+            "line": 70,
+            "name": "i should see the following in the card list",
+            "match": {
+              "location": "TransactionsStepDefs.i_should_see_the_following_in_the_card_list(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "responseCode",
+                  "responseMessage"
+                ]
+              },
+              {
+                "cells": [
+                  "364",
+                  "Invalid Maximum Load Amount"
+                ]
+              }
+            ],
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@TestSet0"
+          },
+          {
+            "name": "@Regression"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 91300,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "i fetch the mobile number from properties",
+            "match": {
+              "location": "PreCondition.iFetchTheMobileNumberFromProperties()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 34383800,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "de link from all the previously issued card",
+            "match": {
+              "location": "PreCondition.deLinkFromAllThePreviouslyIssuedCard()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-12-20T03:24:51.647Z",
+        "before": [
+          {
+            "result": {
+              "duration": 207000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CustomHooks.getTagNamesForTestDataSet(Scenario)"
+            }
+          }
+        ],
+        "line": 99,
+        "name": "Validating the error response code and messages for V2 API.",
+        "description": "",
+        "id": "issuing-reloadable-digital-cards-with-v1-and-v2-api;validating-the-error-response-code-and-messages-for-v2-api.;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 378980500,
+              "status": "passed"
+            },
+            "line": 81,
+            "name": "i am an authorized corporate user",
+            "match": {
+              "location": "AuthorizeStepDefs.IamAnAuthorizedUser()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 330679500,
+              "status": "passed"
+            },
+            "line": 82,
+            "name": "i am issuing an Instant Reloadable Digital Card using \"new\" header with V2 of API",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"new\"",
+                  "offset": 54
+                }
+              ],
+              "location": "CardIssueStepDefs.i_am_issuing_an_Instant_Reloadable_Digital_Card_with_V2_API(String,DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "cardSchemeId",
+                  "12"
+                ]
+              },
+              {
+                "cells": [
+                  "isLinkToBeSentOnMobile",
+                  "true"
+                ]
+              },
+              {
+                "cells": [
+                  "customerName",
+                  "123Afzal"
+                ]
+              },
+              {
+                "cells": [
+                  "mobileNumber",
+                  "context"
+                ]
+              },
+              {
+                "cells": [
+                  "email",
+                  "afzal.ahmed@pinelabs.com"
+                ]
+              },
+              {
+                "cells": [
+                  "amount",
+                  "1000"
+                ]
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 237400,
+              "status": "passed"
+            },
+            "line": 89,
+            "name": "the status code should be 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 26
+                }
+              ],
+              "location": "TransactionsStepDefs.theStatusCodeShouldBe(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 23787900,
+              "status": "passed"
+            },
+            "line": 90,
+            "name": "i should see the following in the header level",
+            "match": {
+              "location": "TransactionsStepDefs.iShouldSeeTheFollowingInTheHeaderLevel(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "successCount",
+                  "0"
+                ]
+              },
+              {
+                "cells": [
+                  "failedCount",
+                  "1"
+                ]
+              },
+              {
+                "cells": [
+                  "responseMessage",
+                  "Invalid card data"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5042300,
+              "status": "passed"
+            },
+            "line": 94,
+            "name": "i should see the following in the card list",
+            "match": {
+              "location": "TransactionsStepDefs.i_should_see_the_following_in_the_card_list(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "responseCode",
+                  "responseMessage"
+                ]
+              },
+              {
+                "cells": [
+                  "13",
+                  "- firstName : Customer Name is not valid. It should start with an alphabet and could contain maximum 50 characters in form of alphabets, numbers, white space, dot(.)"
+                ]
+              }
+            ],
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@TestSet0"
+          },
+          {
+            "name": "@Regression"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 71800,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "i fetch the mobile number from properties",
+            "match": {
+              "location": "PreCondition.iFetchTheMobileNumberFromProperties()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 37396600,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "de link from all the previously issued card",
+            "match": {
+              "location": "PreCondition.deLinkFromAllThePreviouslyIssuedCard()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-12-20T03:24:52.422Z",
+        "before": [
+          {
+            "result": {
+              "duration": 196700,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CustomHooks.getTagNamesForTestDataSet(Scenario)"
+            }
+          }
+        ],
+        "line": 100,
+        "name": "Validating the error response code and messages for V2 API.",
+        "description": "",
+        "id": "issuing-reloadable-digital-cards-with-v1-and-v2-api;validating-the-error-response-code-and-messages-for-v2-api.;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 389087600,
+              "status": "passed"
+            },
+            "line": 81,
+            "name": "i am an authorized corporate user",
+            "match": {
+              "location": "AuthorizeStepDefs.IamAnAuthorizedUser()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 199837300,
+              "status": "passed"
+            },
+            "line": 82,
+            "name": "i am issuing an Instant Reloadable Digital Card using \"new\" header with V2 of API",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"new\"",
+                  "offset": 54
+                }
+              ],
+              "location": "CardIssueStepDefs.i_am_issuing_an_Instant_Reloadable_Digital_Card_with_V2_API(String,DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "cardSchemeId",
+                  "12"
+                ]
+              },
+              {
+                "cells": [
+                  "isLinkToBeSentOnMobile",
+                  "true"
+                ]
+              },
+              {
+                "cells": [
+                  "customerName",
+                  "afzal"
+                ]
+              },
+              {
+                "cells": [
+                  "mobileNumber",
+                  "1111111111"
+                ]
+              },
+              {
+                "cells": [
+                  "email",
+                  "afzal.ahmed@pinelabs.com"
+                ]
+              },
+              {
+                "cells": [
+                  "amount",
+                  "1000"
+                ]
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 193000,
+              "status": "passed"
+            },
+            "line": 89,
+            "name": "the status code should be 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 26
+                }
+              ],
+              "location": "TransactionsStepDefs.theStatusCodeShouldBe(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 17502100,
+              "status": "passed"
+            },
+            "line": 90,
+            "name": "i should see the following in the header level",
+            "match": {
+              "location": "TransactionsStepDefs.iShouldSeeTheFollowingInTheHeaderLevel(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "successCount",
+                  "0"
+                ]
+              },
+              {
+                "cells": [
+                  "failedCount",
+                  "1"
+                ]
+              },
+              {
+                "cells": [
+                  "responseMessage",
+                  "Invalid card data"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 4437800,
+              "status": "passed"
+            },
+            "line": 94,
+            "name": "i should see the following in the card list",
+            "match": {
+              "location": "TransactionsStepDefs.i_should_see_the_following_in_the_card_list(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "responseCode",
+                  "responseMessage"
+                ]
+              },
+              {
+                "cells": [
+                  "13",
+                  "- mobileNumber : Mobile Number is not valid"
+                ]
+              }
+            ],
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@TestSet0"
+          },
+          {
+            "name": "@Regression"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 60100,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "i fetch the mobile number from properties",
+            "match": {
+              "location": "PreCondition.iFetchTheMobileNumberFromProperties()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 35443100,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "de link from all the previously issued card",
+            "match": {
+              "location": "PreCondition.deLinkFromAllThePreviouslyIssuedCard()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-12-20T03:24:53.072Z",
+        "before": [
+          {
+            "result": {
+              "duration": 166200,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CustomHooks.getTagNamesForTestDataSet(Scenario)"
+            }
+          }
+        ],
+        "line": 101,
+        "name": "Validating the error response code and messages for V2 API.",
+        "description": "",
+        "id": "issuing-reloadable-digital-cards-with-v1-and-v2-api;validating-the-error-response-code-and-messages-for-v2-api.;;4",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 361099900,
+              "status": "passed"
+            },
+            "line": 81,
+            "name": "i am an authorized corporate user",
+            "match": {
+              "location": "AuthorizeStepDefs.IamAnAuthorizedUser()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 282930400,
+              "status": "passed"
+            },
+            "line": 82,
+            "name": "i am issuing an Instant Reloadable Digital Card using \"new\" header with V2 of API",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"new\"",
+                  "offset": 54
+                }
+              ],
+              "location": "CardIssueStepDefs.i_am_issuing_an_Instant_Reloadable_Digital_Card_with_V2_API(String,DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "cardSchemeId",
+                  "12"
+                ]
+              },
+              {
+                "cells": [
+                  "isLinkToBeSentOnMobile",
+                  "true"
+                ]
+              },
+              {
+                "cells": [
+                  "customerName",
+                  "afzal"
+                ]
+              },
+              {
+                "cells": [
+                  "mobileNumber",
+                  "context"
+                ]
+              },
+              {
+                "cells": [
+                  "email",
+                  "afzal.ahmed@"
+                ]
+              },
+              {
+                "cells": [
+                  "amount",
+                  "1000"
+                ]
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 187900,
+              "status": "passed"
+            },
+            "line": 89,
+            "name": "the status code should be 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 26
+                }
+              ],
+              "location": "TransactionsStepDefs.theStatusCodeShouldBe(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 24147600,
+              "status": "passed"
+            },
+            "line": 90,
+            "name": "i should see the following in the header level",
+            "match": {
+              "location": "TransactionsStepDefs.iShouldSeeTheFollowingInTheHeaderLevel(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "successCount",
+                  "0"
+                ]
+              },
+              {
+                "cells": [
+                  "failedCount",
+                  "1"
+                ]
+              },
+              {
+                "cells": [
+                  "responseMessage",
+                  "Invalid card data"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5018700,
+              "status": "passed"
+            },
+            "line": 94,
+            "name": "i should see the following in the card list",
+            "match": {
+              "location": "TransactionsStepDefs.i_should_see_the_following_in_the_card_list(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "responseCode",
+                  "responseMessage"
+                ]
+              },
+              {
+                "cells": [
+                  "13",
+                  "- email : Email Format is not valid"
+                ]
+              }
+            ],
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@TestSet0"
+          },
+          {
+            "name": "@Regression"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 102100,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "i fetch the mobile number from properties",
+            "match": {
+              "location": "PreCondition.iFetchTheMobileNumberFromProperties()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 34535600,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "de link from all the previously issued card",
+            "match": {
+              "location": "PreCondition.deLinkFromAllThePreviouslyIssuedCard()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-12-20T03:24:53.781Z",
+        "before": [
+          {
+            "result": {
+              "duration": 253300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CustomHooks.getTagNamesForTestDataSet(Scenario)"
+            }
+          }
+        ],
+        "line": 102,
+        "name": "Validating the error response code and messages for V2 API.",
+        "description": "",
+        "id": "issuing-reloadable-digital-cards-with-v1-and-v2-api;validating-the-error-response-code-and-messages-for-v2-api.;;5",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 339970100,
+              "status": "passed"
+            },
+            "line": 81,
+            "name": "i am an authorized corporate user",
+            "match": {
+              "location": "AuthorizeStepDefs.IamAnAuthorizedUser()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 601630300,
+              "status": "passed"
+            },
+            "line": 82,
+            "name": "i am issuing an Instant Reloadable Digital Card using \"new\" header with V2 of API",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"new\"",
+                  "offset": 54
+                }
+              ],
+              "location": "CardIssueStepDefs.i_am_issuing_an_Instant_Reloadable_Digital_Card_with_V2_API(String,DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "cardSchemeId",
+                  "12"
+                ]
+              },
+              {
+                "cells": [
+                  "isLinkToBeSentOnMobile",
+                  "true"
+                ]
+              },
+              {
+                "cells": [
+                  "customerName",
+                  "afzal"
+                ]
+              },
+              {
+                "cells": [
+                  "mobileNumber",
+                  "context"
+                ]
+              },
+              {
+                "cells": [
+                  "email",
+                  "afzal.ahmed@pinelabs.com"
+                ]
+              },
+              {
+                "cells": [
+                  "amount",
+                  "99999999"
+                ]
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 182900,
+              "status": "passed"
+            },
+            "line": 89,
+            "name": "the status code should be 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 26
+                }
+              ],
+              "location": "TransactionsStepDefs.theStatusCodeShouldBe(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 24253300,
+              "status": "passed"
+            },
+            "line": 90,
+            "name": "i should see the following in the header level",
+            "match": {
+              "location": "TransactionsStepDefs.iShouldSeeTheFollowingInTheHeaderLevel(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "successCount",
+                  "0"
+                ]
+              },
+              {
+                "cells": [
+                  "failedCount",
+                  "1"
+                ]
+              },
+              {
+                "cells": [
+                  "responseMessage",
+                  "Success"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5279400,
+              "status": "passed"
+            },
+            "line": 94,
+            "name": "i should see the following in the card list",
+            "match": {
+              "location": "TransactionsStepDefs.i_should_see_the_following_in_the_card_list(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "responseCode",
+                  "responseMessage"
+                ]
+              },
+              {
+                "cells": [
+                  "364",
+                  "Invalid Maximum Load Amount"
+                ]
+              }
+            ],
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@TestSet0"
+          },
+          {
+            "name": "@Regression"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 189300,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "i fetch the mobile number from properties",
+            "match": {
+              "location": "PreCondition.iFetchTheMobileNumberFromProperties()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 44341700,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "de link from all the previously issued card",
+            "match": {
+              "location": "PreCondition.deLinkFromAllThePreviouslyIssuedCard()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-12-20T03:24:54.788Z",
+        "before": [
+          {
+            "result": {
+              "duration": 172000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CustomHooks.getTagNamesForTestDataSet(Scenario)"
+            }
+          }
+        ],
+        "line": 104,
+        "name": "Issuing a card with Invalid Scheme id for V1 API",
+        "description": "",
+        "id": "issuing-reloadable-digital-cards-with-v1-and-v2-api;issuing-a-card-with-invalid-scheme-id-for-v1-api",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 393514000,
+              "status": "passed"
+            },
+            "line": 105,
+            "name": "i am an authorized corporate user",
+            "match": {
+              "location": "AuthorizeStepDefs.IamAnAuthorizedUser()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 196091500,
+              "status": "passed"
+            },
+            "line": 106,
+            "name": "i am issuing an Instant Reloadable Digital Card using \"old\" header with V1 of API",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"old\"",
+                  "offset": 54
+                }
+              ],
+              "location": "CardIssueStepDefs.iAmIssuingAnInstantReloadableDigitalCardUsingHeaderWithVOfAPI(String,DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "cardSchemeId",
+                  "51"
+                ]
+              },
+              {
+                "cells": [
+                  "isLinkToBeSentOnMobile",
+                  "true"
+                ]
+              },
+              {
+                "cells": [
+                  "customerName",
+                  "afzal"
+                ]
+              },
+              {
+                "cells": [
+                  "mobileNumber",
+                  "context"
+                ]
+              },
+              {
+                "cells": [
+                  "email",
+                  "afzal.ahmed@pinelabs.com"
+                ]
+              },
+              {
+                "cells": [
+                  "amount",
+                  "1000"
+                ]
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 212600,
+              "status": "passed"
+            },
+            "line": 113,
+            "name": "the status code should be 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 26
+                }
+              ],
+              "location": "TransactionsStepDefs.theStatusCodeShouldBe(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 17349800,
+              "status": "passed"
+            },
+            "line": 114,
+            "name": "i should see the following in the header level",
+            "match": {
+              "location": "TransactionsStepDefs.iShouldSeeTheFollowingInTheHeaderLevel(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "responseCode",
+                  "305"
+                ]
+              },
+              {
+                "cells": [
+                  "responseMessage",
+                  "Invalid card scheme Id"
+                ]
+              }
+            ],
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@TestSet0"
+          },
+          {
+            "name": "@Regression"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 152000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "i fetch the mobile number from properties",
+            "match": {
+              "location": "PreCondition.iFetchTheMobileNumberFromProperties()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 37254400,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "de link from all the previously issued card",
+            "match": {
+              "location": "PreCondition.deLinkFromAllThePreviouslyIssuedCard()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-12-20T03:24:55.443Z",
+        "before": [
+          {
+            "result": {
+              "duration": 472000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CustomHooks.getTagNamesForTestDataSet(Scenario)"
+            }
+          }
+        ],
+        "line": 118,
+        "name": "Issuing a card with Invalid Scheme id for V2 API",
+        "description": "",
+        "id": "issuing-reloadable-digital-cards-with-v1-and-v2-api;issuing-a-card-with-invalid-scheme-id-for-v2-api",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 346267900,
+              "status": "passed"
+            },
+            "line": 119,
+            "name": "i am an authorized corporate user",
+            "match": {
+              "location": "AuthorizeStepDefs.IamAnAuthorizedUser()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 167319800,
+              "status": "passed"
+            },
+            "line": 120,
+            "name": "i am issuing an Instant Reloadable Digital Card using \"new\" header with V2 of API",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"new\"",
+                  "offset": 54
+                }
+              ],
+              "location": "CardIssueStepDefs.i_am_issuing_an_Instant_Reloadable_Digital_Card_with_V2_API(String,DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "cardSchemeId",
+                  "51"
+                ]
+              },
+              {
+                "cells": [
+                  "isLinkToBeSentOnMobile",
+                  "true"
+                ]
+              },
+              {
+                "cells": [
+                  "customerName",
+                  "afzal"
+                ]
+              },
+              {
+                "cells": [
+                  "mobileNumber",
+                  "context"
+                ]
+              },
+              {
+                "cells": [
+                  "email",
+                  "afzal.ahmed@pinelabs.com"
+                ]
+              },
+              {
+                "cells": [
+                  "amount",
+                  "1000"
+                ]
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 223100,
+              "status": "passed"
+            },
+            "line": 127,
+            "name": "the status code should be 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 26
+                }
+              ],
+              "location": "TransactionsStepDefs.theStatusCodeShouldBe(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 16642100,
+              "status": "passed"
+            },
+            "line": 128,
+            "name": "i should see the following in the header level",
+            "match": {
+              "location": "TransactionsStepDefs.iShouldSeeTheFollowingInTheHeaderLevel(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "responseCode",
+                  "305"
+                ]
+              },
+              {
+                "cells": [
+                  "responseMessage",
+                  "Invalid card scheme Id"
+                ]
+              }
+            ],
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@TestSet0"
+          },
+          {
+            "name": "@Regression"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 100100,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "i fetch the mobile number from properties",
+            "match": {
+              "location": "PreCondition.iFetchTheMobileNumberFromProperties()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 36489300,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "de link from all the previously issued card",
+            "match": {
+              "location": "PreCondition.deLinkFromAllThePreviouslyIssuedCard()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-12-20T03:24:56.012Z",
+        "before": [
+          {
+            "result": {
+              "duration": 256100,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CustomHooks.getTagNamesForTestDataSet(Scenario)"
+            }
+          }
+        ],
+        "line": 132,
+        "name": "Issuing a reloadable card on already linked mobile for V1 API",
+        "description": "",
+        "id": "issuing-reloadable-digital-cards-with-v1-and-v2-api;issuing-a-reloadable-card-on-already-linked-mobile-for-v1-api",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 401234900,
+              "status": "passed"
+            },
+            "line": 133,
+            "name": "i am an authorized corporate user",
+            "match": {
+              "location": "AuthorizeStepDefs.IamAnAuthorizedUser()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 671579400,
+              "status": "passed"
+            },
+            "line": 134,
+            "name": "i am issuing an Instant Reloadable Digital Card using \"old\" header with V1 of API",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"old\"",
+                  "offset": 54
+                }
+              ],
+              "location": "CardIssueStepDefs.iAmIssuingAnInstantReloadableDigitalCardUsingHeaderWithVOfAPI(String,DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "cardSchemeId",
+                  "12"
+                ]
+              },
+              {
+                "cells": [
+                  "isLinkToBeSentOnMobile",
+                  "true"
+                ]
+              },
+              {
+                "cells": [
+                  "customerName",
+                  "afzal"
+                ]
+              },
+              {
+                "cells": [
+                  "mobileNumber",
+                  "context"
+                ]
+              },
+              {
+                "cells": [
+                  "email",
+                  "afzal.ahmed@pinelabs.com"
+                ]
+              },
+              {
+                "cells": [
+                  "amount",
+                  "1000"
+                ]
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 718163800,
+              "status": "passed"
+            },
+            "line": 141,
+            "name": "i am again issuing the the card with the same details with \"old\" for V1 API",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"old\"",
+                  "offset": 59
+                }
+              ],
+              "location": "CardIssueStepDefs.iAmIssuingAnInstantReloadableDigitalCardUsingHeaderWithVOfAPI(String,DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "cardSchemeId",
+                  "12"
+                ]
+              },
+              {
+                "cells": [
+                  "isLinkToBeSentOnMobile",
+                  "true"
+                ]
+              },
+              {
+                "cells": [
+                  "customerName",
+                  "afzal"
+                ]
+              },
+              {
+                "cells": [
+                  "mobileNumber",
+                  "context"
+                ]
+              },
+              {
+                "cells": [
+                  "email",
+                  "afzal.ahmed@pinelabs.com"
+                ]
+              },
+              {
+                "cells": [
+                  "amount",
+                  "1000"
+                ]
+              }
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 214600,
+              "status": "passed"
+            },
+            "line": 148,
+            "name": "the status code should be 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 26
+                }
+              ],
+              "location": "TransactionsStepDefs.theStatusCodeShouldBe(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 36559300,
+              "status": "passed"
+            },
+            "line": 149,
+            "name": "i should see the following in the header level",
+            "match": {
+              "location": "TransactionsStepDefs.iShouldSeeTheFollowingInTheHeaderLevel(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "orderStatus",
+                  "6"
+                ]
+              },
+              {
+                "cells": [
+                  "successCount",
+                  "0"
+                ]
+              },
+              {
+                "cells": [
+                  "failedCount",
+                  "1"
+                ]
+              },
+              {
+                "cells": [
+                  "orderAmount",
+                  "1000"
+                ]
+              },
+              {
+                "cells": [
+                  "responseCode",
+                  "0"
+                ]
+              },
+              {
+                "cells": [
+                  "responseMessage",
+                  "Success"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2672800,
+              "status": "passed"
+            },
+            "line": 156,
+            "name": "i should see the following in the card list",
+            "match": {
+              "location": "TransactionsStepDefs.i_should_see_the_following_in_the_card_list(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "customerName",
+                  "mobileNumber",
+                  "email",
+                  "amount",
+                  "responseCode",
+                  "responseMessage"
+                ]
+              },
+              {
+                "cells": [
+                  "afzal",
+                  "8284854535",
+                  "afzal.ahmed@pinelabs.com",
+                  "1000",
+                  "269",
+                  "Request declined. Only one such card can be linked to a mobile number"
+                ]
+              }
+            ],
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@TestSet0"
+          },
+          {
+            "name": "@Regression"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 100500,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "i fetch the mobile number from properties",
+            "match": {
+              "location": "PreCondition.iFetchTheMobileNumberFromProperties()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 50368900,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "de link from all the previously issued card",
+            "match": {
+              "location": "PreCondition.deLinkFromAllThePreviouslyIssuedCard()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-12-20T03:24:57.880Z",
+        "before": [
+          {
+            "result": {
+              "duration": 172800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CustomHooks.getTagNamesForTestDataSet(Scenario)"
+            }
+          }
+        ],
+        "line": 160,
+        "name": "Issuing a reloadable card on already linked mobile for V2 API",
+        "description": "",
+        "id": "issuing-reloadable-digital-cards-with-v1-and-v2-api;issuing-a-reloadable-card-on-already-linked-mobile-for-v2-api",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 342550300,
+              "status": "passed"
+            },
+            "line": 161,
+            "name": "i am an authorized corporate user",
+            "match": {
+              "location": "AuthorizeStepDefs.IamAnAuthorizedUser()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 647193700,
+              "status": "passed"
+            },
+            "line": 162,
+            "name": "i am issuing an Instant Reloadable Digital Card using \"new\" header with V2 of API",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"new\"",
+                  "offset": 54
+                }
+              ],
+              "location": "CardIssueStepDefs.i_am_issuing_an_Instant_Reloadable_Digital_Card_with_V2_API(String,DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "cardSchemeId",
+                  "12"
+                ]
+              },
+              {
+                "cells": [
+                  "isLinkToBeSentOnMobile",
+                  "true"
+                ]
+              },
+              {
+                "cells": [
+                  "customerName",
+                  "afzal"
+                ]
+              },
+              {
+                "cells": [
+                  "mobileNumber",
+                  "context"
+                ]
+              },
+              {
+                "cells": [
+                  "email",
+                  "afzal.ahmed@pinelabs.com"
+                ]
+              },
+              {
+                "cells": [
+                  "amount",
+                  "1000"
+                ]
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 722280300,
+              "status": "passed"
+            },
+            "line": 169,
+            "name": "i am again issuing the the card with the same details with \"old\" for V1 API",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"old\"",
+                  "offset": 59
+                }
+              ],
+              "location": "CardIssueStepDefs.iAmIssuingAnInstantReloadableDigitalCardUsingHeaderWithVOfAPI(String,DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "cardSchemeId",
+                  "12"
+                ]
+              },
+              {
+                "cells": [
+                  "isLinkToBeSentOnMobile",
+                  "true"
+                ]
+              },
+              {
+                "cells": [
+                  "customerName",
+                  "afzal"
+                ]
+              },
+              {
+                "cells": [
+                  "mobileNumber",
+                  "context"
+                ]
+              },
+              {
+                "cells": [
+                  "email",
+                  "afzal.ahmed@pinelabs.com"
+                ]
+              },
+              {
+                "cells": [
+                  "amount",
+                  "1000"
+                ]
+              }
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 247800,
+              "status": "passed"
+            },
+            "line": 176,
+            "name": "the status code should be 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 26
+                }
+              ],
+              "location": "TransactionsStepDefs.theStatusCodeShouldBe(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 39501000,
+              "status": "passed"
+            },
+            "line": 177,
+            "name": "i should see the following in the header level",
+            "match": {
+              "location": "TransactionsStepDefs.iShouldSeeTheFollowingInTheHeaderLevel(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "orderStatus",
+                  "6"
+                ]
+              },
+              {
+                "cells": [
+                  "successCount",
+                  "0"
+                ]
+              },
+              {
+                "cells": [
+                  "failedCount",
+                  "1"
+                ]
+              },
+              {
+                "cells": [
+                  "orderAmount",
+                  "1000"
+                ]
+              },
+              {
+                "cells": [
+                  "responseCode",
+                  "0"
+                ]
+              },
+              {
+                "cells": [
+                  "responseMessage",
+                  "Success"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2984500,
+              "status": "passed"
+            },
+            "line": 184,
+            "name": "i should see the following in the card list",
+            "match": {
+              "location": "TransactionsStepDefs.i_should_see_the_following_in_the_card_list(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "customerName",
+                  "mobileNumber",
+                  "email",
+                  "amount",
+                  "responseCode",
+                  "responseMessage"
+                ]
+              },
+              {
+                "cells": [
+                  "afzal",
+                  "8284854535",
+                  "afzal.ahmed@pinelabs.com",
+                  "1000",
+                  "269",
+                  "Request declined. Only one such card can be linked to a mobile number"
+                ]
+              }
+            ],
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@TestSet0"
+          },
+          {
+            "name": "@Regression"
+          }
+        ]
+      }
+    ],
+    "name": "Issuing Reloadable Digital cards with V1 and V2 API",
+    "description": "",
+    "id": "issuing-reloadable-digital-cards-with-v1-and-v2-api",
+    "keyword": "Feature",
+    "uri": "classpath:features/cardissue/InstantReloadableDigital.feature",
+    "tags": [
+      {
+        "name": "@TestSet0",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      },
+      {
+        "name": "@Regression",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 11
         }
       }
     ]

@@ -1,0 +1,99 @@
+2021-12-18_14:23:35.039 [main] INFO  pl.rest.utils.TestSetDataReader - Reading API Test Data config values from  testData/api/_devAPITestData.properties
+2021-12-18_14:23:35.060 [main] ERROR com.qc.qa.utils.LoadProperties - Unable to find : testData/api/_devAPITestData.properties---testData\api\_devAPITestData.properties (The system cannot find the file specified)
+2021-12-18_14:23:35.060 [main] ERROR pl.rest.utils.TestSetDataReader - Unable to find ::CustomerMobileNumber in API test data properties file , Please add correct property values and check
+2021-12-18_14:23:35.072 [main] INFO  pl.rest.stepDefs.CardIssueStepDefs - Fetched mobile number Dataset null
+2021-12-18_14:23:35.079 [main] INFO  pl.rest.utils.DBUtils - Delinking mobile from Cards
+2021-12-18_14:23:35.079 [main] INFO  pl.rest.utils.DBUtils - Executing the query update card set CardStatus=4where AccountType=18 and ActivationMobileNumber in(null) and CardType=2 and cardstatus in (1,2);
+2021-12-18_14:23:35.147 [main] ERROR com.qc.qa.utils.LoadProperties - Missing MySQLDBEnvironment property value in system property or in config.properties files.Please add it if incase required
+2021-12-18_14:23:35.148 [main] INFO  com.qc.qa.dbutils.DBPoolProvider - Con pool Total - 400, idle - 0,  Num active - 0
+2021-12-18_14:23:35.148 [main] INFO  com.qc.qa.dbutils.DBPoolProvider - Retrieved connection
+2021-12-18_14:23:38.509 [main] INFO  c.qc.qa.dbutils.DBConnectionManager - DB Connected Successfully.
+2021-12-18_14:23:38.511 [main] INFO  c.qc.qa.dbutils.DBConnectionManager - Executing Query:::update card set CardStatus=4where AccountType=18 and ActivationMobileNumber in(null) and CardType=2 and cardstatus in (1,2);
+2021-12-18_14:23:38.523 [main] INFO  pl.rest.utils.DBUtils - No. of rows affected on delinking mobile0
+2021-12-18_14:23:40.056 [main] INFO  com.qc.qa.utils.TestDataReader - Reading API Test Data config values from  testData/api/devAPITestData.properties
+2021-12-18_14:23:40.058 [main] INFO  pl.rest.service.Authorize - Authorize Rest API URL :- https://apitest.pineperks.in/auth/V1/generate/token
+2021-12-18_14:23:40.058 [main] INFO  com.qc.BaseAPI - GET call to URL https://apitest.pineperks.in/auth/V1/generate/token
+2021-12-18_14:23:40.303 [main] INFO  com.qc.BaseAPI - ********************REQUEST********************
+2021-12-18_14:23:40.646 [main] DEBUG o.a.h.i.c.BasicClientConnectionManager - Get connection for route {s}->https://apitest.pineperks.in:443
+2021-12-18_14:23:40.661 [main] DEBUG o.a.h.i.c.DefaultClientConnectionOperator - Connecting to apitest.pineperks.in:443
+2021-12-18_14:23:40.834 [main] DEBUG o.a.h.c.protocol.RequestAddCookies - CookieSpec selected: ignoreCookies
+2021-12-18_14:23:40.839 [main] DEBUG o.a.h.c.protocol.RequestAuthCache - Auth cache not set in the context
+2021-12-18_14:23:40.840 [main] DEBUG o.a.h.c.p.RequestTargetAuthentication - Target auth state: UNCHALLENGED
+2021-12-18_14:23:40.842 [main] DEBUG o.a.h.c.p.RequestProxyAuthentication - Proxy auth state: UNCHALLENGED
+2021-12-18_14:23:40.842 [main] DEBUG o.a.h.impl.client.DefaultHttpClient - Attempt 1 to execute request
+2021-12-18_14:23:40.843 [main] DEBUG o.a.h.i.conn.DefaultClientConnection - Sending request: GET /auth/V1/generate/token HTTP/1.1
+2021-12-18_14:23:40.844 [main] DEBUG org.apache.http.wire -  >> "GET /auth/V1/generate/token HTTP/1.1[\r][\n]"
+2021-12-18_14:23:40.847 [main] DEBUG org.apache.http.wire -  >> "Content-Type: application/json; charset=UTF-8[\r][\n]"
+2021-12-18_14:23:40.847 [main] DEBUG org.apache.http.wire -  >> "Accept: */*[\r][\n]"
+2021-12-18_14:23:40.847 [main] DEBUG org.apache.http.wire -  >> "userName: t3azPwts/6OSPTFxhCdYug==[\r][\n]"
+2021-12-18_14:23:40.847 [main] DEBUG org.apache.http.wire -  >> "Host: apitest.pineperks.in[\r][\n]"
+2021-12-18_14:23:40.848 [main] DEBUG org.apache.http.wire -  >> "Connection: Keep-Alive[\r][\n]"
+2021-12-18_14:23:40.848 [main] DEBUG org.apache.http.wire -  >> "User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_202)[\r][\n]"
+2021-12-18_14:23:40.848 [main] DEBUG org.apache.http.wire -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2021-12-18_14:23:40.849 [main] DEBUG org.apache.http.wire -  >> "[\r][\n]"
+2021-12-18_14:23:40.849 [main] DEBUG org.apache.http.headers - >> GET /auth/V1/generate/token HTTP/1.1
+2021-12-18_14:23:40.849 [main] DEBUG org.apache.http.headers - >> Content-Type: application/json; charset=UTF-8
+2021-12-18_14:23:40.849 [main] DEBUG org.apache.http.headers - >> Accept: */*
+2021-12-18_14:23:40.850 [main] DEBUG org.apache.http.headers - >> userName: t3azPwts/6OSPTFxhCdYug==
+2021-12-18_14:23:40.850 [main] DEBUG org.apache.http.headers - >> Host: apitest.pineperks.in
+2021-12-18_14:23:40.850 [main] DEBUG org.apache.http.headers - >> Connection: Keep-Alive
+2021-12-18_14:23:40.850 [main] DEBUG org.apache.http.headers - >> User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_202)
+2021-12-18_14:23:40.850 [main] DEBUG org.apache.http.headers - >> Accept-Encoding: gzip,deflate
+2021-12-18_14:23:40.891 [main] DEBUG org.apache.http.wire -  << "HTTP/1.1 200 [\r][\n]"
+2021-12-18_14:23:40.894 [main] DEBUG org.apache.http.wire -  << "Access-Control-Allow-Methods: GET, POST[\r][\n]"
+2021-12-18_14:23:40.895 [main] DEBUG org.apache.http.wire -  << "Access-Control-Allow-Origin: *[\r][\n]"
+2021-12-18_14:23:40.895 [main] DEBUG org.apache.http.wire -  << "Content-Security-Policy: default-src 'none'[\r][\n]"
+2021-12-18_14:23:40.895 [main] DEBUG org.apache.http.wire -  << "Feature-Policy: 'none'[\r][\n]"
+2021-12-18_14:23:40.895 [main] DEBUG org.apache.http.wire -  << "Referrer-Policy: no-referrer[\r][\n]"
+2021-12-18_14:23:40.895 [main] DEBUG org.apache.http.wire -  << "Strict-Transport-Security: max-age=31536000 ; includeSubDomains[\r][\n]"
+2021-12-18_14:23:40.896 [main] DEBUG org.apache.http.wire -  << "Date: Sat, 18 Dec 2021 08:53:41 GMT[\r][\n]"
+2021-12-18_14:23:40.896 [main] DEBUG org.apache.http.wire -  << "Keep-Alive: timeout=60[\r][\n]"
+2021-12-18_14:23:40.896 [main] DEBUG org.apache.http.wire -  << "Content-Type: application/json[\r][\n]"
+2021-12-18_14:23:40.897 [main] DEBUG org.apache.http.wire -  << "Transfer-Encoding: chunked[\r][\n]"
+2021-12-18_14:23:40.897 [main] DEBUG org.apache.http.wire -  << "Connection: keep-alive[\r][\n]"
+2021-12-18_14:23:40.897 [main] DEBUG org.apache.http.wire -  << "[\r][\n]"
+2021-12-18_14:23:40.898 [main] DEBUG o.a.h.i.conn.DefaultClientConnection - Receiving response: HTTP/1.1 200 
+2021-12-18_14:23:40.899 [main] DEBUG org.apache.http.headers - << HTTP/1.1 200 
+2021-12-18_14:23:40.899 [main] DEBUG org.apache.http.headers - << Access-Control-Allow-Methods: GET, POST
+2021-12-18_14:23:40.899 [main] DEBUG org.apache.http.headers - << Access-Control-Allow-Origin: *
+2021-12-18_14:23:40.899 [main] DEBUG org.apache.http.headers - << Content-Security-Policy: default-src 'none'
+2021-12-18_14:23:40.900 [main] DEBUG org.apache.http.headers - << Feature-Policy: 'none'
+2021-12-18_14:23:40.900 [main] DEBUG org.apache.http.headers - << Referrer-Policy: no-referrer
+2021-12-18_14:23:40.900 [main] DEBUG org.apache.http.headers - << Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+2021-12-18_14:23:40.900 [main] DEBUG org.apache.http.headers - << Date: Sat, 18 Dec 2021 08:53:41 GMT
+2021-12-18_14:23:40.900 [main] DEBUG org.apache.http.headers - << Keep-Alive: timeout=60
+2021-12-18_14:23:40.901 [main] DEBUG org.apache.http.headers - << Content-Type: application/json
+2021-12-18_14:23:40.901 [main] DEBUG org.apache.http.headers - << Transfer-Encoding: chunked
+2021-12-18_14:23:40.901 [main] DEBUG org.apache.http.headers - << Connection: keep-alive
+2021-12-18_14:23:40.909 [main] DEBUG o.a.h.impl.client.DefaultHttpClient - Connection can be kept alive for 60000 MILLISECONDS
+2021-12-18_14:23:40.931 [main] DEBUG i.r.i.RequestSpecificationImpl$RestAssuredHttpBuilder - Parsing response as: application/json
+2021-12-18_14:23:40.932 [main] DEBUG i.r.i.RequestSpecificationImpl$RestAssuredHttpBuilder - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+2021-12-18_14:23:40.953 [main] INFO  com.qc.BaseAPI - Method :GET
+2021-12-18_14:23:40.955 [main] INFO  com.qc.BaseAPI - URI :https://apitest.pineperks.in/auth/V1/generate/token
+2021-12-18_14:23:40.955 [main] INFO  com.qc.BaseAPI - Headers :userName=t3azPwts/6OSPTFxhCdYug==
+Accept=*/*
+Content-Type=application/json; charset=UTF-8
+2021-12-18_14:23:40.955 [main] INFO  com.qc.BaseAPI - Body :null
+2021-12-18_14:23:40.956 [main] INFO  com.qc.BaseAPI - ********************RESPONSE********************
+2021-12-18_14:23:40.974 [main] DEBUG org.apache.http.wire -  << "7f[\r][\n]"
+2021-12-18_14:23:40.974 [main] DEBUG org.apache.http.wire -  << "{"accessToken":"f5b5d2f2ada64885b8f68503a29e9b02","tokenExpiryTime":"19-Dec-2021","responseCode":0,"responseMessage":"Success"}"
+2021-12-18_14:23:40.975 [main] DEBUG org.apache.http.wire -  << "[\r][\n]"
+2021-12-18_14:23:40.976 [main] DEBUG org.apache.http.wire -  << "0[\r][\n]"
+2021-12-18_14:23:40.976 [main] DEBUG org.apache.http.wire -  << "[\r][\n]"
+2021-12-18_14:23:40.976 [main] DEBUG o.a.h.i.c.BasicClientConnectionManager - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@6e1d27f5
+2021-12-18_14:23:40.976 [main] DEBUG o.a.h.i.c.BasicClientConnectionManager - Connection can be kept alive for 60000 MILLISECONDS
+2021-12-18_14:23:41.016 [main] INFO  com.qc.BaseAPI - Response :{
+    "accessToken": "f5b5d2f2ada64885b8f68503a29e9b02",
+    "tokenExpiryTime": "19-Dec-2021",
+    "responseCode": 0,
+    "responseMessage": "Success"
+}
+2021-12-18_14:23:41.020 [main] INFO  com.qc.BaseAPI -  **** GET call Response time 635 ms
+2021-12-18_14:23:41.020 [main] INFO  pl.rest.service.Authorize - Time Taken to perform https://apitest.pineperks.in/auth/V1/generate/token transaction: 635
+2021-12-18_14:23:54.655 [main] INFO  com.qc.qa.utils.TestDataReader - Reading Json data authorizeHeaders
+2021-12-18_14:23:54.662 [main] INFO  com.qc.qa.utils.TestDataReader - Reading json data from file @ testData/api/devAPIData.json
+2021-12-18_14:26:25.829 [main] ERROR com.qc.qa.utils.TestDataReader - Unable to find ::cardIssueReloadableDigitalV1URIURI in API test data properties file , Please add correct property values and check
+2021-12-18_14:26:25.830 [main] INFO  pl.rest.service.CardIssue - CardIssue Rest API URL :- https://apitest.pineperks.innull
+2021-12-18_14:26:25.830 [main] INFO  com.qc.BaseAPI - POST call to URL https://apitest.pineperks.innull
+2021-12-18_14:26:25.842 [main] INFO  com.qc.BaseAPI - ********************REQUEST********************
+2021-12-18_14:26:25.893 [main] DEBUG o.a.h.i.c.BasicClientConnectionManager - Get connection for route {s}->https://apitest.pineperks.innull:443

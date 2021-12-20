@@ -3428,10 +3428,25 @@ public class DBUtils<query> {
 
     public static Map<String,String> getCardDetails(String referenceNumber) throws FrameworkException, ConfigPropertyException, SQLException {
        // String query = "Select CorporateId,CardSchemeId from card AS bigint where cardid='59393';";
-        String query = " Select CorporateId,CardSchemeId,ActivationEmail,ActivationEmail,ActivationMobileNumber from card AS bigint where ReferenceNumber=convert(bigint, 1789154895);";
+        String query = " Select CorporateId,CardSchemeId,ActivationEmail,ActivationEmail,ActivationMobileNumber " +
+                "from card AS bigint where ReferenceNumber=convert(bigint, " +
+                "1789154895" +
+                ");";
         logger.info("Fetching card details from card table, using Query: " + query);
         Map<String, String> retMap = DBConnectionManager.getQueryResultAsStringMap(query);
         logger.info("Card database values: " + retMap);
         return retMap;
+    }
+
+    public static void DelinkMobileNumber(String MobileNumber)
+            throws SQLException, FrameworkException, ConfigPropertyException {
+        logger.info("Delinking mobile from Cards");
+        String query =
+                "update card set CardStatus=4"
+                 +"where AccountType=18 " + "and ActivationMobileNumber in"
+                 +"(" + MobileNumber + ") and CardType=2 and cardstatus in (1,2);";
+        logger.info("Executing the query " + query);
+        int result = DBConnectionManager.executeUpdateQuery(query);
+        logger.info("No. of rows affected on delinking mobile" + result);
     }
 }

@@ -69,14 +69,12 @@ Feature: Issuing instant Non Reloadable cards
       | responseCode   | responseMessage   |
       | <responseCode> | <responseMessage> |
     Examples:
-      | customerName | mobileNumber | email                    | amount   | responseMessage                                                                                                                                                       | responseCode | responseMessageatheaderlevel    |
-      | 123Afzal     | 8284854535   | afzal.ahmed@pinelabs.com | 1000     | - firstName : Customer Name is not valid. It should start with an alphabet and could contain maximum 50 characters in form of alphabets, numbers, white space, dot(.) | 13           | Invalid card data               |
-      | afzal        | 1111111111   | afzal.ahmed@pinelabs.com | 1000     | - mobileNumber : Mobile Number is not valid                                                                                                                           | 13           | Invalid card data               |
-      | afzal        | 8284854535   | afzal.ahmed@             | 1000     | - email : Email Format is not valid                                                                                                                                   | 13           | Invalid card data               |
-      | afzal        | 8284854535   | afzal.ahmed@pinelabs.com | 99999999 | Insufficient Corporate balance.                                                                                                                                       | 216          | Insufficient Corporate balance. |
+      | customerName | mobileNumber | email                    | amount | responseMessage                                                                                                                                                       | responseCode | responseMessageatheaderlevel |
+      | 123Afzal     | 8284854535   | afzal.ahmed@pinelabs.com | 1000   | - firstName : Customer Name is not valid. It should start with an alphabet and could contain maximum 50 characters in form of alphabets, numbers, white space, dot(.) | 13           | Invalid card data            |
+      | afzal        | 1111111111   | afzal.ahmed@pinelabs.com | 1000   | - mobileNumber : Mobile Number is not valid                                                                                                                           | 13           | Invalid card data            |
+      | afzal        | 8284854535   | afzal.ahmed@             | 1000   | - email : Email Format is not valid                                                                                                                                   | 13           | Invalid card data            |
 
-
-  Scenario Outline: Validating the response code and messages.
+  Scenario Outline: Validating the error response code and messages.
     Given i am an authorized corporate user
     When i am issuing an Instant Non Reloadable Digital Card using "new" header with V2 of API
       | cardSchemeId           | 7              |
@@ -95,11 +93,10 @@ Feature: Issuing instant Non Reloadable cards
       | responseCode   | responseMessage   |
       | <responseCode> | <responseMessage> |
     Examples:
-      | customerName | mobileNumber | email                    | amount   | responseMessage                                                                                                                                                       | responseCode | responseMessageatheaderlevel    |
-      | 123Afzal     | 8284854535   | afzal.ahmed@pinelabs.com | 1000     | - firstName : Customer Name is not valid. It should start with an alphabet and could contain maximum 50 characters in form of alphabets, numbers, white space, dot(.) | 13           | Invalid card data               |
-      | afzal        | 1111111111   | afzal.ahmed@pinelabs.com | 1000     | - mobileNumber : Mobile Number is not valid                                                                                                                           | 13           | Invalid card data               |
-      | afzal        | 8284854535   | afzal.ahmed@             | 1000     | - email : Email Format is not valid                                                                                                                                   | 13           | Invalid card data               |
-      | afzal        | 8284854535   | afzal.ahmed@pinelabs.com | 99999999 | Insufficient Corporate balance.                                                                                                                                       | 216          | Insufficient Corporate balance. |
+      | customerName | mobileNumber | email                    | amount | responseMessage                                                                                                                                                       | responseCode | responseMessageatheaderlevel |
+      | 123Afzal     | 8284854535   | afzal.ahmed@pinelabs.com | 1000   | - firstName : Customer Name is not valid. It should start with an alphabet and could contain maximum 50 characters in form of alphabets, numbers, white space, dot(.) | 13           | Invalid card data            |
+      | afzal        | 1111111111   | afzal.ahmed@pinelabs.com | 1000   | - mobileNumber : Mobile Number is not valid                                                                                                                           | 13           | Invalid card data            |
+      | afzal        | 8284854535   | afzal.ahmed@             | 1000   | - email : Email Format is not valid                                                                                                                                   | 13           | Invalid card data            |
 
   Scenario: Issuing a card with Invalid Scheme id
     Given i am an authorized corporate user
@@ -128,6 +125,8 @@ Feature: Issuing instant Non Reloadable cards
     And i should see the following in the header level
       | responseCode    | 305                    |
       | responseMessage | Invalid card scheme Id |
+
+
 
 
 

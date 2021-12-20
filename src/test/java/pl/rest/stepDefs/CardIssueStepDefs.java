@@ -5,6 +5,7 @@ import com.qc.qa.ConfigPropertyException;
 import com.qc.qa.FrameworkException;
 import com.qc.qa.utils.Helper;
 import io.cucumber.datatable.DataTable;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.When;
 import io.restassured.response.Response;
 import org.json.JSONArray;
@@ -46,7 +47,7 @@ public class CardIssueStepDefs {
                 cardDetailListObject.put("mobileNumber", map.get("mobileNumber"));
             }
         } else {
-            cardDetailListObject.put("mobileNumber", "1111111111");
+            cardDetailListObject.put("mobileNumber", "8010251243");
         }
         cardDetailListObject.put("email", map.get("email"));
         cardDetailListObject.put("amount", map.get("amount"));
@@ -55,7 +56,7 @@ public class CardIssueStepDefs {
         System.out.println("This is the JSON" + jsonObject.toString());
         Object issuingCard = jsonObject.toString();
         Response response = null;
-        cardIssue.cardIssue(issuingCard, arg0);
+        cardIssue.cardIssueNonReloadableDigital(issuingCard, arg0);
     }
 
     @When("i am issuing an Instant Non Reloadable Digital Card using {string} header with V2 of API")
@@ -84,6 +85,74 @@ public class CardIssueStepDefs {
         System.out.println("This is the JSON" + jsonObject.toString());
         Object issuingCard = jsonObject.toString();
         Response response = null;
-        cardIssue.cardIssue(issuingCard, arg0);
+        cardIssue.cardIssueNonReloadableDigital(issuingCard, arg0);
     }
+
+    @When("i am issuing an Instant Reloadable Digital Card using {string} header with V1 of API")
+    @And("i am again issuing the the card with the same details with {string} for V1 API")
+    public void iAmIssuingAnInstantReloadableDigitalCardUsingHeaderWithVOfAPI(String arg0, DataTable table) throws ConfigPropertyException, FrameworkException {
+        Map<String, String> map = table.asMap(String.class, String.class);
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("externalRequestId", Helper.generate_random_alphaNumeric(7));
+        jsonObject.put("cardSchemeId", map.get("cardSchemeId"));
+        jsonObject.put("checksum", "5x3GNrnStyS2PkMvV6EeAw==");
+        jsonObject.put("isLinkToBeSentOnMobile", true);
+        JSONArray cardDetailListArray = new JSONArray();
+        JSONObject cardDetailListObject = new JSONObject();
+        cardDetailListObject.put("customerName", map.get("customerName"));
+        if (map.containsKey("mobileNumber")) {
+            if (map.get("mobileNumber").equalsIgnoreCase("null")) {
+                cardDetailListObject.put("mobileNumber", JSONObject.NULL);
+            } else if (map.get("mobileNumber").equalsIgnoreCase("context")) {
+               String Mobile=context.getDataStore().get("MobileNumber");
+                cardDetailListObject.put("mobileNumber", Mobile);
+            } else {
+                cardDetailListObject.put("mobileNumber", map.get("mobileNumber"));
+            }
+        } else {
+            cardDetailListObject.put("mobileNumber", "8010251243");
+        }
+        cardDetailListObject.put("email", map.get("email"));
+        cardDetailListObject.put("amount", map.get("amount"));
+        cardDetailListArray.put(cardDetailListObject);
+        jsonObject.put("cardDetailList", cardDetailListArray);
+        System.out.println("This is the JSON" + jsonObject.toString());
+        Object issuingCard = jsonObject.toString();
+        Response response = null;
+        cardIssue.cardIssueReloadableDigital(issuingCard, arg0);
+    }
+
+    @When("i am issuing an Instant Reloadable Digital Card using {string} header with V2 of API")
+    @And("i am again issuing the the card with the same details with {string} for V2 API")
+    public void i_am_issuing_an_Instant_Reloadable_Digital_Card_with_V2_API(String arg0, DataTable table) throws ConfigPropertyException, FrameworkException {
+        Map<String, String> map = table.asMap(String.class, String.class);
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("externalRequestId", Helper.generate_random_alphaNumeric(7));
+        jsonObject.put("cardSchemeId", map.get("cardSchemeId"));
+        jsonObject.put("checksum", "5x3GNrnStyS2PkMvV6EeAw==");
+        JSONArray cardDetailListArray = new JSONArray();
+        JSONObject cardDetailListObject = new JSONObject();
+        cardDetailListObject.put("customerName", map.get("customerName"));
+        if (map.containsKey("mobileNumber")) {
+            if (map.get("mobileNumber").equalsIgnoreCase("null")) {
+                cardDetailListObject.put("mobileNumber", JSONObject.NULL);
+            } else if (map.get("mobileNumber").equalsIgnoreCase("context")) {
+                String Mobile=context.getDataStore().get("MobileNumber");
+                cardDetailListObject.put("mobileNumber", Mobile);
+            } else {
+                cardDetailListObject.put("mobileNumber", map.get("mobileNumber"));
+            }
+        } else {
+            cardDetailListObject.put("mobileNumber", "8010251243");
+        }
+        cardDetailListObject.put("email", map.get("email"));
+        cardDetailListObject.put("amount", map.get("amount"));
+        cardDetailListArray.put(cardDetailListObject);
+        jsonObject.put("cardDetailList", cardDetailListArray);
+        System.out.println("This is the JSON" + jsonObject.toString());
+        Object issuingCard = jsonObject.toString();
+        Response response = null;
+        cardIssue.cardIssueReloadableDigital(issuingCard, arg0);
+    }
+
 }
