@@ -96,27 +96,24 @@ public class TransactionsStepDefs {
         }
     }
 
-    @Then("i should see the following in the card list")
-    public void i_should_see_the_following_in_the_card_list(DataTable table) throws FrameworkException, ConfigPropertyException {
-
+    @And("i should see the following in the {string}")
+    public void i_should_see_the_following_in_the_card_list(String listName,DataTable table) throws FrameworkException, ConfigPropertyException {
 //        List<Map<String, String>> map = table.asMaps();
 //        for (int i = 0; i < map.size(); i++) {
 //            for (String key: map.get(i).keySet()) {
 //
 //            }
 //        }
-
         Object actualValue = null;
         String responseKeyValue = "", key1 = "", expectedValue = "", cpgName = "", strActualValue = "";
         int intLength = 0, flag = 0;
         List<Map<String, String>> map = table.asMaps(String.class, String.class);
 //        JsonPath jsonPathEvaluator = context.previousResponse.jsonPath();
 //        ArrayList<Map<String, ?>> array = jsonPathEvaluator.getJsonObject("Cards");
-        ArrayList<Map<String, ?>> array = JsonPath.with(context.previousResponse.asString()).using(new JsonPathConfig(JsonPathConfig.NumberReturnType.BIG_DECIMAL)).get("cardDetailResponseList");
+        ArrayList<Map<String, ?>> array = JsonPath.with(context.previousResponse.asString()).using(new JsonPathConfig(JsonPathConfig.NumberReturnType.BIG_DECIMAL)).get(listName);
         for (int i = 0; i < map.size(); i++) {
             flag = 0;
             for (String key : map.get(i).keySet()) {
-
                 key1 = key;
                 try {
                     actualValue = array.get(i).get(key);
@@ -234,7 +231,6 @@ public class TransactionsStepDefs {
                         .isEqualTo(map.get(i).get(key1));
             }
         }
-
     }
 
     @Then("the status code should be {int}")

@@ -1,6 +1,7 @@
 @Regression
 Feature: Issuing instant Non Reloadable cards
 
+  @DB
   Scenario: Issuing a instant non reloadable card
     Given i am an authorized corporate user
     When i am issuing an Instant Non Reloadable Digital Card using "old" header with V1 of API
@@ -18,13 +19,14 @@ Feature: Issuing instant Non Reloadable cards
       | orderAmount     | 1000    |
       | responseCode    | 0       |
       | responseMessage | Success |
-    And i should see the following in the card list
+    And i should see the following in the "cardDetailResponseList"
       | customerName | mobileNumber | email                    | amount | responseCode | responseMessage |
       | afzal        | 8284854535   | afzal.ahmed@pinelabs.com | 1000   | 0            | Success         |
     And i should see the following in the card list in the database
       | ActivationEmail        | afzal.ahmed@pinelabs.com |
       | ActivationMobileNumber | 8284854535               |
 
+  @DB
   Scenario: Issuing a instant non reloadable card
     Given i am an authorized corporate user
     When i am issuing an Instant Non Reloadable Digital Card using "new" header with V2 of API
@@ -42,13 +44,12 @@ Feature: Issuing instant Non Reloadable cards
       | orderAmount     | 1000    |
       | responseCode    | 0       |
       | responseMessage | Success |
-    And i should see the following in the card list
+    And i should see the following in the "cardDetailResponseList"
       | customerName | mobileNumber | email                    | amount | responseCode | responseMessage |
       | afzal        | 8284854535   | afzal.ahmed@pinelabs.com | 1000   | 0            | Success         |
     And i should see the following in the card list in the database
       | ActivationEmail        | afzal.ahmed@pinelabs.com |
       | ActivationMobileNumber | 8284854535               |
-
 
   Scenario Outline: Validating the response code and messages.
     Given i am an authorized corporate user
@@ -65,7 +66,7 @@ Feature: Issuing instant Non Reloadable cards
       | failedCount     | 1                              |
       | responseCode    | <responseCode>                 |
       | responseMessage | <responseMessageatheaderlevel> |
-    And i should see the following in the card list
+    And i should see the following in the "cardDetailResponseList"
       | responseCode   | responseMessage   |
       | <responseCode> | <responseMessage> |
     Examples:
@@ -89,7 +90,7 @@ Feature: Issuing instant Non Reloadable cards
       | failedCount     | 1                              |
       | responseCode    | <responseCode>                 |
       | responseMessage | <responseMessageatheaderlevel> |
-    And i should see the following in the card list
+    And i should see the following in the "cardDetailResponseList"
       | responseCode   | responseMessage   |
       | <responseCode> | <responseMessage> |
     Examples:
@@ -125,6 +126,12 @@ Feature: Issuing instant Non Reloadable cards
     And i should see the following in the header level
       | responseCode    | 305                    |
       | responseMessage | Invalid card scheme Id |
+
+
+  Scenario: Issuing card with amount more that available account balance.
+
+
+  Scenario: Validating the net order amount after changing the issuance charges
 
 
 

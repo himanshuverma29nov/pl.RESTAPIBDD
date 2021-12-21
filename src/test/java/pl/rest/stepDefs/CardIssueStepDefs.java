@@ -104,7 +104,7 @@ public class CardIssueStepDefs {
             if (map.get("mobileNumber").equalsIgnoreCase("null")) {
                 cardDetailListObject.put("mobileNumber", JSONObject.NULL);
             } else if (map.get("mobileNumber").equalsIgnoreCase("context")) {
-               String Mobile=context.getDataStore().get("MobileNumber");
+                String Mobile = context.getDataStore().get("MobileNumber");
                 cardDetailListObject.put("mobileNumber", Mobile);
             } else {
                 cardDetailListObject.put("mobileNumber", map.get("mobileNumber"));
@@ -137,7 +137,7 @@ public class CardIssueStepDefs {
             if (map.get("mobileNumber").equalsIgnoreCase("null")) {
                 cardDetailListObject.put("mobileNumber", JSONObject.NULL);
             } else if (map.get("mobileNumber").equalsIgnoreCase("context")) {
-                String Mobile=context.getDataStore().get("MobileNumber");
+                String Mobile = context.getDataStore().get("MobileNumber");
                 cardDetailListObject.put("mobileNumber", Mobile);
             } else {
                 cardDetailListObject.put("mobileNumber", map.get("mobileNumber"));

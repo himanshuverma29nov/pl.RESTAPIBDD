@@ -5,6 +5,7 @@ Feature: Issuing Reloadable Digital cards with V1 and V2 API
     Given i fetch the mobile number from properties
     And de link from all the previously issued card
 
+  @DB
   Scenario: Issuing a Reloadable Digital Card with V1 API
     Given i am an authorized corporate user
     When i am issuing an Instant Reloadable Digital Card using "old" header with V1 of API
@@ -22,13 +23,14 @@ Feature: Issuing Reloadable Digital cards with V1 and V2 API
       | orderAmount     | 1000    |
       | responseCode    | 0       |
       | responseMessage | Success |
-    And i should see the following in the card list
+    And i should see the following in the "cardDetailResponseList"
       | customerName | mobileNumber | email                    | amount | responseCode | responseMessage |
       | afzal        | 8284854535   | afzal.ahmed@pinelabs.com | 1000   | 0            | Success         |
     And i should see the following in the card list in the database
       | ActivationEmail        | afzal.ahmed@pinelabs.com |
       | ActivationMobileNumber | context                  |
 
+  @DB
   Scenario: Issuing a Reloadable Digital Card with V2 API
     Given i am an authorized corporate user
     When i am issuing an Instant Reloadable Digital Card using "new" header with V2 of API
@@ -46,7 +48,7 @@ Feature: Issuing Reloadable Digital cards with V1 and V2 API
       | orderAmount     | 1000    |
       | responseCode    | 0       |
       | responseMessage | Success |
-    And i should see the following in the card list
+    And i should see the following in the "cardDetailResponseList"
       | customerName | mobileNumber | email                    | amount | responseCode | responseMessage |
       | afzal        | 8284854535   | afzal.ahmed@pinelabs.com | 1000   | 0            | Success         |
     And i should see the following in the card list in the database
@@ -67,7 +69,7 @@ Feature: Issuing Reloadable Digital cards with V1 and V2 API
       | successCount    | 0                              |
       | failedCount     | 1                              |
       | responseMessage | <responseMessageatheaderlevel> |
-    And i should see the following in the card list
+    And i should see the following in the "cardDetailResponseList"
       | responseCode   | responseMessage   |
       | <responseCode> | <responseMessage> |
     Examples:
@@ -91,7 +93,7 @@ Feature: Issuing Reloadable Digital cards with V1 and V2 API
       | successCount    | 0                              |
       | failedCount     | 1                              |
       | responseMessage | <responseMessageatheaderlevel> |
-    And i should see the following in the card list
+    And i should see the following in the "cardDetailResponseList"
       | responseCode   | responseMessage   |
       | <responseCode> | <responseMessage> |
     Examples:
@@ -138,7 +140,7 @@ Feature: Issuing Reloadable Digital cards with V1 and V2 API
       | mobileNumber           | context                  |
       | email                  | afzal.ahmed@pinelabs.com |
       | amount                 | 1000                     |
-  Given i am again issuing the the card with the same details with "old" for V1 API
+    Given i am again issuing the the card with the same details with "old" for V1 API
       | cardSchemeId           | 12                       |
       | isLinkToBeSentOnMobile | true                     |
       | customerName           | afzal                    |
@@ -153,7 +155,7 @@ Feature: Issuing Reloadable Digital cards with V1 and V2 API
       | orderAmount     | 1000    |
       | responseCode    | 0       |
       | responseMessage | Success |
-    And i should see the following in the card list
+    And i should see the following in the "cardDetailResponseList"
       | customerName | mobileNumber | email                    | amount | responseCode | responseMessage                                                       |
       | afzal        | 8284854535   | afzal.ahmed@pinelabs.com | 1000   | 269          | Request declined. Only one such card can be linked to a mobile number |
 
@@ -181,6 +183,11 @@ Feature: Issuing Reloadable Digital cards with V1 and V2 API
       | orderAmount     | 1000    |
       | responseCode    | 0       |
       | responseMessage | Success |
-    And i should see the following in the card list
+    And i should see the following in the "cardDetailResponseList"
       | customerName | mobileNumber | email                    | amount | responseCode | responseMessage                                                       |
       | afzal        | 8284854535   | afzal.ahmed@pinelabs.com | 1000   | 269          | Request declined. Only one such card can be linked to a mobile number |
+
+#  Scenario: Issuing card with amoount more that available account balance.
+#
+#
+#  Scenario: Validating the net order amount after changing the issuance charges
