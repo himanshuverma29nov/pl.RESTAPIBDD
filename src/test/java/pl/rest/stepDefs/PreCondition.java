@@ -3,7 +3,6 @@ package pl.rest.stepDefs;
 import com.qc.cuke.ScenarioContext;
 import com.qc.qa.ConfigPropertyException;
 import com.qc.qa.FrameworkException;
-import com.qc.qa.utils.TestDataReader;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import org.slf4j.Logger;
@@ -12,6 +11,8 @@ import pl.rest.utils.DBUtils;
 import pl.rest.utils.TestSetDataReader;
 
 import java.sql.SQLException;
+
+import static pl.rest.utils.TestSetDataReader.getAPITestSetData;
 
 public class PreCondition {
 
@@ -26,7 +27,7 @@ public class PreCondition {
 
     @Given("i fetch the mobile number from properties")
     public void iFetchTheMobileNumberFromProperties() throws ConfigPropertyException, FrameworkException {
-        String CustomerMobile = TestDataReader.getAPITestData("CustomerMobileNumber");
+        String CustomerMobile = getAPITestSetData("CustomerMobileNumber");
         logger.info("Fetched mobile number Dataset " + CustomerMobile);
         context.setDataStore("MobileNumber", CustomerMobile);
     }

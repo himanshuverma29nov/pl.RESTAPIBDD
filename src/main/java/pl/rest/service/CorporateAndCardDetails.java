@@ -41,8 +41,43 @@ public class CorporateAndCardDetails extends BaseAPI {
             url = getAPIResourceURI("cardCategoryV2");
         }
         logger.info("CardIssue Rest API URL :- " + url);
-        Response response = getAPI(headerMap,url);
+        Response response = getAPI(headerMap, url);
         logger.info("Time Taken to perform " + url + " transaction: " + response.getTime());
         return response;
     }
+
+    public Response CardDetail(String headerType, Object object) throws ConfigPropertyException, FrameworkException {
+        Map<String, String> headerMap = null;
+        String url = null;
+
+        if (headerType.equalsIgnoreCase("old")) {
+            headerMap = header.getOldHeaderAsMap();
+            url = getAPIResourceURI("cardDetailV1");
+        } else if (headerType.equalsIgnoreCase("new")) {
+            headerMap = header.getNewHeaderAsMap();
+            url = getAPIResourceURI("cardDetailV2");
+        }
+        logger.info("CardIssue Rest API URL :- " + url);
+        Response response = postAPI(headerMap,object,url);
+        logger.info("Time Taken to perform " + url + " transaction: " + response.getTime());
+        return response;
+    }
+
+    public Response cardScheme(Object create, String headerType) throws ConfigPropertyException, FrameworkException {
+        Map<String, String> headerMap = null;
+        String url = null;
+
+        if (headerType.equalsIgnoreCase("old")) {
+            headerMap = header.getOldHeaderAsMap();
+            url = getAPIResourceURI("cardSchemeV1");
+        } else if (headerType.equalsIgnoreCase("new")) {
+            headerMap = header.getNewHeaderAsMap();
+            url = getAPIResourceURI("cardSchemeV2");
+        }
+        logger.info("CardIssue Rest API URL :- " + url);
+        Response response = postAPI(headerMap, create, url);
+        logger.info("Time Taken to perform " + url + " transaction: " + response.getTime());
+        return response;
+    }
+
 }

@@ -1,0 +1,12 @@
+2021-12-21_16:52:02.469 [main] INFO  pl.rest.CustomHooks - SCENARIO NAME: Issuing a Reloadable Digital Card with V1 API
+2021-12-21_16:52:02.478 [main] INFO  pl.rest.CustomHooks - TAG NAMEs: [@Regression, @TestSet0]
+2021-12-21_16:52:02.486 [main] INFO  pl.rest.CustomHooks - SCENARIO NAME: Issuing a Reloadable Digital Card with V1 API
+2021-12-21_16:52:02.487 [main] INFO  pl.rest.CustomHooks - TAG NAMEs: [@Regression, @TestSet0]
+2021-12-21_16:52:02.618 [main] INFO  pl.rest.CustomHooks - Index: 0, Size: 0
+2021-12-21_16:52:41.769 [main] INFO  pl.rest.utils.TestSetDataReader - Reading API Test Data config values from  testData/api/TestSet0_devAPITestData.properties
+2021-12-21_16:52:46.000 [main] INFO  pl.rest.stepDefs.CardIssueStepDefs - Fetched mobile number Dataset 8284854535
+2021-12-21_16:52:48.477 [main] INFO  pl.rest.utils.DBUtils - Delinking mobile from Cards
+2021-12-21_16:52:48.478 [main] INFO  pl.rest.utils.DBUtils - Executing the query update card set CardStatus=4where AccountType=18 and ActivationMobileNumber in(8284854535) and CardType=2 and cardstatus in (1,2);
+2021-12-21_16:52:48.564 [main] ERROR com.qc.qa.utils.LoadProperties - Missing MySQLDBEnvironment property value in system property or in config.properties files.Please add it if incase required
+2021-12-21_16:52:48.566 [main] INFO  com.qc.qa.dbutils.DBPoolProvider - Con pool Total - 400, idle - 0,  Num active - 0
+2021-12-21_16:52:48.566 [main] INFO  com.qc.qa.dbutils.DBPoolProvider - Retrieved connection

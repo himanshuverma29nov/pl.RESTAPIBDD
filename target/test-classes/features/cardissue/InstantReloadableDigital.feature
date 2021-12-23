@@ -5,7 +5,6 @@ Feature: Issuing Reloadable Digital cards with V1 and V2 API
     Given i fetch the mobile number from properties
     And de link from all the previously issued card
 
-  @DB
   Scenario: Issuing a Reloadable Digital Card with V1 API
     Given i am an authorized corporate user
     When i am issuing an Instant Reloadable Digital Card using "old" header with V1 of API
@@ -168,7 +167,7 @@ Feature: Issuing Reloadable Digital cards with V1 and V2 API
       | mobileNumber           | context                  |
       | email                  | afzal.ahmed@pinelabs.com |
       | amount                 | 1000                     |
-    Given i am again issuing the the card with the same details with "old" for V1 API
+    Given i am again issuing the the card with the same details with "new" for V2 API
       | cardSchemeId           | 12                       |
       | isLinkToBeSentOnMobile | true                     |
       | customerName           | afzal                    |

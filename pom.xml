@@ -19,7 +19,6 @@
         <cucumber.version>4.6.0</cucumber.version>
         <picocontainer.version>4.7.0</picocontainer.version>
     </properties>
-
     <dependencies>
         <dependency>
             <groupId>com.qc.qa</groupId>
@@ -58,6 +57,18 @@
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-csv</artifactId>
             <version>1.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.aventstack</groupId>
+            <artifactId>extentreports</artifactId>
+            <version>5.0.8</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.aventstack</groupId>
+            <artifactId>extentreports-cucumber4-adapter</artifactId>
+            <version>1.2.1</version>
         </dependency>
 
         <dependency>

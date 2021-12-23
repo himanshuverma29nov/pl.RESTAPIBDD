@@ -5,6 +5,7 @@ import com.qc.qa.ConfigPropertyException;
 import com.qc.qa.FrameworkException;
 import com.qc.qa.utils.DataGenerator;
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 import io.restassured.mapper.ObjectMapperType;
 import io.restassured.response.Response;
 import pl.rest.domain.response.AuthorizeResponse;
@@ -46,5 +47,9 @@ public class AuthorizeStepDefs {
         Response response = authorize.authorize(requestParams);
         setAuthorizeResponse(response);
         AuthorizeResponse authorizeResponse = (AuthorizeResponse)context.getResponseFromTransactionMap(Transaction.AUTHORIZE.name());
+    }
+
+    @Then("response header of scheme API should have following as in the DB")
+    public void responseHeaderOfSchemeAPIShouldHaveFollowingAsInTheDB() {
     }
 }

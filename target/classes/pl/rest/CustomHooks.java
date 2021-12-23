@@ -9,6 +9,8 @@ import pl.rest.utils.TestSetDataReader;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
+import static pl.rest.utils.DBUtils.*;
 
 public class CustomHooks {
     private static final Logger logger = LoggerFactory.getLogger(CustomHooks.class);
@@ -23,6 +25,20 @@ public class CustomHooks {
         testSetDataReader = new TestSetDataReader(context);
     }
 
+    @Before
+    public void printScenarioName(Scenario scenario) {
+        logger.info("SCENARIO NAME: " + scenario.getName());
+        logger.info("TAG NAMEs: " + scenario.getSourceTagNames());
+        try {
+            String testCaseId = scenario.getSourceTagNames().stream().filter(str -> str.contains("@TestID")).collect(Collectors.toList()).get(0);
+            testCaseId = testCaseId.replace("@","");
+            TESTCASEID = testCaseId;
+            TESTCASESCENARIONAME = scenario.getName();
+
+        } catch (Exception e) {
+            logger.info(e.getMessage());
+        }
+    }
 
     @Before(order = 0)
     public void getTagNamesForTestDataSet(io.cucumber.core.api.Scenario scenario) {

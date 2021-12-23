@@ -97,7 +97,7 @@ public class TransactionsStepDefs {
     }
 
     @And("i should see the following in the {string}")
-    public void i_should_see_the_following_in_the_card_list(String listName,DataTable table) throws FrameworkException, ConfigPropertyException {
+    public void i_should_see_the_following_in_the_card_list(String listName, DataTable table) throws FrameworkException, ConfigPropertyException {
 //        List<Map<String, String>> map = table.asMaps();
 //        for (int i = 0; i < map.size(); i++) {
 //            for (String key: map.get(i).keySet()) {
@@ -260,6 +260,10 @@ public class TransactionsStepDefs {
 
         assertThat(tabletotest.get("email")).isEqualTo(map.get("ActivationEmail"));
         assertThat(tabletotest.get("mobileNumber")).isEqualTo(map.get("ActivationMobileNumber"));
+    }
 
+    @And("the values in the card detail list response for the card {string} should match the DB values")
+    public void theValuesInTheCardDetailListResponseForTheCardShouldMatchTheDBValues(String arg0) {
+        
     }
 }

@@ -28,8 +28,8 @@ public class TestSetDataReader {
         new HashMap();
         new Properties();
         if (apiTestData == null) {
-//            String testData = context.getDataStore().get("testSet");
-            String testData = DBUtils.TESTDATASET;
+           String testData = context.getDataStore().get("testSet");
+          //  String testData = DBUtils.TESTDATASET;
             System.out.println("testDataSet: " + testData);
             String filePropertyValue = LoadProperties.getPropertyValue("TestEnv");
             String fileName = "testData/api/" + testData + "_" + filePropertyValue + "APITestData.properties";
