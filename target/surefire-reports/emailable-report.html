@@ -9,52 +9,13 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="7">Surefire suite</th></tr>
-<tr><td><a href="#t0">Surefire test</a></td><td class="num">10</td><td class="num">0</td><td class="num attn">2</td><td class="num">48,110</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Surefire test</a></td><td class="num">17</td><td class="num attn">2</td><td class="num">0</td><td class="num">25,057</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Surefire suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Surefire test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="2">pl.rest.testRunners.TestRunner</td><td><a href="#m0">runScenario</a></td><td rowspan="2">1639720226781</td><td rowspan="2">19624</td></tr><tr class="failedeven"><td><a href="#m1">runScenario</a></td></tr><tr><th colspan="4">Surefire test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="10">pl.rest.testRunners.TestRunner</td><td><a href="#m2">runScenario</a></td><td rowspan="10">1639720266341</td><td rowspan="10">937</td></tr><tr class="passedeven"><td><a href="#m3">runScenario</a></td></tr><tr class="passedeven"><td><a href="#m4">runScenario</a></td></tr><tr class="passedeven"><td><a href="#m5">runScenario</a></td></tr><tr class="passedeven"><td><a href="#m6">runScenario</a></td></tr><tr class="passedeven"><td><a href="#m7">runScenario</a></td></tr><tr class="passedeven"><td><a href="#m8">runScenario</a></td></tr><tr class="passedeven"><td><a href="#m9">runScenario</a></td></tr><tr class="passedeven"><td><a href="#m10">runScenario</a></td></tr><tr class="passedeven"><td><a href="#m11">runScenario</a></td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Surefire suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Surefire test &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="2">pl.rest.testRunners.NonDBTestRunner</td><td><a href="#m0">runScenario</a></td><td rowspan="2">1640327609904</td><td rowspan="2">1</td></tr><tr class="skippedeven"><td><a href="#m1">runScenario</a></td></tr><tr><th colspan="4">Surefire test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="17">pl.rest.testRunners.NonDBTestRunner</td><td><a href="#m2">runScenario</a></td><td rowspan="17">1640327600766</td><td rowspan="17">840</td></tr><tr class="passedeven"><td><a href="#m3">runScenario</a></td></tr><tr class="passedeven"><td><a href="#m4">runScenario</a></td></tr><tr class="passedeven"><td><a href="#m5">runScenario</a></td></tr><tr class="passedeven"><td><a href="#m6">runScenario</a></td></tr><tr class="passedeven"><td><a href="#m7">runScenario</a></td></tr><tr class="passedeven"><td><a href="#m8">runScenario</a></td></tr><tr class="passedeven"><td><a href="#m9">runScenario</a></td></tr><tr class="passedeven"><td><a href="#m10">runScenario</a></td></tr><tr class="passedeven"><td><a href="#m11">runScenario</a></td></tr><tr class="passedeven"><td><a href="#m12">runScenario</a></td></tr><tr class="passedeven"><td><a href="#m13">runScenario</a></td></tr><tr class="passedeven"><td><a href="#m14">runScenario</a></td></tr><tr class="passedeven"><td><a href="#m15">runScenario</a></td></tr><tr class="passedeven"><td><a href="#m16">runScenario</a></td></tr><tr class="passedeven"><td><a href="#m17">runScenario</a></td></tr><tr class="passedeven"><td><a href="#m18">runScenario</a></td></tr></tbody>
 </table>
-<h2>Surefire test</h2><h3 id="m0">pl.rest.testRunners.TestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Issuing a instant non reloadable card&quot;</td><td>&quot;Issuing instant Non Reloadable cards&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.sql.SQLException: Cannot create PoolableConnectionFactory (The TCP/IP connection to the host 192.168.104.22, port 6135 has failed. Error: &quot;Connection timed out: no further information.. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.&quot;.)
-	at org.apache.commons.dbcp2.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:2385)
-	at org.apache.commons.dbcp2.BasicDataSource.createDataSource(BasicDataSource.java:2110)
-	at org.apache.commons.dbcp2.BasicDataSource.getConnection(BasicDataSource.java:1563)
-	at com.qc.qa.dbutils.DBPoolProvider.getConnection(DBPoolProvider.java:76)
-	at com.qc.qa.dbutils.DBConnectionManager.getConnection(DBConnectionManager.java:158)
-	at com.qc.qa.dbutils.DBConnectionManager.getQueryResultAsStringMap(DBConnectionManager.java:83)
-	at pl.rest.utils.DBUtils.getCardDetails(DBUtils.java:3433)
-	at pl.rest.stepDefs.TransactionsStepDefs.iShouldSeeTheFollowingInTheCardListInTheDatabase(TransactionsStepDefs.java:249)
-	at ✽.i should see the following in the card list in the database(classpath:features/cardissue/InstantNonRelodableDigital.feature:24)
-Caused by: com.microsoft.sqlserver.jdbc.SQLServerException: The TCP/IP connection to the host 192.168.104.22, port 6135 has failed. Error: &quot;Connection timed out: no further information.. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.&quot;.
-	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDriverError(SQLServerException.java:228)
-	at com.microsoft.sqlserver.jdbc.SQLServerException.ConvertConnectExceptionToSQLServerException(SQLServerException.java:285)
-	at com.microsoft.sqlserver.jdbc.SocketFinder.findSocket(IOBuffer.java:2437)
-	at com.microsoft.sqlserver.jdbc.TDSChannel.open(IOBuffer.java:641)
-	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connectHelper(SQLServerConnection.java:2245)
-	at com.microsoft.sqlserver.jdbc.SQLServerConnection.login(SQLServerConnection.java:1921)
-	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connectInternal(SQLServerConnection.java:1762)
-	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connect(SQLServerConnection.java:1077)
-	at com.microsoft.sqlserver.jdbc.SQLServerDriver.connect(SQLServerDriver.java:623)
-	at org.apache.commons.dbcp2.DriverConnectionFactory.createConnection(DriverConnectionFactory.java:53)
-	at org.apache.commons.dbcp2.PoolableConnectionFactory.makeObject(PoolableConnectionFactory.java:291)
-	at org.apache.commons.dbcp2.BasicDataSource.validateConnectionFactory(BasicDataSource.java:2395)
-	at org.apache.commons.dbcp2.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:2381)
-	at org.apache.commons.dbcp2.BasicDataSource.createDataSource(BasicDataSource.java:2110)
-	at org.apache.commons.dbcp2.BasicDataSource.getConnection(BasicDataSource.java:1563)
-	at com.qc.qa.dbutils.DBPoolProvider.getConnection(DBPoolProvider.java:76)
-	at com.qc.qa.dbutils.DBConnectionManager.getConnection(DBConnectionManager.java:158)
-	at com.qc.qa.dbutils.DBConnectionManager.getQueryResultAsStringMap(DBConnectionManager.java:83)
-	at pl.rest.utils.DBUtils.getCardDetails(DBUtils.java:3433)
-	at pl.rest.stepDefs.TransactionsStepDefs.iShouldSeeTheFollowingInTheCardListInTheDatabase(TransactionsStepDefs.java:249)
-	at cucumber.runtime.Utils$1.call(Utils.java:26)
-	at cucumber.runtime.Timeout.timeout(Timeout.java:16)
-	at cucumber.runtime.Utils.invoke(Utils.java:20)
-	at cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:57)
-	at cucumber.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:50)
-	at cucumber.runner.TestStep.executeStep(TestStep.java:65)
-	at cucumber.runner.TestStep.run(TestStep.java:50)
-	at cucumber.runner.PickleStepTestStep.run(PickleStepTestStep.java:43)
-	at cucumber.runner.TestCase.run(TestCase.java:46)
-	at cucumber.runner.Runner.runPickle(Runner.java:50)
-	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:69)
+<h2>Surefire test</h2><h3 id="m0">pl.rest.testRunners.NonDBTestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Validating the net order amount after changing the issuance charges&quot;</td><td>&quot;Issuing instant Non Reloadable cards&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">org.testng.SkipException: There are undefined steps
+	at io.cucumber.testng.TestCaseResultListener.getError(TestCaseResultListener.java:60)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:73)
 	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:24)
 	at org.apache.maven.plugin.surefire.InPluginVMSurefireStarter.runSuitesInProcess(InPluginVMSurefireStarter.java:87)
 	at org.apache.maven.plugin.surefire.AbstractSurefireMojo.executeProvider(AbstractSurefireMojo.java:1177)
@@ -78,49 +39,10 @@ Caused by: com.microsoft.sqlserver.jdbc.SQLServerException: The TCP/IP connectio
 	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:225)
 	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:406)
 	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:347)
-... Removed 41 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">pl.rest.testRunners.TestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Issuing a instant non reloadable card&quot;</td><td>&quot;Issuing instant Non Reloadable cards&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.sql.SQLException: Cannot create PoolableConnectionFactory (The TCP/IP connection to the host 192.168.104.22, port 6135 has failed. Error: &quot;Connection timed out: no further information.. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.&quot;.)
-	at org.apache.commons.dbcp2.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:2385)
-	at org.apache.commons.dbcp2.BasicDataSource.createDataSource(BasicDataSource.java:2110)
-	at org.apache.commons.dbcp2.BasicDataSource.getConnection(BasicDataSource.java:1563)
-	at com.qc.qa.dbutils.DBPoolProvider.getConnection(DBPoolProvider.java:76)
-	at com.qc.qa.dbutils.DBConnectionManager.getConnection(DBConnectionManager.java:158)
-	at com.qc.qa.dbutils.DBConnectionManager.getQueryResultAsStringMap(DBConnectionManager.java:83)
-	at pl.rest.utils.DBUtils.getCardDetails(DBUtils.java:3433)
-	at pl.rest.stepDefs.TransactionsStepDefs.iShouldSeeTheFollowingInTheCardListInTheDatabase(TransactionsStepDefs.java:249)
-	at ✽.i should see the following in the card list in the database(classpath:features/cardissue/InstantNonRelodableDigital.feature:48)
-Caused by: com.microsoft.sqlserver.jdbc.SQLServerException: The TCP/IP connection to the host 192.168.104.22, port 6135 has failed. Error: &quot;Connection timed out: no further information.. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.&quot;.
-	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDriverError(SQLServerException.java:228)
-	at com.microsoft.sqlserver.jdbc.SQLServerException.ConvertConnectExceptionToSQLServerException(SQLServerException.java:285)
-	at com.microsoft.sqlserver.jdbc.SocketFinder.findSocket(IOBuffer.java:2437)
-	at com.microsoft.sqlserver.jdbc.TDSChannel.open(IOBuffer.java:641)
-	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connectHelper(SQLServerConnection.java:2245)
-	at com.microsoft.sqlserver.jdbc.SQLServerConnection.login(SQLServerConnection.java:1921)
-	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connectInternal(SQLServerConnection.java:1762)
-	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connect(SQLServerConnection.java:1077)
-	at com.microsoft.sqlserver.jdbc.SQLServerDriver.connect(SQLServerDriver.java:623)
-	at org.apache.commons.dbcp2.DriverConnectionFactory.createConnection(DriverConnectionFactory.java:53)
-	at org.apache.commons.dbcp2.PoolableConnectionFactory.makeObject(PoolableConnectionFactory.java:291)
-	at org.apache.commons.dbcp2.BasicDataSource.validateConnectionFactory(BasicDataSource.java:2395)
-	at org.apache.commons.dbcp2.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:2381)
-	at org.apache.commons.dbcp2.BasicDataSource.createDataSource(BasicDataSource.java:2110)
-	at org.apache.commons.dbcp2.BasicDataSource.getConnection(BasicDataSource.java:1563)
-	at com.qc.qa.dbutils.DBPoolProvider.getConnection(DBPoolProvider.java:76)
-	at com.qc.qa.dbutils.DBConnectionManager.getConnection(DBConnectionManager.java:158)
-	at com.qc.qa.dbutils.DBConnectionManager.getQueryResultAsStringMap(DBConnectionManager.java:83)
-	at pl.rest.utils.DBUtils.getCardDetails(DBUtils.java:3433)
-	at pl.rest.stepDefs.TransactionsStepDefs.iShouldSeeTheFollowingInTheCardListInTheDatabase(TransactionsStepDefs.java:249)
-	at cucumber.runtime.Utils$1.call(Utils.java:26)
-	at cucumber.runtime.Timeout.timeout(Timeout.java:16)
-	at cucumber.runtime.Utils.invoke(Utils.java:20)
-	at cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:57)
-	at cucumber.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:50)
-	at cucumber.runner.TestStep.executeStep(TestStep.java:65)
-	at cucumber.runner.TestStep.run(TestStep.java:50)
-	at cucumber.runner.PickleStepTestStep.run(PickleStepTestStep.java:43)
-	at cucumber.runner.TestCase.run(TestCase.java:46)
-	at cucumber.runner.Runner.runPickle(Runner.java:50)
-	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:69)
+... Removed 36 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">pl.rest.testRunners.NonDBTestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Issuing card with amount more that available account balance.&quot;</td><td>&quot;Issuing instant Non Reloadable cards&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">org.testng.SkipException: There are undefined steps
+	at io.cucumber.testng.TestCaseResultListener.getError(TestCaseResultListener.java:60)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:73)
 	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:24)
 	at org.apache.maven.plugin.surefire.InPluginVMSurefireStarter.runSuitesInProcess(InPluginVMSurefireStarter.java:87)
 	at org.apache.maven.plugin.surefire.AbstractSurefireMojo.executeProvider(AbstractSurefireMojo.java:1177)
@@ -144,16 +66,23 @@ Caused by: com.microsoft.sqlserver.jdbc.SQLServerException: The TCP/IP connectio
 	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:225)
 	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:406)
 	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:347)
-... Removed 41 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">pl.rest.testRunners.TestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Validating the response code and messages.&quot;</td><td>&quot;Issuing instant Non Reloadable cards&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">pl.rest.testRunners.TestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Validating the response code and messages.&quot;</td><td>&quot;Issuing instant Non Reloadable cards&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">pl.rest.testRunners.TestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Issuing a card with Invalid Scheme id&quot;</td><td>&quot;Issuing instant Non Reloadable cards&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">pl.rest.testRunners.TestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Validating the response code and messages.&quot;</td><td>&quot;Issuing instant Non Reloadable cards&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m6">pl.rest.testRunners.TestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Validating the response code and messages.&quot;</td><td>&quot;Issuing instant Non Reloadable cards&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m7">pl.rest.testRunners.TestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Validating the response code and messages.&quot;</td><td>&quot;Issuing instant Non Reloadable cards&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m8">pl.rest.testRunners.TestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Validating the response code and messages.&quot;</td><td>&quot;Issuing instant Non Reloadable cards&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m9">pl.rest.testRunners.TestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Validating the response code and messages.&quot;</td><td>&quot;Issuing instant Non Reloadable cards&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m10">pl.rest.testRunners.TestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Validating the response code and messages.&quot;</td><td>&quot;Issuing instant Non Reloadable cards&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m11">pl.rest.testRunners.TestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Issuing a card with Invalid Scheme id&quot;</td><td>&quot;Issuing instant Non Reloadable cards&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+... Removed 36 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">pl.rest.testRunners.NonDBTestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Updating the card status to blocked&quot;</td><td>&quot;Updating the Card status by Customer&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">pl.rest.testRunners.NonDBTestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Validating the response code and messages.&quot;</td><td>&quot;Issuing instant Non Reloadable cards&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">pl.rest.testRunners.NonDBTestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Changing of scheme of issued card and validating the data in the API response&quot;</td><td>&quot;Card Details fetching API&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">pl.rest.testRunners.NonDBTestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Updating the card status from active to active&quot;</td><td>&quot;Updating the Card status by admin&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">pl.rest.testRunners.NonDBTestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Validating the response code and messages.&quot;</td><td>&quot;Issuing instant Non Reloadable cards&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">pl.rest.testRunners.NonDBTestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Updating the card status to inactive&quot;</td><td>&quot;Updating the Card status by Customer&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">pl.rest.testRunners.NonDBTestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Updating the card status to blocked&quot;</td><td>&quot;Updating the Card status by admin&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m9">pl.rest.testRunners.NonDBTestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Updating the card status to inactive&quot;</td><td>&quot;Updating the Card status by admin&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m10">pl.rest.testRunners.NonDBTestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Validating the error response code and messages.&quot;</td><td>&quot;Issuing instant Non Reloadable cards&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m11">pl.rest.testRunners.NonDBTestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Validate the Card Categories API Response for V2&quot;</td><td>&quot;Details of Card Categories against an issuer&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m12">pl.rest.testRunners.NonDBTestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Validate the Card Categories API Response for V1&quot;</td><td>&quot;Details of Card Categories against an issuer&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m13">pl.rest.testRunners.NonDBTestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Updating the card status from active to active&quot;</td><td>&quot;Updating the Card status by Customer&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m14">pl.rest.testRunners.NonDBTestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Validating the error response code and messages.&quot;</td><td>&quot;Issuing instant Non Reloadable cards&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m15">pl.rest.testRunners.NonDBTestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Issuing a card with Invalid Scheme id&quot;</td><td>&quot;Issuing instant Non Reloadable cards&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m16">pl.rest.testRunners.NonDBTestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Issuing a card with Invalid Scheme id&quot;</td><td>&quot;Issuing instant Non Reloadable cards&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m17">pl.rest.testRunners.NonDBTestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Validating the response code and messages.&quot;</td><td>&quot;Issuing instant Non Reloadable cards&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m18">pl.rest.testRunners.NonDBTestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Validating the error response code and messages.&quot;</td><td>&quot;Issuing instant Non Reloadable cards&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

@@ -1,24 +1,168 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="2" ignored="0" total="12" passed="10">
+<testng-results skipped="2" failed="0" ignored="0" total="19" passed="17">
   <reporter-output>
   </reporter-output>
-  <suite name="Surefire suite" duration-ms="48110" started-at="2021-12-17T05:50:26Z" finished-at="2021-12-17T05:51:14Z">
+  <suite name="Surefire suite" duration-ms="25057" started-at="2021-12-24T06:33:05Z" finished-at="2021-12-24T06:33:30Z">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleEventWrapper, io.cucumber.testng.CucumberFeatureWrapper)[pri:0, instance:pl.rest.testRunners.TestRunner@47400608]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleEventWrapper, io.cucumber.testng.CucumberFeatureWrapper)[pri:0, instance:pl.rest.testRunners.NonDBTestRunner@53ccbc15]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test name="Surefire test" duration-ms="48110" started-at="2021-12-17T05:50:26Z" finished-at="2021-12-17T05:51:14Z">
-      <class name="pl.rest.testRunners.TestRunner">
-        <test-method status="PASS" signature="setUpClass()[pri:0, instance:pl.rest.testRunners.TestRunner@47400608]" name="setUpClass" is-config="true" duration-ms="90" started-at="2021-12-17T05:50:26Z" finished-at="2021-12-17T05:50:26Z">
+    <test name="Surefire test" duration-ms="25057" started-at="2021-12-24T06:33:05Z" finished-at="2021-12-24T06:33:30Z">
+      <class name="pl.rest.testRunners.NonDBTestRunner">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:pl.rest.testRunners.NonDBTestRunner@53ccbc15]" name="setUpClass" is-config="true" duration-ms="175" started-at="2021-12-24T06:33:05Z" finished-at="2021-12-24T06:33:05Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method status="FAIL" signature="runScenario(io.cucumber.testng.PickleEventWrapper, io.cucumber.testng.CucumberFeatureWrapper)[pri:0, instance:pl.rest.testRunners.TestRunner@47400608]" name="runScenario" duration-ms="19624" started-at="2021-12-17T05:50:26Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-12-17T05:50:46Z">
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleEventWrapper, io.cucumber.testng.CucumberFeatureWrapper)[pri:0, instance:pl.rest.testRunners.NonDBTestRunner@53ccbc15]" name="runScenario" duration-ms="8148" started-at="2021-12-24T06:33:06Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-12-24T06:33:14Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Issuing a instant non reloadable card"]]>
+                <![CDATA["Updating the card status to inactive"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Updating the Card status by admin"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleEventWrapper, io.cucumber.testng.CucumberFeatureWrapper)[pri:0, instance:pl.rest.testRunners.NonDBTestRunner@53ccbc15]" name="runScenario" duration-ms="932" started-at="2021-12-24T06:33:14Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-12-24T06:33:15Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Updating the card status to blocked"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Updating the Card status by admin"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleEventWrapper, io.cucumber.testng.CucumberFeatureWrapper)[pri:0, instance:pl.rest.testRunners.NonDBTestRunner@53ccbc15]" name="runScenario" duration-ms="1294" started-at="2021-12-24T06:33:15Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-12-24T06:33:16Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Updating the card status from active to active"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Updating the Card status by admin"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleEventWrapper, io.cucumber.testng.CucumberFeatureWrapper)[pri:0, instance:pl.rest.testRunners.NonDBTestRunner@53ccbc15]" name="runScenario" duration-ms="1012" started-at="2021-12-24T06:33:16Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-12-24T06:33:17Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Validate the Card Categories API Response for V1"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Details of Card Categories against an issuer"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleEventWrapper, io.cucumber.testng.CucumberFeatureWrapper)[pri:0, instance:pl.rest.testRunners.NonDBTestRunner@53ccbc15]" name="runScenario" duration-ms="1014" started-at="2021-12-24T06:33:17Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-12-24T06:33:18Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Validate the Card Categories API Response for V2"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Details of Card Categories against an issuer"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleEventWrapper, io.cucumber.testng.CucumberFeatureWrapper)[pri:0, instance:pl.rest.testRunners.NonDBTestRunner@53ccbc15]" name="runScenario" duration-ms="1577" started-at="2021-12-24T06:33:18Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-12-24T06:33:19Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Changing of scheme of issued card and validating the data in the API response"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Card Details fetching API"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleEventWrapper, io.cucumber.testng.CucumberFeatureWrapper)[pri:0, instance:pl.rest.testRunners.NonDBTestRunner@53ccbc15]" name="runScenario" duration-ms="778" started-at="2021-12-24T06:33:19Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-12-24T06:33:20Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Updating the card status to inactive"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Updating the Card status by Customer"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleEventWrapper, io.cucumber.testng.CucumberFeatureWrapper)[pri:0, instance:pl.rest.testRunners.NonDBTestRunner@53ccbc15]" name="runScenario" duration-ms="840" started-at="2021-12-24T06:33:20Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-12-24T06:33:21Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Updating the card status to blocked"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Updating the Card status by Customer"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleEventWrapper, io.cucumber.testng.CucumberFeatureWrapper)[pri:0, instance:pl.rest.testRunners.NonDBTestRunner@53ccbc15]" name="runScenario" duration-ms="1714" started-at="2021-12-24T06:33:21Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-12-24T06:33:23Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Updating the card status from active to active"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Updating the Card status by Customer"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleEventWrapper, io.cucumber.testng.CucumberFeatureWrapper)[pri:0, instance:pl.rest.testRunners.NonDBTestRunner@53ccbc15]" name="runScenario" duration-ms="803" started-at="2021-12-24T06:33:23Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-12-24T06:33:24Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Validating the response code and messages."]]>
               </value>
             </param>
             <param index="1">
@@ -27,60 +171,144 @@
               </value>
             </param>
           </params>
-          <exception class="java.sql.SQLException">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleEventWrapper, io.cucumber.testng.CucumberFeatureWrapper)[pri:0, instance:pl.rest.testRunners.NonDBTestRunner@53ccbc15]" name="runScenario" duration-ms="907" started-at="2021-12-24T06:33:24Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-12-24T06:33:25Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Validating the response code and messages."]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Issuing instant Non Reloadable cards"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleEventWrapper, io.cucumber.testng.CucumberFeatureWrapper)[pri:0, instance:pl.rest.testRunners.NonDBTestRunner@53ccbc15]" name="runScenario" duration-ms="788" started-at="2021-12-24T06:33:25Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-12-24T06:33:25Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Validating the response code and messages."]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Issuing instant Non Reloadable cards"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleEventWrapper, io.cucumber.testng.CucumberFeatureWrapper)[pri:0, instance:pl.rest.testRunners.NonDBTestRunner@53ccbc15]" name="runScenario" duration-ms="918" started-at="2021-12-24T06:33:25Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-12-24T06:33:26Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Validating the error response code and messages."]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Issuing instant Non Reloadable cards"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleEventWrapper, io.cucumber.testng.CucumberFeatureWrapper)[pri:0, instance:pl.rest.testRunners.NonDBTestRunner@53ccbc15]" name="runScenario" duration-ms="1050" started-at="2021-12-24T06:33:26Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-12-24T06:33:27Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Validating the error response code and messages."]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Issuing instant Non Reloadable cards"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleEventWrapper, io.cucumber.testng.CucumberFeatureWrapper)[pri:0, instance:pl.rest.testRunners.NonDBTestRunner@53ccbc15]" name="runScenario" duration-ms="709" started-at="2021-12-24T06:33:27Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-12-24T06:33:28Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Validating the error response code and messages."]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Issuing instant Non Reloadable cards"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleEventWrapper, io.cucumber.testng.CucumberFeatureWrapper)[pri:0, instance:pl.rest.testRunners.NonDBTestRunner@53ccbc15]" name="runScenario" duration-ms="795" started-at="2021-12-24T06:33:28Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-12-24T06:33:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Issuing a card with Invalid Scheme id"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Issuing instant Non Reloadable cards"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleEventWrapper, io.cucumber.testng.CucumberFeatureWrapper)[pri:0, instance:pl.rest.testRunners.NonDBTestRunner@53ccbc15]" name="runScenario" duration-ms="610" started-at="2021-12-24T06:33:29Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-12-24T06:33:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Issuing a card with Invalid Scheme id"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Issuing instant Non Reloadable cards"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="SKIP" signature="runScenario(io.cucumber.testng.PickleEventWrapper, io.cucumber.testng.CucumberFeatureWrapper)[pri:0, instance:pl.rest.testRunners.NonDBTestRunner@53ccbc15]" name="runScenario" duration-ms="1" started-at="2021-12-24T06:33:29Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-12-24T06:33:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Issuing card with amount more that available account balance."]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Issuing instant Non Reloadable cards"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.testng.SkipException">
             <message>
-              <![CDATA[Cannot create PoolableConnectionFactory (The TCP/IP connection to the host 192.168.104.22, port 6135 has failed. Error: "Connection timed out: no further information.. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".)]]>
+              <![CDATA[There are undefined steps]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.sql.SQLException: Cannot create PoolableConnectionFactory (The TCP/IP connection to the host 192.168.104.22, port 6135 has failed. Error: "Connection timed out: no further information.. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".)
-at org.apache.commons.dbcp2.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:2385)
-at org.apache.commons.dbcp2.BasicDataSource.createDataSource(BasicDataSource.java:2110)
-at org.apache.commons.dbcp2.BasicDataSource.getConnection(BasicDataSource.java:1563)
-at com.qc.qa.dbutils.DBPoolProvider.getConnection(DBPoolProvider.java:76)
-at com.qc.qa.dbutils.DBConnectionManager.getConnection(DBConnectionManager.java:158)
-at com.qc.qa.dbutils.DBConnectionManager.getQueryResultAsStringMap(DBConnectionManager.java:83)
-at pl.rest.utils.DBUtils.getCardDetails(DBUtils.java:3433)
-at pl.rest.stepDefs.TransactionsStepDefs.iShouldSeeTheFollowingInTheCardListInTheDatabase(TransactionsStepDefs.java:249)
-at ✽.i should see the following in the card list in the database(classpath:features/cardissue/InstantNonRelodableDigital.feature:24)
-Caused by: com.microsoft.sqlserver.jdbc.SQLServerException: The TCP/IP connection to the host 192.168.104.22, port 6135 has failed. Error: "Connection timed out: no further information.. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
-at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDriverError(SQLServerException.java:228)
-at com.microsoft.sqlserver.jdbc.SQLServerException.ConvertConnectExceptionToSQLServerException(SQLServerException.java:285)
-at com.microsoft.sqlserver.jdbc.SocketFinder.findSocket(IOBuffer.java:2437)
-at com.microsoft.sqlserver.jdbc.TDSChannel.open(IOBuffer.java:641)
-at com.microsoft.sqlserver.jdbc.SQLServerConnection.connectHelper(SQLServerConnection.java:2245)
-at com.microsoft.sqlserver.jdbc.SQLServerConnection.login(SQLServerConnection.java:1921)
-at com.microsoft.sqlserver.jdbc.SQLServerConnection.connectInternal(SQLServerConnection.java:1762)
-at com.microsoft.sqlserver.jdbc.SQLServerConnection.connect(SQLServerConnection.java:1077)
-at com.microsoft.sqlserver.jdbc.SQLServerDriver.connect(SQLServerDriver.java:623)
-at org.apache.commons.dbcp2.DriverConnectionFactory.createConnection(DriverConnectionFactory.java:53)
-at org.apache.commons.dbcp2.PoolableConnectionFactory.makeObject(PoolableConnectionFactory.java:291)
-at org.apache.commons.dbcp2.BasicDataSource.validateConnectionFactory(BasicDataSource.java:2395)
-at org.apache.commons.dbcp2.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:2381)
-at org.apache.commons.dbcp2.BasicDataSource.createDataSource(BasicDataSource.java:2110)
-at org.apache.commons.dbcp2.BasicDataSource.getConnection(BasicDataSource.java:1563)
-at com.qc.qa.dbutils.DBPoolProvider.getConnection(DBPoolProvider.java:76)
-at com.qc.qa.dbutils.DBConnectionManager.getConnection(DBConnectionManager.java:158)
-at com.qc.qa.dbutils.DBConnectionManager.getQueryResultAsStringMap(DBConnectionManager.java:83)
-at pl.rest.utils.DBUtils.getCardDetails(DBUtils.java:3433)
-at pl.rest.stepDefs.TransactionsStepDefs.iShouldSeeTheFollowingInTheCardListInTheDatabase(TransactionsStepDefs.java:249)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.lang.reflect.Method.invoke(Method.java:498)
-at cucumber.runtime.Utils$1.call(Utils.java:26)
-at cucumber.runtime.Timeout.timeout(Timeout.java:16)
-at cucumber.runtime.Utils.invoke(Utils.java:20)
-at cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:57)
-at cucumber.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:50)
-at cucumber.runner.TestStep.executeStep(TestStep.java:65)
-at cucumber.runner.TestStep.run(TestStep.java:50)
-at cucumber.runner.PickleStepTestStep.run(PickleStepTestStep.java:43)
-at cucumber.runner.TestCase.run(TestCase.java:46)
-at cucumber.runner.Runner.runPickle(Runner.java:50)
-at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:69)
+              <![CDATA[org.testng.SkipException: There are undefined steps
+at io.cucumber.testng.TestCaseResultListener.getError(TestCaseResultListener.java:60)
+at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:73)
 at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:24)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.GeneratedMethodAccessor174.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 at java.lang.reflect.Method.invoke(Method.java:498)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
@@ -140,15 +368,15 @@ at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.j
 at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:347)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.sql.SQLException -->
+          </exception> <!-- org.testng.SkipException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method status="FAIL" signature="runScenario(io.cucumber.testng.PickleEventWrapper, io.cucumber.testng.CucumberFeatureWrapper)[pri:0, instance:pl.rest.testRunners.TestRunner@47400608]" name="runScenario" duration-ms="19930" started-at="2021-12-17T05:50:46Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-12-17T05:51:06Z">
+        <test-method status="SKIP" signature="runScenario(io.cucumber.testng.PickleEventWrapper, io.cucumber.testng.CucumberFeatureWrapper)[pri:0, instance:pl.rest.testRunners.NonDBTestRunner@53ccbc15]" name="runScenario" duration-ms="1" started-at="2021-12-24T06:33:29Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-12-24T06:33:29Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Issuing a instant non reloadable card"]]>
+                <![CDATA["Validating the net order amount after changing the issuance charges"]]>
               </value>
             </param>
             <param index="1">
@@ -157,60 +385,16 @@ at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:347)
               </value>
             </param>
           </params>
-          <exception class="java.sql.SQLException">
+          <exception class="org.testng.SkipException">
             <message>
-              <![CDATA[Cannot create PoolableConnectionFactory (The TCP/IP connection to the host 192.168.104.22, port 6135 has failed. Error: "Connection timed out: no further information.. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".)]]>
+              <![CDATA[There are undefined steps]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.sql.SQLException: Cannot create PoolableConnectionFactory (The TCP/IP connection to the host 192.168.104.22, port 6135 has failed. Error: "Connection timed out: no further information.. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".)
-at org.apache.commons.dbcp2.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:2385)
-at org.apache.commons.dbcp2.BasicDataSource.createDataSource(BasicDataSource.java:2110)
-at org.apache.commons.dbcp2.BasicDataSource.getConnection(BasicDataSource.java:1563)
-at com.qc.qa.dbutils.DBPoolProvider.getConnection(DBPoolProvider.java:76)
-at com.qc.qa.dbutils.DBConnectionManager.getConnection(DBConnectionManager.java:158)
-at com.qc.qa.dbutils.DBConnectionManager.getQueryResultAsStringMap(DBConnectionManager.java:83)
-at pl.rest.utils.DBUtils.getCardDetails(DBUtils.java:3433)
-at pl.rest.stepDefs.TransactionsStepDefs.iShouldSeeTheFollowingInTheCardListInTheDatabase(TransactionsStepDefs.java:249)
-at ✽.i should see the following in the card list in the database(classpath:features/cardissue/InstantNonRelodableDigital.feature:48)
-Caused by: com.microsoft.sqlserver.jdbc.SQLServerException: The TCP/IP connection to the host 192.168.104.22, port 6135 has failed. Error: "Connection timed out: no further information.. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
-at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDriverError(SQLServerException.java:228)
-at com.microsoft.sqlserver.jdbc.SQLServerException.ConvertConnectExceptionToSQLServerException(SQLServerException.java:285)
-at com.microsoft.sqlserver.jdbc.SocketFinder.findSocket(IOBuffer.java:2437)
-at com.microsoft.sqlserver.jdbc.TDSChannel.open(IOBuffer.java:641)
-at com.microsoft.sqlserver.jdbc.SQLServerConnection.connectHelper(SQLServerConnection.java:2245)
-at com.microsoft.sqlserver.jdbc.SQLServerConnection.login(SQLServerConnection.java:1921)
-at com.microsoft.sqlserver.jdbc.SQLServerConnection.connectInternal(SQLServerConnection.java:1762)
-at com.microsoft.sqlserver.jdbc.SQLServerConnection.connect(SQLServerConnection.java:1077)
-at com.microsoft.sqlserver.jdbc.SQLServerDriver.connect(SQLServerDriver.java:623)
-at org.apache.commons.dbcp2.DriverConnectionFactory.createConnection(DriverConnectionFactory.java:53)
-at org.apache.commons.dbcp2.PoolableConnectionFactory.makeObject(PoolableConnectionFactory.java:291)
-at org.apache.commons.dbcp2.BasicDataSource.validateConnectionFactory(BasicDataSource.java:2395)
-at org.apache.commons.dbcp2.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:2381)
-at org.apache.commons.dbcp2.BasicDataSource.createDataSource(BasicDataSource.java:2110)
-at org.apache.commons.dbcp2.BasicDataSource.getConnection(BasicDataSource.java:1563)
-at com.qc.qa.dbutils.DBPoolProvider.getConnection(DBPoolProvider.java:76)
-at com.qc.qa.dbutils.DBConnectionManager.getConnection(DBConnectionManager.java:158)
-at com.qc.qa.dbutils.DBConnectionManager.getQueryResultAsStringMap(DBConnectionManager.java:83)
-at pl.rest.utils.DBUtils.getCardDetails(DBUtils.java:3433)
-at pl.rest.stepDefs.TransactionsStepDefs.iShouldSeeTheFollowingInTheCardListInTheDatabase(TransactionsStepDefs.java:249)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.lang.reflect.Method.invoke(Method.java:498)
-at cucumber.runtime.Utils$1.call(Utils.java:26)
-at cucumber.runtime.Timeout.timeout(Timeout.java:16)
-at cucumber.runtime.Utils.invoke(Utils.java:20)
-at cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:57)
-at cucumber.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:50)
-at cucumber.runner.TestStep.executeStep(TestStep.java:65)
-at cucumber.runner.TestStep.run(TestStep.java:50)
-at cucumber.runner.PickleStepTestStep.run(PickleStepTestStep.java:43)
-at cucumber.runner.TestCase.run(TestCase.java:46)
-at cucumber.runner.Runner.runPickle(Runner.java:50)
-at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:69)
+              <![CDATA[org.testng.SkipException: There are undefined steps
+at io.cucumber.testng.TestCaseResultListener.getError(TestCaseResultListener.java:60)
+at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:73)
 at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:24)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.GeneratedMethodAccessor174.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 at java.lang.reflect.Method.invoke(Method.java:498)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
@@ -270,175 +454,15 @@ at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.j
 at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:347)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.sql.SQLException -->
+          </exception> <!-- org.testng.SkipException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleEventWrapper, io.cucumber.testng.CucumberFeatureWrapper)[pri:0, instance:pl.rest.testRunners.TestRunner@47400608]" name="runScenario" duration-ms="937" started-at="2021-12-17T05:51:06Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-12-17T05:51:07Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Validating the response code and messages."]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Issuing instant Non Reloadable cards"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleEventWrapper, io.cucumber.testng.CucumberFeatureWrapper)[pri:0, instance:pl.rest.testRunners.TestRunner@47400608]" name="runScenario" duration-ms="811" started-at="2021-12-17T05:51:07Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-12-17T05:51:08Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Validating the response code and messages."]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Issuing instant Non Reloadable cards"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleEventWrapper, io.cucumber.testng.CucumberFeatureWrapper)[pri:0, instance:pl.rest.testRunners.TestRunner@47400608]" name="runScenario" duration-ms="794" started-at="2021-12-17T05:51:08Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-12-17T05:51:08Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Validating the response code and messages."]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Issuing instant Non Reloadable cards"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleEventWrapper, io.cucumber.testng.CucumberFeatureWrapper)[pri:0, instance:pl.rest.testRunners.TestRunner@47400608]" name="runScenario" duration-ms="742" started-at="2021-12-17T05:51:08Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-12-17T05:51:09Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Validating the response code and messages."]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Issuing instant Non Reloadable cards"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleEventWrapper, io.cucumber.testng.CucumberFeatureWrapper)[pri:0, instance:pl.rest.testRunners.TestRunner@47400608]" name="runScenario" duration-ms="782" started-at="2021-12-17T05:51:09Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-12-17T05:51:10Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Validating the response code and messages."]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Issuing instant Non Reloadable cards"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleEventWrapper, io.cucumber.testng.CucumberFeatureWrapper)[pri:0, instance:pl.rest.testRunners.TestRunner@47400608]" name="runScenario" duration-ms="701" started-at="2021-12-17T05:51:10Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-12-17T05:51:11Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Validating the response code and messages."]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Issuing instant Non Reloadable cards"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleEventWrapper, io.cucumber.testng.CucumberFeatureWrapper)[pri:0, instance:pl.rest.testRunners.TestRunner@47400608]" name="runScenario" duration-ms="748" started-at="2021-12-17T05:51:11Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-12-17T05:51:11Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Validating the response code and messages."]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Issuing instant Non Reloadable cards"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleEventWrapper, io.cucumber.testng.CucumberFeatureWrapper)[pri:0, instance:pl.rest.testRunners.TestRunner@47400608]" name="runScenario" duration-ms="1065" started-at="2021-12-17T05:51:11Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-12-17T05:51:12Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Validating the response code and messages."]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Issuing instant Non Reloadable cards"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleEventWrapper, io.cucumber.testng.CucumberFeatureWrapper)[pri:0, instance:pl.rest.testRunners.TestRunner@47400608]" name="runScenario" duration-ms="670" started-at="2021-12-17T05:51:12Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-12-17T05:51:13Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Issuing a card with Invalid Scheme id"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Issuing instant Non Reloadable cards"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleEventWrapper, io.cucumber.testng.CucumberFeatureWrapper)[pri:0, instance:pl.rest.testRunners.TestRunner@47400608]" name="runScenario" duration-ms="701" started-at="2021-12-17T05:51:13Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-12-17T05:51:14Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Issuing a card with Invalid Scheme id"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Issuing instant Non Reloadable cards"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:pl.rest.testRunners.TestRunner@47400608]" name="tearDownClass" is-config="true" duration-ms="439" started-at="2021-12-17T05:51:14Z" finished-at="2021-12-17T05:51:14Z">
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:pl.rest.testRunners.NonDBTestRunner@53ccbc15]" name="tearDownClass" is-config="true" duration-ms="819" started-at="2021-12-24T06:33:29Z" finished-at="2021-12-24T06:33:30Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
-      </class> <!-- pl.rest.testRunners.TestRunner -->
+      </class> <!-- pl.rest.testRunners.NonDBTestRunner -->
     </test> <!-- Surefire test -->
   </suite> <!-- Surefire suite -->
 </testng-results>
