@@ -1,0 +1,5 @@
+2021-12-24_11:18:35.629 [main] INFO  pl.rest.CustomHooks - SCENARIO NAME: Updating the card status to inactive
+2021-12-24_11:18:35.633 [main] INFO  pl.rest.CustomHooks - TAG NAMEs: [@Regression]
+2021-12-24_11:18:35.636 [main] INFO  pl.rest.CustomHooks - SCENARIO NAME: Updating the card status to inactive
+2021-12-24_11:18:35.636 [main] INFO  pl.rest.CustomHooks - TAG NAMEs: [@Regression]
+2021-12-24_11:18:35.723 [main] INFO  pl.rest.CustomHooks - Index: 0, Size: 0

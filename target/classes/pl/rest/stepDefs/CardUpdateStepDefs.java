@@ -35,13 +35,13 @@ public class CardUpdateStepDefs {
     public void iAmChangingTheStatusWithTheFollowingDetails(DataTable table) throws ConfigPropertyException, FrameworkException {
         Map<String, String> data = table.asMap(String.class, String.class);
 
-        Gson gson = new Gson();
-        CardIssueResponse cardIssueResponseObject = gson.fromJson(context.previousResponse.asString(), CardIssueResponse.class);
-        Long referenceNumber1 = cardIssueResponseObject.getCardDetailResponseList().get(0).getReferenceNumber();
-        String referenceNumberString = Long.toString((referenceNumber1));
         JSONObject cardUpdateRequestObject = new JSONObject();
 
         if (data.get("referenceNumber").equalsIgnoreCase("context")) {
+            Gson gson = new Gson();
+            CardIssueResponse cardIssueResponseObject = gson.fromJson(context.previousResponse.asString(), CardIssueResponse.class);
+            Long referenceNumber1 = cardIssueResponseObject.getCardDetailResponseList().get(0).getReferenceNumber();
+            String referenceNumberString = Long.toString((referenceNumber1));
             cardUpdateRequestObject.put("referenceNumber", referenceNumberString);
         } else {
             cardUpdateRequestObject.put("referenceNumber", data.get("referenceNumber"));

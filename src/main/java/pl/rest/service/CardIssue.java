@@ -65,6 +65,7 @@ public class CardIssue extends BaseAPI {
         Response response = postAPI(headerMap, create, url);
         logger.info("Time Taken to perform " + url + " transaction: " + response.getTime());
         return response;
+
     }
 
     public Response cardIssueReloadableDigital(Object create, String headerType) throws ConfigPropertyException, FrameworkException {

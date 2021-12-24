@@ -1,16 +1,17 @@
-
+@Regression
 Feature: Card Details fetching API
 
-  Scenario: Validating the response of the card card detail API with the database
-    Given i am an authorized corporate user
-    When i get the card detail using "old" holder with V1 API for the following card
-      | Reference Number | 1383737387 |
-    Then the status code should be 200
-    And i should see the following in the header level
-      | responseCode    | 0       |
-      | responseMessage | Success |
-    And the values in the card detail list response for the card "1383737387" should match the DB values
-      | API Key Name | Database column name |
+  @DB
+#  Scenario: Validating the response of the card card detail API with the database
+#    Given i am an authorized corporate user
+#    When i get the card detail using "old" holder with V1 API for the following card
+#      | Reference Number | 1383737387 |
+#    Then the status code should be 200
+#    And i should see the following in the header level
+#      | responseCode    | 0       |
+#      | responseMessage | Success |
+#    And the values in the card detail list response for the card "1383737387" should match the DB values
+#      | API Key Name | Database column name |
 #      | referenceNumber             |                      |
 #      | cardStatus                  |                      |
 #      | cardSchemeId                |                      |
@@ -32,11 +33,11 @@ Feature: Card Details fetching API
     When i am issuing an Instant Non Reloadable Digital Card using "old" header with V1 of API
       | cardSchemeId           | 7                        |
       | isLinkToBeSentOnMobile | true                     |
-      | customerName           | afzalab                  |
+      | customerName           | afzal                    |
       | mobileNumber           | 8284854535               |
       | email                  | afzal.ahmed@pinelabs.com |
       | amount                 | 1000                     |
-    When i get the card detail using "old" holder with V1 API for the following card
+    When i get the card detail using "old" header with V1 API for the following card
       | Reference Number | context |
     Then the status code should be 200
     And i should see the following in the header level
@@ -62,7 +63,7 @@ Feature: Card Details fetching API
       | cardStatus      | 2       |
       | reason          | 1       |
       | remarks         | Test    |
-    When i get the card detail using "old" holder with V1 API for the following card
+    And i get the card detail using "old" header with V1 API for the previously issued card
       | Reference Number | context |
     Then the status code should be 200
     And i should see the following in the header level

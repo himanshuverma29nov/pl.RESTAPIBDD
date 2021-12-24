@@ -1,4 +1,4 @@
-@TestSet0 @Regression
+@TestSet0 @Regression @DB
 Feature: Issuing Reloadable Digital cards with V1 and V2 API
 
   Background:

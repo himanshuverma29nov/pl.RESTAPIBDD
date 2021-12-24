@@ -5,6 +5,7 @@ import com.qc.cuke.ScenarioContext;
 import com.qc.qa.ConfigPropertyException;
 import com.qc.qa.FrameworkException;
 import io.cucumber.datatable.DataTable;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.When;
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -40,21 +41,41 @@ public class CorporateDetailsStepDefs {
     public void iGetTheCardSchemeFromAPIUsingTheHeaderUsingVAPI(String arg0) throws ConfigPropertyException, FrameworkException {
     }
 
-    @When("i get the card detail using {string} holder with V1 API for the following card")
+    @When("i get the card detail using {string} header with V1 API for the following card")
     public void iGetTheCardDetailUsingHolderWithVAPIForTheFollowingCard(String arg0, DataTable table) throws ConfigPropertyException, FrameworkException {
-        Gson gson = new Gson();
-        AdminCardUpdateResponse adminCardUpdateResponse = gson.fromJson(context.previousResponse.asString(), AdminCardUpdateResponse.class);
-        Long referenceNumber1 = adminCardUpdateResponse.getCardStatusUpdateResponseList().get(0).getReferenceNumber();
-        String referenceNumberString = Long.toString((referenceNumber1));
 
         Map<String, String> referenceNumber = table.asMap(String.class, String.class);
         JSONArray jsonArray = new JSONArray();
 
         JSONObject object = new JSONObject();
         if (referenceNumber.get("Reference Number").equalsIgnoreCase("context")) {
+            Gson gson = new Gson();
+            CardIssueResponse cardIssueResponseObject = gson.fromJson(context.previousResponse.asString(), CardIssueResponse.class);
+            Long referenceNumber1 = cardIssueResponseObject.getCardDetailResponseList().get(0).getReferenceNumber();
+            String referenceNumberString = Long.toString((referenceNumber1));
             jsonArray.put(referenceNumberString);
+        } else {
+            jsonArray.put(referenceNumber.get("Reference Number"));
         }
-        else {
+        object.put("cardDetailRequestList", jsonArray);
+
+        corporateAndCardDetails.CardDetail(arg0, object.toString());
+    }
+
+    @And("i get the card detail using {string} header with V1 API for the previously issued card")
+    public void iGetTheCardDetailUsingHeaderWithVAPIForTheFollowingCard(String arg0, DataTable table) throws ConfigPropertyException, FrameworkException {
+
+        Map<String, String> referenceNumber = table.asMap(String.class, String.class);
+        JSONArray jsonArray = new JSONArray();
+
+        JSONObject object = new JSONObject();
+        if (referenceNumber.get("Reference Number").equalsIgnoreCase("context")) {
+            Gson gson = new Gson();
+            AdminCardUpdateResponse adminCardUpdateResponse = gson.fromJson(context.previousResponse.asString(), AdminCardUpdateResponse.class);
+            Long referenceNumber1 = adminCardUpdateResponse.getCardStatusUpdateResponseList().get(0).getReferenceNumber();
+            String referenceNumberString = Long.toString((referenceNumber1));
+            jsonArray.put(referenceNumberString);
+        } else {
             jsonArray.put(referenceNumber.get("Reference Number"));
         }
         object.put("cardDetailRequestList", jsonArray);
