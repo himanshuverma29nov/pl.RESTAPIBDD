@@ -1,5 +1,5 @@
 @TestSet0 @Regression @DB
-Feature: Issuing Reloadable Digital cards with V1 and V2 API
+Feature: Instant Reloadable Digital card Issuing API
 
   Background:
     Given i fetch the mobile number from properties

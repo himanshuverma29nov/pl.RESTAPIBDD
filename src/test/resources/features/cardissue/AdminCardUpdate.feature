@@ -1,5 +1,5 @@
 @Regression
-Feature: Updating the Card status by admin
+Feature: Admin Card Update API
 
   Scenario: Updating the card status to inactive
     Given i am an authorized corporate user

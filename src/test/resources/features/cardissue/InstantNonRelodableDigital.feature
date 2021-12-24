@@ -1,5 +1,5 @@
 @Regression
-Feature: Issuing instant Non Reloadable cards
+Feature: Instant Non Reloadable Digital Card Issuing API V1 & V2
 
   @DB
   Scenario: Issuing a instant non reloadable card

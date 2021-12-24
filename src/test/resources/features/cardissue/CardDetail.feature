@@ -1,5 +1,5 @@
 @Regression
-Feature: Card Details fetching API
+Feature: Card Details API
 
   @DB
 #  Scenario: Validating the response of the card card detail API with the database

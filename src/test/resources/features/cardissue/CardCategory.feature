@@ -1,5 +1,5 @@
 @Regression
-Feature: Details of Card Categories against an issuer
+Feature: Card Categories API
 
   Scenario: Validate the Card Categories API Response for V1
     Given i am an authorized corporate user
