@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: pl.rest.testRunners.NonDBTestRunner
 -------------------------------------------------------------------------------
-Tests run: 19, Failures: 0, Errors: 0, Skipped: 2, Time elapsed: 27.691 s - in pl.rest.testRunners.NonDBTestRunner
+Tests run: 19, Failures: 0, Errors: 0, Skipped: 2, Time elapsed: 24.154 s - in pl.rest.testRunners.NonDBTestRunner
