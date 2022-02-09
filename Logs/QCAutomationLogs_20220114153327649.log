@@ -1,0 +1,20 @@
+2022-01-14_15:33:27.727 [main] INFO  com.qc.CukeBase - Cucumber Before web scenario - Validating the expiry date field when updating the expiry duration as 7 days.
+2022-01-14_15:33:27.753 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Please answer the following questionnaire based on your experience with WebDriverManager. Thanks a lot!
+2022-01-14_15:33:27.753 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - ====> http://tiny.cc/wdm-survey <====
+2022-01-14_15:33:29.371 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 97.0.4692.71 (since Chrome 97 is installed in your machine)
+2022-01-14_15:33:29.410 [main] DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 97.0.4692.71 found in cache
+2022-01-14_15:33:29.411 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\afzal.ahmed\.m2\repository\webdriver\chromedriver\win32\97.0.4692.71\chromedriver.exe
+2022-01-14_15:33:30.583 [main] INFO  com.qc.qa.drivers.ChromeDriverManger - Chrome service started
+2022-01-14_15:33:34.143 [main] INFO  com.qc.CukeBase - Set new webDriver
+2022-01-14_15:33:34.144 [main] INFO  com.qc.CukeBase - Getting webDriver
+2022-01-14_15:33:34.596 [main] INFO  com.qc.CukeBase - Getting webDriver
+2022-01-14_15:33:34.602 [main] INFO  pl.rest.CustomHooks - SCENARIO NAME: Validating the expiry date field when updating the expiry duration as 7 days.
+2022-01-14_15:33:34.602 [main] INFO  pl.rest.CustomHooks - TAG NAMEs: [@Web]
+2022-01-14_15:33:34.603 [main] INFO  pl.rest.CustomHooks - SCENARIO NAME: Validating the expiry date field when updating the expiry duration as 7 days.
+2022-01-14_15:33:34.603 [main] INFO  pl.rest.CustomHooks - TAG NAMEs: [@Web]
+2022-01-14_15:33:34.604 [main] INFO  pl.rest.CustomHooks - Index: 0, Size: 0
+2022-01-14_15:33:34.611 [main] INFO  com.qc.qa.drivers.ChromeDriverManger - Exception is:- null
+2022-01-14_15:33:34.617 [main] INFO  com.qc.qa.drivers.ChromeDriverManger - Exception is:- null
+2022-01-14_15:33:34.630 [main] INFO  com.qc.CukeBase - Getting webDriver
+2022-01-14_15:33:34.842 [main] DEBUG com.qc.qa.ui.BasePage - No Alert displayed
+2022-01-14_15:33:34.996 [main] INFO  com.qc.CukeBase - Closing driver

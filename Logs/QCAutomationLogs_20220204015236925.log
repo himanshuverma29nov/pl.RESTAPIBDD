@@ -1,0 +1,9 @@
+2022-02-04_01:52:36.987 [main] INFO  pl.rest.CustomHooks - SCENARIO NAME: Validating a balance field of card on issuing and reloading a card.
+2022-02-04_01:52:36.990 [main] INFO  pl.rest.CustomHooks - TAG NAMEs: [@Regression]
+2022-02-04_01:52:36.994 [main] INFO  pl.rest.CustomHooks - SCENARIO NAME: Validating a balance field of card on issuing and reloading a card.
+2022-02-04_01:52:36.995 [main] INFO  pl.rest.CustomHooks - TAG NAMEs: [@Regression]
+2022-02-04_01:52:37.048 [main] INFO  pl.rest.CustomHooks - Index: 0, Size: 0
+2022-02-04_01:52:38.356 [main] INFO  com.qc.qa.utils.TestDataReader - Reading API Test Data config values from  testData/api/devAPITestData.properties
+2022-02-04_01:52:38.372 [main] INFO  pl.rest.service.Authorize - Authorize Rest API URL :- https://apitest.pineperks.in/auth/V1/generate/token
+2022-02-04_01:52:38.373 [main] INFO  com.qc.BaseAPI - GET call to URL https://apitest.pineperks.in/auth/V1/generate/token
+2022-02-04_01:52:38.589 [main] INFO  com.qc.BaseAPI - ********************REQUEST********************

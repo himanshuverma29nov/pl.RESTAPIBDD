@@ -1,0 +1,33 @@
+2022-01-19_18:09:22.213 [main] INFO  com.qc.CukeBase - Cucumber Before web scenario - Validating the expiry date field when updating the expiry duration as 7 days.
+2022-01-19_18:09:22.261 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Please answer the following questionnaire based on your experience with WebDriverManager. Thanks a lot!
+2022-01-19_18:09:22.262 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - ====> http://tiny.cc/wdm-survey <====
+2022-01-19_18:09:24.720 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 97.0.4692.71 (since Chrome 97 is installed in your machine)
+2022-01-19_18:09:24.765 [main] DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 97.0.4692.71 found in cache
+2022-01-19_18:09:24.767 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\afzal.ahmed\.m2\repository\webdriver\chromedriver\win32\97.0.4692.71\chromedriver.exe
+2022-01-19_18:09:26.565 [main] INFO  com.qc.qa.drivers.ChromeDriverManger - Chrome service started
+2022-01-19_18:09:32.965 [main] INFO  com.qc.CukeBase - Set new webDriver
+2022-01-19_18:09:32.966 [main] INFO  com.qc.CukeBase - Getting webDriver
+2022-01-19_18:09:33.109 [main] INFO  com.qc.CukeBase - Getting webDriver
+2022-01-19_18:09:33.122 [main] INFO  pl.rest.CustomHooks - SCENARIO NAME: Validating the expiry date field when updating the expiry duration as 7 days.
+2022-01-19_18:09:33.123 [main] INFO  pl.rest.CustomHooks - TAG NAMEs: [@Web_UI_01, @Regression, @Web]
+2022-01-19_18:09:33.126 [main] INFO  pl.rest.CustomHooks - SCENARIO NAME: Validating the expiry date field when updating the expiry duration as 7 days.
+2022-01-19_18:09:33.126 [main] INFO  pl.rest.CustomHooks - TAG NAMEs: [@Web_UI_01, @Regression, @Web]
+2022-01-19_18:09:33.128 [main] INFO  pl.rest.CustomHooks - Index: 0, Size: 0
+2022-01-19_18:09:36.282 [main] INFO  com.qc.qa.ui.BasePage - Navigating to  URL: https://admintest.pineperks.in/
+2022-01-19_18:09:36.284 [main] INFO  com.qc.qa.ui.BasePage - Waiting for page to be ready 
+2022-01-19_18:09:36.375 [main] INFO  gui.pages.UIActionPages - PinePerks|Login
+2022-01-19_18:09:36.468 [main] INFO  com.qc.qa.ui.BasePage - Entering the text -afzal.ahmed@pinelabs.com
+2022-01-19_18:09:36.472 [main] INFO  com.qc.qa.ui.BasePage - Waiting for element to clickable 
+2022-01-19_18:09:36.799 [main] INFO  com.qc.qa.ui.BasePage - Entering the text -Dashboard@DG1809
+2022-01-19_18:09:36.803 [main] INFO  com.qc.qa.ui.BasePage - Waiting for element to clickable 
+2022-01-19_18:09:37.032 [main] INFO  com.qc.qa.ui.BasePage - Clicking the element in page
+2022-01-19_18:09:37.036 [main] INFO  com.qc.qa.ui.BasePage - Waiting for element to clickable 
+2022-01-19_18:09:39.109 [main] INFO  com.qc.qa.ui.BasePage - Waiting for page to be ready 
+2022-01-19_18:09:39.139 [main] INFO  com.qc.qa.ui.BasePage - ClickingBy.xpath: //a[@href='/admin/clearCacheData']
+2022-01-19_18:09:39.198 [main] INFO  com.qc.qa.ui.BasePage - Waiting for element to clickable 
+2022-01-19_18:09:40.156 [main] INFO  com.qc.qa.ui.BasePage - Waiting for page to be ready 
+2022-01-19_18:09:51.562 [main] INFO  p.rest.stepDefs.TransactionsStepDefs - selected dropdown
+2022-01-19_18:09:51.563 [main] INFO  com.qc.qa.ui.BasePage - ClickingBy.id: pageSubmission
+2022-01-19_18:09:51.608 [main] INFO  com.qc.qa.ui.BasePage - Waiting for element to clickable 
+2022-01-19_18:43:20.357 [main] INFO  p.rest.stepDefs.TransactionsStepDefs - cache cleared
+2022-01-19_18:43:20.377 [main] DEBUG com.qc.qa.ui.BasePage - No Alert displayed

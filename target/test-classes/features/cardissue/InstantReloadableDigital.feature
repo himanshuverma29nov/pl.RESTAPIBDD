@@ -1,5 +1,5 @@
 @TestSet0 @Regression @DB
-Feature: Issuing Reloadable Digital cards with V1 and V2 API
+Feature: Instant Reloadable Digital card Issuing API V1&V2
 
   Background:
     Given i fetch the mobile number from properties
@@ -25,9 +25,53 @@ Feature: Issuing Reloadable Digital cards with V1 and V2 API
     And i should see the following in the "cardDetailResponseList"
       | customerName | mobileNumber | email                    | amount | responseCode | responseMessage |
       | afzal        | 8284854535   | afzal.ahmed@pinelabs.com | 1000   | 0            | Success         |
-    And i should see the following in the card list in the database
+    And i should see the following details in the ExternalRequestDetail table
+      | ExternalRequestId           | context     |
+      | ExternalAPIType             | 9           |
+      | CorporateId                 | 6           |
+      | ExternalRequestDetailStatus | 6           |
+      | ResponseCode                | 0           |
+      | ResponseMessage             | Success     |
+      | CreatedOn                   | CurrentDate |
+      | ModifiedOn                  | CurrentDate |
+    And i should see the following details in the ExternalRequestTimeLog table
+      | ServiceName     | /card/order                          |
+      | InstanceName    | /instant/issue/nonreloadable/digital |
+      | Version         | V1                                   |
+      | ExternalAPIType | 9                                    |
+      | ResponseMessage | Success                              |
+      | CreatedOn       | CurrentDate                          |
+    And i should see the following details in the ordersummary table
+      | AdminUserInfoId        | 6           |
+      | OrderAmount            | 1000        |
+      | NetOrderAmount         | 1100        |
+      | CorporateOrderQuantity | 1           |
+      | IsInstant              | 1           |
+      | AccountType            | 12          |
+      | CardNetwork            | 1           |
+      | IssuerId               | 1           |
+      | ModifiedOn             | CurrentDate |
+      | CreatedOn              | CurrentDate |
+    And i should see the following details in the giftcardtransaction table
+      | CorporateId     | 6    |
+      | AccountType     | 12   |
+      | Amount          | 1000 |
+      | TransactionType | 1    |
+      | IssuerId        | 1    |
+    And i should see the following details in the corporateaccounthistory table
+      | CorporateId | 6    |
+      | Amount      | 1100 |
+      | NetAmount   | 1100 |
+      | FundStatus  | 2    |
+      | AccountType | 12   |
+      | IssuerId    | 1    |
+    And i should see the following details in the card table
+      | CorporateId            | 6                        |
+      | CardSchemeId           | 7                        |
+      | AccountType            | 12                       |
       | ActivationEmail        | afzal.ahmed@pinelabs.com |
-      | ActivationMobileNumber | context                  |
+      | ActivationMobileNumber | 8284854535               |
+
 
   @DB
   Scenario: Issuing a Reloadable Digital Card with V2 API
@@ -186,7 +230,5 @@ Feature: Issuing Reloadable Digital cards with V1 and V2 API
       | customerName | mobileNumber | email                    | amount | responseCode | responseMessage                                                       |
       | afzal        | 8284854535   | afzal.ahmed@pinelabs.com | 1000   | 269          | Request declined. Only one such card can be linked to a mobile number |
 
-#  Scenario: Issuing card with amoount more that available account balance.
-#
-#
-#  Scenario: Validating the net order amount after changing the issuance charges
+#  Scenario: Issuing card with amount more that available account balance.
+

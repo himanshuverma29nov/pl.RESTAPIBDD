@@ -30,7 +30,18 @@ public class CardUpdate extends BaseAPI {
     public Response adminCardUpdate(Object create) throws ConfigPropertyException, FrameworkException {
         Map<String, String> headerMap = null;
         String url = null;
-        url = getAPIResourceURI("cardUpdate");
+        url = getAPIResourceURI("AdminCardUpdate");
+        headerMap = header.getOldHeaderAsMap();
+        logger.info("CardIssue Rest API URL :- " + url);
+        Response response = postAPI(headerMap, create, url);
+        logger.info("Time Taken to perform " + url + " transaction: " + response.getTime());
+        return response;
+    }
+
+    public Response customerCardUpdate(Object create) throws ConfigPropertyException, FrameworkException {
+        Map<String, String> headerMap = null;
+        String url = null;
+        url = getAPIResourceURI("CustomerCardUpdate");
         headerMap = header.getOldHeaderAsMap();
         logger.info("CardIssue Rest API URL :- " + url);
         Response response = postAPI(headerMap, create, url);

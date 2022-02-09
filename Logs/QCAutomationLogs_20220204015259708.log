@@ -1,0 +1,429 @@
+2022-02-04_01:52:59.770 [main] INFO  pl.rest.CustomHooks - SCENARIO NAME: Validating a balance field of card on issuing and reloading a card.
+2022-02-04_01:52:59.773 [main] INFO  pl.rest.CustomHooks - TAG NAMEs: [@Regression]
+2022-02-04_01:52:59.775 [main] INFO  pl.rest.CustomHooks - SCENARIO NAME: Validating a balance field of card on issuing and reloading a card.
+2022-02-04_01:52:59.776 [main] INFO  pl.rest.CustomHooks - TAG NAMEs: [@Regression]
+2022-02-04_01:52:59.835 [main] INFO  pl.rest.CustomHooks - Index: 0, Size: 0
+2022-02-04_01:53:00.975 [main] INFO  com.qc.qa.utils.TestDataReader - Reading API Test Data config values from  testData/api/devAPITestData.properties
+2022-02-04_01:53:00.991 [main] INFO  pl.rest.service.Authorize - Authorize Rest API URL :- https://apitest.pineperks.in/auth/V1/generate/token
+2022-02-04_01:53:00.991 [main] INFO  com.qc.BaseAPI - GET call to URL https://apitest.pineperks.in/auth/V1/generate/token
+2022-02-04_01:53:01.157 [main] INFO  com.qc.BaseAPI - ********************REQUEST********************
+2022-02-04_01:53:03.106 [main] DEBUG o.a.h.i.c.BasicClientConnectionManager - Get connection for route {s}->https://apitest.pineperks.in:443
+2022-02-04_01:53:03.176 [main] DEBUG o.a.h.i.c.DefaultClientConnectionOperator - Connecting to apitest.pineperks.in:443
+2022-02-04_01:53:03.750 [main] DEBUG o.a.h.c.protocol.RequestAddCookies - CookieSpec selected: ignoreCookies
+2022-02-04_01:53:03.753 [main] DEBUG o.a.h.c.protocol.RequestAuthCache - Auth cache not set in the context
+2022-02-04_01:53:03.753 [main] DEBUG o.a.h.c.p.RequestTargetAuthentication - Target auth state: UNCHALLENGED
+2022-02-04_01:53:03.754 [main] DEBUG o.a.h.c.p.RequestProxyAuthentication - Proxy auth state: UNCHALLENGED
+2022-02-04_01:53:03.754 [main] DEBUG o.a.h.impl.client.DefaultHttpClient - Attempt 1 to execute request
+2022-02-04_01:53:03.755 [main] DEBUG o.a.h.i.conn.DefaultClientConnection - Sending request: GET /auth/V1/generate/token HTTP/1.1
+2022-02-04_01:53:03.755 [main] DEBUG org.apache.http.wire -  >> "GET /auth/V1/generate/token HTTP/1.1[\r][\n]"
+2022-02-04_01:53:03.756 [main] DEBUG org.apache.http.wire -  >> "Content-Type: application/json; charset=UTF-8[\r][\n]"
+2022-02-04_01:53:03.757 [main] DEBUG org.apache.http.wire -  >> "Accept: */*[\r][\n]"
+2022-02-04_01:53:03.757 [main] DEBUG org.apache.http.wire -  >> "userName: A0aCcnPzDANtKmvSLPKcaw==[\r][\n]"
+2022-02-04_01:53:03.757 [main] DEBUG org.apache.http.wire -  >> "Host: apitest.pineperks.in[\r][\n]"
+2022-02-04_01:53:03.757 [main] DEBUG org.apache.http.wire -  >> "Connection: Keep-Alive[\r][\n]"
+2022-02-04_01:53:03.757 [main] DEBUG org.apache.http.wire -  >> "User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_202)[\r][\n]"
+2022-02-04_01:53:03.758 [main] DEBUG org.apache.http.wire -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2022-02-04_01:53:03.758 [main] DEBUG org.apache.http.wire -  >> "[\r][\n]"
+2022-02-04_01:53:03.758 [main] DEBUG org.apache.http.headers - >> GET /auth/V1/generate/token HTTP/1.1
+2022-02-04_01:53:03.758 [main] DEBUG org.apache.http.headers - >> Content-Type: application/json; charset=UTF-8
+2022-02-04_01:53:03.758 [main] DEBUG org.apache.http.headers - >> Accept: */*
+2022-02-04_01:53:03.758 [main] DEBUG org.apache.http.headers - >> userName: A0aCcnPzDANtKmvSLPKcaw==
+2022-02-04_01:53:03.758 [main] DEBUG org.apache.http.headers - >> Host: apitest.pineperks.in
+2022-02-04_01:53:03.758 [main] DEBUG org.apache.http.headers - >> Connection: Keep-Alive
+2022-02-04_01:53:03.759 [main] DEBUG org.apache.http.headers - >> User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_202)
+2022-02-04_01:53:03.759 [main] DEBUG org.apache.http.headers - >> Accept-Encoding: gzip,deflate
+2022-02-04_01:53:03.818 [main] DEBUG org.apache.http.wire -  << "HTTP/1.1 200 [\r][\n]"
+2022-02-04_01:53:03.821 [main] DEBUG org.apache.http.wire -  << "Access-Control-Allow-Methods: GET, POST[\r][\n]"
+2022-02-04_01:53:03.822 [main] DEBUG org.apache.http.wire -  << "Access-Control-Allow-Origin: *[\r][\n]"
+2022-02-04_01:53:03.822 [main] DEBUG org.apache.http.wire -  << "Content-Security-Policy: default-src 'none'[\r][\n]"
+2022-02-04_01:53:03.822 [main] DEBUG org.apache.http.wire -  << "Feature-Policy: 'none'[\r][\n]"
+2022-02-04_01:53:03.822 [main] DEBUG org.apache.http.wire -  << "Referrer-Policy: no-referrer[\r][\n]"
+2022-02-04_01:53:03.822 [main] DEBUG org.apache.http.wire -  << "Strict-Transport-Security: max-age=31536000 ; includeSubDomains[\r][\n]"
+2022-02-04_01:53:03.822 [main] DEBUG org.apache.http.wire -  << "Date: Thu, 03 Feb 2022 20:23:03 GMT[\r][\n]"
+2022-02-04_01:53:03.823 [main] DEBUG org.apache.http.wire -  << "Keep-Alive: timeout=60[\r][\n]"
+2022-02-04_01:53:03.823 [main] DEBUG org.apache.http.wire -  << "Content-Type: application/json[\r][\n]"
+2022-02-04_01:53:03.824 [main] DEBUG org.apache.http.wire -  << "Transfer-Encoding: chunked[\r][\n]"
+2022-02-04_01:53:03.824 [main] DEBUG org.apache.http.wire -  << "Connection: keep-alive[\r][\n]"
+2022-02-04_01:53:03.824 [main] DEBUG org.apache.http.wire -  << "[\r][\n]"
+2022-02-04_01:53:03.824 [main] DEBUG o.a.h.i.conn.DefaultClientConnection - Receiving response: HTTP/1.1 200 
+2022-02-04_01:53:03.824 [main] DEBUG org.apache.http.headers - << HTTP/1.1 200 
+2022-02-04_01:53:03.825 [main] DEBUG org.apache.http.headers - << Access-Control-Allow-Methods: GET, POST
+2022-02-04_01:53:03.825 [main] DEBUG org.apache.http.headers - << Access-Control-Allow-Origin: *
+2022-02-04_01:53:03.825 [main] DEBUG org.apache.http.headers - << Content-Security-Policy: default-src 'none'
+2022-02-04_01:53:03.825 [main] DEBUG org.apache.http.headers - << Feature-Policy: 'none'
+2022-02-04_01:53:03.825 [main] DEBUG org.apache.http.headers - << Referrer-Policy: no-referrer
+2022-02-04_01:53:03.825 [main] DEBUG org.apache.http.headers - << Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+2022-02-04_01:53:03.826 [main] DEBUG org.apache.http.headers - << Date: Thu, 03 Feb 2022 20:23:03 GMT
+2022-02-04_01:53:03.826 [main] DEBUG org.apache.http.headers - << Keep-Alive: timeout=60
+2022-02-04_01:53:03.826 [main] DEBUG org.apache.http.headers - << Content-Type: application/json
+2022-02-04_01:53:03.826 [main] DEBUG org.apache.http.headers - << Transfer-Encoding: chunked
+2022-02-04_01:53:03.826 [main] DEBUG org.apache.http.headers - << Connection: keep-alive
+2022-02-04_01:53:03.832 [main] DEBUG o.a.h.impl.client.DefaultHttpClient - Connection can be kept alive for 60000 MILLISECONDS
+2022-02-04_01:53:03.846 [main] DEBUG i.r.i.RequestSpecificationImpl$RestAssuredHttpBuilder - Parsing response as: application/json
+2022-02-04_01:53:03.846 [main] DEBUG i.r.i.RequestSpecificationImpl$RestAssuredHttpBuilder - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+2022-02-04_01:53:03.858 [main] INFO  com.qc.BaseAPI - Method :GET
+2022-02-04_01:53:03.859 [main] INFO  com.qc.BaseAPI - URI :https://apitest.pineperks.in/auth/V1/generate/token
+2022-02-04_01:53:03.860 [main] INFO  com.qc.BaseAPI - Headers :userName=A0aCcnPzDANtKmvSLPKcaw==
+Accept=*/*
+Content-Type=application/json; charset=UTF-8
+2022-02-04_01:53:03.860 [main] INFO  com.qc.BaseAPI - Body :null
+2022-02-04_01:53:03.860 [main] INFO  com.qc.BaseAPI - ********************RESPONSE********************
+2022-02-04_01:53:03.868 [main] DEBUG org.apache.http.wire -  << "7f[\r][\n]"
+2022-02-04_01:53:03.870 [main] DEBUG org.apache.http.wire -  << "{"accessToken":"d1fccbeb11474f9596fee26e1f4823cb","tokenExpiryTime":"04-Feb-2024","responseCode":0,"responseMessage":"Success"}"
+2022-02-04_01:53:03.870 [main] DEBUG org.apache.http.wire -  << "[\r][\n]"
+2022-02-04_01:53:03.870 [main] DEBUG org.apache.http.wire -  << "0[\r][\n]"
+2022-02-04_01:53:03.870 [main] DEBUG org.apache.http.wire -  << "[\r][\n]"
+2022-02-04_01:53:03.871 [main] DEBUG o.a.h.i.c.BasicClientConnectionManager - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@e11248f
+2022-02-04_01:53:03.871 [main] DEBUG o.a.h.i.c.BasicClientConnectionManager - Connection can be kept alive for 60000 MILLISECONDS
+2022-02-04_01:53:03.899 [main] INFO  com.qc.BaseAPI - Response :{
+    "accessToken": "d1fccbeb11474f9596fee26e1f4823cb",
+    "tokenExpiryTime": "04-Feb-2024",
+    "responseCode": 0,
+    "responseMessage": "Success"
+}
+2022-02-04_01:53:03.901 [main] INFO  com.qc.BaseAPI -  **** GET call Response time 2686 ms
+2022-02-04_01:53:03.901 [main] INFO  pl.rest.service.Authorize - Time Taken to perform https://apitest.pineperks.in/auth/V1/generate/token transaction: 2686
+2022-02-04_01:53:03.978 [main] INFO  pl.rest.utils.TestSetDataReader - Reading API Test Data config values from  testData/api/TestSet0_devAPITestData.properties
+2022-02-04_01:53:03.980 [main] INFO  pl.rest.stepDefs.CardIssueStepDefs - Fetched mobile number Dataset 8284854535
+2022-02-04_01:53:03.984 [main] INFO  pl.rest.utils.DBUtils - Delinking mobile from Cards
+2022-02-04_01:53:03.984 [main] INFO  pl.rest.utils.DBUtils - Executing the query update card set CardStatus=4where AccountType=18 and ActivationMobileNumber in(8284854535) and CardType=2 and cardstatus in (1,2);
+2022-02-04_01:53:04.031 [main] ERROR com.qc.qa.utils.LoadProperties - Missing MySQLDBEnvironment property value in system property or in config.properties files.Please add it if incase required
+2022-02-04_01:53:04.032 [main] INFO  com.qc.qa.dbutils.DBPoolProvider - Con pool Total - 400, idle - 0,  Num active - 0
+2022-02-04_01:53:04.032 [main] INFO  com.qc.qa.dbutils.DBPoolProvider - Retrieved connection
+2022-02-04_01:53:04.659 [main] INFO  c.qc.qa.dbutils.DBConnectionManager - DB Connected Successfully.
+2022-02-04_01:53:04.661 [main] INFO  c.qc.qa.dbutils.DBConnectionManager - Executing Query:::update card set CardStatus=4where AccountType=18 and ActivationMobileNumber in(8284854535) and CardType=2 and cardstatus in (1,2);
+2022-02-04_01:53:04.701 [main] INFO  pl.rest.utils.DBUtils - No. of rows affected on delinking mobile1
+2022-02-04_01:53:04.724 [main] INFO  com.qc.qa.utils.TestDataReader - Reading Json data authorizeHeaders
+2022-02-04_01:53:04.731 [main] INFO  com.qc.qa.utils.TestDataReader - Reading json data from file @ testData/api/devAPIData.json
+2022-02-04_01:53:04.772 [main] INFO  pl.rest.service.CardIssue - CardIssue Rest API URL :- https://apitest.pineperks.in/card/order/V1/instant/issue/reloadable/digital
+2022-02-04_01:53:04.773 [main] INFO  com.qc.BaseAPI - POST call to URL https://apitest.pineperks.in/card/order/V1/instant/issue/reloadable/digital
+2022-02-04_01:53:04.792 [main] INFO  com.qc.BaseAPI - ********************REQUEST********************
+2022-02-04_01:53:04.834 [main] DEBUG o.a.h.i.c.BasicClientConnectionManager - Get connection for route {s}->https://apitest.pineperks.in:443
+2022-02-04_01:53:04.834 [main] DEBUG o.a.h.i.c.DefaultClientConnectionOperator - Connecting to apitest.pineperks.in:443
+2022-02-04_01:53:04.949 [main] DEBUG o.a.h.c.protocol.RequestAddCookies - CookieSpec selected: ignoreCookies
+2022-02-04_01:53:04.950 [main] DEBUG o.a.h.c.protocol.RequestAuthCache - Auth cache not set in the context
+2022-02-04_01:53:04.950 [main] DEBUG o.a.h.c.p.RequestTargetAuthentication - Target auth state: UNCHALLENGED
+2022-02-04_01:53:04.950 [main] DEBUG o.a.h.c.p.RequestProxyAuthentication - Proxy auth state: UNCHALLENGED
+2022-02-04_01:53:04.950 [main] DEBUG o.a.h.impl.client.DefaultHttpClient - Attempt 1 to execute request
+2022-02-04_01:53:04.950 [main] DEBUG o.a.h.i.conn.DefaultClientConnection - Sending request: POST /card/order/V1/instant/issue/reloadable/digital HTTP/1.1
+2022-02-04_01:53:04.950 [main] DEBUG org.apache.http.wire -  >> "POST /card/order/V1/instant/issue/reloadable/digital HTTP/1.1[\r][\n]"
+2022-02-04_01:53:04.951 [main] DEBUG org.apache.http.wire -  >> "Accept: */*[\r][\n]"
+2022-02-04_01:53:04.951 [main] DEBUG org.apache.http.wire -  >> "userName: A0aCcnPzDANtKmvSLPKcaw==[\r][\n]"
+2022-02-04_01:53:04.951 [main] DEBUG org.apache.http.wire -  >> "token: d1fccbeb11474f9596fee26e1f4823cb[\r][\n]"
+2022-02-04_01:53:04.951 [main] DEBUG org.apache.http.wire -  >> "Content-Type: application/json; charset=UTF-8[\r][\n]"
+2022-02-04_01:53:04.951 [main] DEBUG org.apache.http.wire -  >> "Content-Length: 242[\r][\n]"
+2022-02-04_01:53:04.951 [main] DEBUG org.apache.http.wire -  >> "Host: apitest.pineperks.in[\r][\n]"
+2022-02-04_01:53:04.952 [main] DEBUG org.apache.http.wire -  >> "Connection: Keep-Alive[\r][\n]"
+2022-02-04_01:53:04.952 [main] DEBUG org.apache.http.wire -  >> "User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_202)[\r][\n]"
+2022-02-04_01:53:04.952 [main] DEBUG org.apache.http.wire -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2022-02-04_01:53:04.952 [main] DEBUG org.apache.http.wire -  >> "[\r][\n]"
+2022-02-04_01:53:04.953 [main] DEBUG org.apache.http.headers - >> POST /card/order/V1/instant/issue/reloadable/digital HTTP/1.1
+2022-02-04_01:53:04.953 [main] DEBUG org.apache.http.headers - >> Accept: */*
+2022-02-04_01:53:04.953 [main] DEBUG org.apache.http.headers - >> userName: A0aCcnPzDANtKmvSLPKcaw==
+2022-02-04_01:53:04.953 [main] DEBUG org.apache.http.headers - >> token: d1fccbeb11474f9596fee26e1f4823cb
+2022-02-04_01:53:04.953 [main] DEBUG org.apache.http.headers - >> Content-Type: application/json; charset=UTF-8
+2022-02-04_01:53:04.953 [main] DEBUG org.apache.http.headers - >> Content-Length: 242
+2022-02-04_01:53:04.953 [main] DEBUG org.apache.http.headers - >> Host: apitest.pineperks.in
+2022-02-04_01:53:04.953 [main] DEBUG org.apache.http.headers - >> Connection: Keep-Alive
+2022-02-04_01:53:04.953 [main] DEBUG org.apache.http.headers - >> User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_202)
+2022-02-04_01:53:04.953 [main] DEBUG org.apache.http.headers - >> Accept-Encoding: gzip,deflate
+2022-02-04_01:53:04.954 [main] DEBUG org.apache.http.wire -  >> "{"isLinkToBeSentOnMobile":true,"checksum":"5x3GNrnStyS2PkMvV6EeAw==","cardDetailList":[{"amount":"1000","mobileNumber":"8284854535","customerName":"afzal","email":"afzal.ahmed@pinelabs.com"}],"externalRequestId":"OCGu3q8","cardSchemeId":"12"}"
+2022-02-04_01:53:05.298 [main] DEBUG org.apache.http.wire -  << "HTTP/1.1 200 [\r][\n]"
+2022-02-04_01:53:05.299 [main] DEBUG org.apache.http.wire -  << "Access-Control-Allow-Methods: GET, POST[\r][\n]"
+2022-02-04_01:53:05.299 [main] DEBUG org.apache.http.wire -  << "Access-Control-Allow-Origin: *[\r][\n]"
+2022-02-04_01:53:05.299 [main] DEBUG org.apache.http.wire -  << "Content-Security-Policy: default-src 'none'[\r][\n]"
+2022-02-04_01:53:05.300 [main] DEBUG org.apache.http.wire -  << "Feature-Policy: 'none'[\r][\n]"
+2022-02-04_01:53:05.301 [main] DEBUG org.apache.http.wire -  << "Referrer-Policy: no-referrer[\r][\n]"
+2022-02-04_01:53:05.301 [main] DEBUG org.apache.http.wire -  << "Strict-Transport-Security: max-age=31536000 ; includeSubDomains[\r][\n]"
+2022-02-04_01:53:05.301 [main] DEBUG org.apache.http.wire -  << "Date: Thu, 03 Feb 2022 20:23:05 GMT[\r][\n]"
+2022-02-04_01:53:05.302 [main] DEBUG org.apache.http.wire -  << "Keep-Alive: timeout=60[\r][\n]"
+2022-02-04_01:53:05.302 [main] DEBUG org.apache.http.wire -  << "Content-Type: application/json[\r][\n]"
+2022-02-04_01:53:05.302 [main] DEBUG org.apache.http.wire -  << "Transfer-Encoding: chunked[\r][\n]"
+2022-02-04_01:53:05.302 [main] DEBUG org.apache.http.wire -  << "Connection: keep-alive[\r][\n]"
+2022-02-04_01:53:05.302 [main] DEBUG org.apache.http.wire -  << "[\r][\n]"
+2022-02-04_01:53:05.302 [main] DEBUG o.a.h.i.conn.DefaultClientConnection - Receiving response: HTTP/1.1 200 
+2022-02-04_01:53:05.302 [main] DEBUG org.apache.http.headers - << HTTP/1.1 200 
+2022-02-04_01:53:05.303 [main] DEBUG org.apache.http.headers - << Access-Control-Allow-Methods: GET, POST
+2022-02-04_01:53:05.303 [main] DEBUG org.apache.http.headers - << Access-Control-Allow-Origin: *
+2022-02-04_01:53:05.303 [main] DEBUG org.apache.http.headers - << Content-Security-Policy: default-src 'none'
+2022-02-04_01:53:05.303 [main] DEBUG org.apache.http.headers - << Feature-Policy: 'none'
+2022-02-04_01:53:05.303 [main] DEBUG org.apache.http.headers - << Referrer-Policy: no-referrer
+2022-02-04_01:53:05.303 [main] DEBUG org.apache.http.headers - << Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+2022-02-04_01:53:05.303 [main] DEBUG org.apache.http.headers - << Date: Thu, 03 Feb 2022 20:23:05 GMT
+2022-02-04_01:53:05.303 [main] DEBUG org.apache.http.headers - << Keep-Alive: timeout=60
+2022-02-04_01:53:05.303 [main] DEBUG org.apache.http.headers - << Content-Type: application/json
+2022-02-04_01:53:05.304 [main] DEBUG org.apache.http.headers - << Transfer-Encoding: chunked
+2022-02-04_01:53:05.304 [main] DEBUG org.apache.http.headers - << Connection: keep-alive
+2022-02-04_01:53:05.304 [main] DEBUG o.a.h.impl.client.DefaultHttpClient - Connection can be kept alive for 60000 MILLISECONDS
+2022-02-04_01:53:05.305 [main] DEBUG i.r.i.RequestSpecificationImpl$RestAssuredHttpBuilder - Parsing response as: application/json
+2022-02-04_01:53:05.306 [main] DEBUG i.r.i.RequestSpecificationImpl$RestAssuredHttpBuilder - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+2022-02-04_01:53:05.308 [main] INFO  com.qc.BaseAPI - Method :POST
+2022-02-04_01:53:05.312 [main] INFO  com.qc.BaseAPI - URI :https://apitest.pineperks.in/card/order/V1/instant/issue/reloadable/digital
+2022-02-04_01:53:05.312 [main] INFO  com.qc.BaseAPI - Headers :token=d1fccbeb11474f9596fee26e1f4823cb
+userName=A0aCcnPzDANtKmvSLPKcaw==
+Accept=*/*
+Content-Type=application/json; charset=UTF-8
+2022-02-04_01:53:05.313 [main] INFO  com.qc.BaseAPI - Body :{"isLinkToBeSentOnMobile":true,"checksum":"5x3GNrnStyS2PkMvV6EeAw==","cardDetailList":[{"amount":"1000","mobileNumber":"8284854535","customerName":"afzal","email":"afzal.ahmed@pinelabs.com"}],"externalRequestId":"OCGu3q8","cardSchemeId":"12"}
+2022-02-04_01:53:05.313 [main] INFO  com.qc.BaseAPI - ********************RESPONSE********************
+2022-02-04_01:53:05.313 [main] DEBUG org.apache.http.wire -  << "1f2[\r][\n]"
+2022-02-04_01:53:05.313 [main] DEBUG org.apache.http.wire -  << "{"externalRequestId":"OCGu3q8","orderId":103266,"orderStatus":6,"cardDetailResponseList":[{"referenceNumber":6431621255,"serialNumber":10326600010001,"customerName":"afzal","mobileNumber":8284854535,"email":"afzal.ahmed@pinelabs.com","amount":1000,"cardLink":"test.pineperks.in/rCard?c=uLn4vi4NGNkKpL8mDcHqKg2","responseCode":0,"responseMessage":"Success"}],"successCount":1,"failedCount":0,"orderAmount":1000,"issuanceCharge":200,"netOrderAmount":1200,"responseCode":0,"responseMessage":"Success"}"
+2022-02-04_01:53:05.313 [main] DEBUG org.apache.http.wire -  << "[\r][\n]"
+2022-02-04_01:53:05.314 [main] DEBUG org.apache.http.wire -  << "0[\r][\n]"
+2022-02-04_01:53:05.315 [main] DEBUG org.apache.http.wire -  << "[\r][\n]"
+2022-02-04_01:53:05.315 [main] DEBUG o.a.h.i.c.BasicClientConnectionManager - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@6b7072c3
+2022-02-04_01:53:05.315 [main] DEBUG o.a.h.i.c.BasicClientConnectionManager - Connection can be kept alive for 60000 MILLISECONDS
+2022-02-04_01:53:05.319 [main] INFO  com.qc.BaseAPI - Response :{
+    "externalRequestId": "OCGu3q8",
+    "orderId": 103266,
+    "orderStatus": 6,
+    "cardDetailResponseList": [
+        {
+            "referenceNumber": 6431621255,
+            "serialNumber": 10326600010001,
+            "customerName": "afzal",
+            "mobileNumber": 8284854535,
+            "email": "afzal.ahmed@pinelabs.com",
+            "amount": 1000,
+            "cardLink": "test.pineperks.in/rCard?c=uLn4vi4NGNkKpL8mDcHqKg2",
+            "responseCode": 0,
+            "responseMessage": "Success"
+        }
+    ],
+    "successCount": 1,
+    "failedCount": 0,
+    "orderAmount": 1000,
+    "issuanceCharge": 200,
+    "netOrderAmount": 1200,
+    "responseCode": 0,
+    "responseMessage": "Success"
+}
+2022-02-04_01:53:05.319 [main] INFO  com.qc.BaseAPI -  **** POST call Response time 511 ms
+2022-02-04_01:53:05.320 [main] INFO  pl.rest.service.CardIssue - Time Taken to perform https://apitest.pineperks.in/card/order/V1/instant/issue/reloadable/digital transaction: 511
+2022-02-04_01:53:05.334 [main] INFO  com.qc.qa.utils.TestDataReader - Reading Json data authorizeHeaders
+2022-02-04_01:53:05.339 [main] INFO  com.qc.qa.utils.TestDataReader - Reading json data from file @ testData/api/devAPIData.json
+2022-02-04_01:53:05.342 [main] INFO  pl.rest.service.CardReload - Card Reload Rest API URL :- https://apitest.pineperks.in/card/order/V1/instant/reload
+2022-02-04_01:53:05.343 [main] INFO  com.qc.BaseAPI - POST call to URL https://apitest.pineperks.in/card/order/V1/instant/reload
+2022-02-04_01:53:05.349 [main] INFO  com.qc.BaseAPI - ********************REQUEST********************
+2022-02-04_01:53:05.359 [main] DEBUG o.a.h.i.c.BasicClientConnectionManager - Get connection for route {s}->https://apitest.pineperks.in:443
+2022-02-04_01:53:05.360 [main] DEBUG o.a.h.i.c.DefaultClientConnectionOperator - Connecting to apitest.pineperks.in:443
+2022-02-04_01:53:05.472 [main] DEBUG o.a.h.c.protocol.RequestAddCookies - CookieSpec selected: ignoreCookies
+2022-02-04_01:53:05.472 [main] DEBUG o.a.h.c.protocol.RequestAuthCache - Auth cache not set in the context
+2022-02-04_01:53:05.472 [main] DEBUG o.a.h.c.p.RequestTargetAuthentication - Target auth state: UNCHALLENGED
+2022-02-04_01:53:05.472 [main] DEBUG o.a.h.c.p.RequestProxyAuthentication - Proxy auth state: UNCHALLENGED
+2022-02-04_01:53:05.473 [main] DEBUG o.a.h.impl.client.DefaultHttpClient - Attempt 1 to execute request
+2022-02-04_01:53:05.473 [main] DEBUG o.a.h.i.conn.DefaultClientConnection - Sending request: POST /card/order/V1/instant/reload HTTP/1.1
+2022-02-04_01:53:05.473 [main] DEBUG org.apache.http.wire -  >> "POST /card/order/V1/instant/reload HTTP/1.1[\r][\n]"
+2022-02-04_01:53:05.473 [main] DEBUG org.apache.http.wire -  >> "Accept: */*[\r][\n]"
+2022-02-04_01:53:05.473 [main] DEBUG org.apache.http.wire -  >> "userName: A0aCcnPzDANtKmvSLPKcaw==[\r][\n]"
+2022-02-04_01:53:05.473 [main] DEBUG org.apache.http.wire -  >> "token: d1fccbeb11474f9596fee26e1f4823cb[\r][\n]"
+2022-02-04_01:53:05.474 [main] DEBUG org.apache.http.wire -  >> "Content-Type: application/json; charset=UTF-8[\r][\n]"
+2022-02-04_01:53:05.474 [main] DEBUG org.apache.http.wire -  >> "Content-Length: 216[\r][\n]"
+2022-02-04_01:53:05.474 [main] DEBUG org.apache.http.wire -  >> "Host: apitest.pineperks.in[\r][\n]"
+2022-02-04_01:53:05.474 [main] DEBUG org.apache.http.wire -  >> "Connection: Keep-Alive[\r][\n]"
+2022-02-04_01:53:05.474 [main] DEBUG org.apache.http.wire -  >> "User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_202)[\r][\n]"
+2022-02-04_01:53:05.474 [main] DEBUG org.apache.http.wire -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2022-02-04_01:53:05.474 [main] DEBUG org.apache.http.wire -  >> "[\r][\n]"
+2022-02-04_01:53:05.474 [main] DEBUG org.apache.http.headers - >> POST /card/order/V1/instant/reload HTTP/1.1
+2022-02-04_01:53:05.476 [main] DEBUG org.apache.http.headers - >> Accept: */*
+2022-02-04_01:53:05.476 [main] DEBUG org.apache.http.headers - >> userName: A0aCcnPzDANtKmvSLPKcaw==
+2022-02-04_01:53:05.476 [main] DEBUG org.apache.http.headers - >> token: d1fccbeb11474f9596fee26e1f4823cb
+2022-02-04_01:53:05.476 [main] DEBUG org.apache.http.headers - >> Content-Type: application/json; charset=UTF-8
+2022-02-04_01:53:05.476 [main] DEBUG org.apache.http.headers - >> Content-Length: 216
+2022-02-04_01:53:05.476 [main] DEBUG org.apache.http.headers - >> Host: apitest.pineperks.in
+2022-02-04_01:53:05.476 [main] DEBUG org.apache.http.headers - >> Connection: Keep-Alive
+2022-02-04_01:53:05.476 [main] DEBUG org.apache.http.headers - >> User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_202)
+2022-02-04_01:53:05.476 [main] DEBUG org.apache.http.headers - >> Accept-Encoding: gzip,deflate
+2022-02-04_01:53:05.476 [main] DEBUG org.apache.http.wire -  >> "{"cardNetwork":"1","checksum":"NbUNCWgKV/nC+On7DsoqCQ==","cardDetailList":[{"amount":"200","serialNumber":"null","referenceNumber":6431621255}],"cardCategoryId":"1","externalRequestId":"wyM1A9I","cardIdentifier":"1"}"
+2022-02-04_01:53:05.970 [main] DEBUG org.apache.http.wire -  << "HTTP/1.1 200 [\r][\n]"
+2022-02-04_01:53:05.971 [main] DEBUG org.apache.http.wire -  << "Access-Control-Allow-Methods: GET, POST[\r][\n]"
+2022-02-04_01:53:05.971 [main] DEBUG org.apache.http.wire -  << "Access-Control-Allow-Origin: *[\r][\n]"
+2022-02-04_01:53:05.971 [main] DEBUG org.apache.http.wire -  << "Content-Security-Policy: default-src 'none'[\r][\n]"
+2022-02-04_01:53:05.971 [main] DEBUG org.apache.http.wire -  << "Feature-Policy: 'none'[\r][\n]"
+2022-02-04_01:53:05.971 [main] DEBUG org.apache.http.wire -  << "Referrer-Policy: no-referrer[\r][\n]"
+2022-02-04_01:53:05.971 [main] DEBUG org.apache.http.wire -  << "Strict-Transport-Security: max-age=31536000 ; includeSubDomains[\r][\n]"
+2022-02-04_01:53:05.972 [main] DEBUG org.apache.http.wire -  << "Date: Thu, 03 Feb 2022 20:23:05 GMT[\r][\n]"
+2022-02-04_01:53:05.972 [main] DEBUG org.apache.http.wire -  << "Keep-Alive: timeout=60[\r][\n]"
+2022-02-04_01:53:05.972 [main] DEBUG org.apache.http.wire -  << "Content-Type: application/json[\r][\n]"
+2022-02-04_01:53:05.972 [main] DEBUG org.apache.http.wire -  << "Transfer-Encoding: chunked[\r][\n]"
+2022-02-04_01:53:05.972 [main] DEBUG org.apache.http.wire -  << "Connection: keep-alive[\r][\n]"
+2022-02-04_01:53:05.972 [main] DEBUG org.apache.http.wire -  << "[\r][\n]"
+2022-02-04_01:53:05.972 [main] DEBUG o.a.h.i.conn.DefaultClientConnection - Receiving response: HTTP/1.1 200 
+2022-02-04_01:53:05.972 [main] DEBUG org.apache.http.headers - << HTTP/1.1 200 
+2022-02-04_01:53:05.973 [main] DEBUG org.apache.http.headers - << Access-Control-Allow-Methods: GET, POST
+2022-02-04_01:53:05.973 [main] DEBUG org.apache.http.headers - << Access-Control-Allow-Origin: *
+2022-02-04_01:53:05.973 [main] DEBUG org.apache.http.headers - << Content-Security-Policy: default-src 'none'
+2022-02-04_01:53:05.973 [main] DEBUG org.apache.http.headers - << Feature-Policy: 'none'
+2022-02-04_01:53:05.973 [main] DEBUG org.apache.http.headers - << Referrer-Policy: no-referrer
+2022-02-04_01:53:05.973 [main] DEBUG org.apache.http.headers - << Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+2022-02-04_01:53:05.973 [main] DEBUG org.apache.http.headers - << Date: Thu, 03 Feb 2022 20:23:05 GMT
+2022-02-04_01:53:05.973 [main] DEBUG org.apache.http.headers - << Keep-Alive: timeout=60
+2022-02-04_01:53:05.973 [main] DEBUG org.apache.http.headers - << Content-Type: application/json
+2022-02-04_01:53:05.973 [main] DEBUG org.apache.http.headers - << Transfer-Encoding: chunked
+2022-02-04_01:53:05.973 [main] DEBUG org.apache.http.headers - << Connection: keep-alive
+2022-02-04_01:53:05.973 [main] DEBUG o.a.h.impl.client.DefaultHttpClient - Connection can be kept alive for 60000 MILLISECONDS
+2022-02-04_01:53:05.974 [main] DEBUG i.r.i.RequestSpecificationImpl$RestAssuredHttpBuilder - Parsing response as: application/json
+2022-02-04_01:53:05.974 [main] DEBUG i.r.i.RequestSpecificationImpl$RestAssuredHttpBuilder - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+2022-02-04_01:53:05.975 [main] INFO  com.qc.BaseAPI - Method :POST
+2022-02-04_01:53:05.977 [main] INFO  com.qc.BaseAPI - URI :https://apitest.pineperks.in/card/order/V1/instant/reload
+2022-02-04_01:53:05.977 [main] INFO  com.qc.BaseAPI - Headers :token=d1fccbeb11474f9596fee26e1f4823cb
+userName=A0aCcnPzDANtKmvSLPKcaw==
+Accept=*/*
+Content-Type=application/json; charset=UTF-8
+2022-02-04_01:53:05.977 [main] INFO  com.qc.BaseAPI - Body :{"cardNetwork":"1","checksum":"NbUNCWgKV/nC+On7DsoqCQ==","cardDetailList":[{"amount":"200","serialNumber":"null","referenceNumber":6431621255}],"cardCategoryId":"1","externalRequestId":"wyM1A9I","cardIdentifier":"1"}
+2022-02-04_01:53:05.977 [main] INFO  com.qc.BaseAPI - ********************RESPONSE********************
+2022-02-04_01:53:05.978 [main] DEBUG org.apache.http.wire -  << "186[\r][\n]"
+2022-02-04_01:53:05.978 [main] DEBUG org.apache.http.wire -  << "{"externalRequestId":"wyM1A9I","orderId":103267,"orderStatus":6,"cardDetailResponseList":[{"referenceNumber":6431621255,"serialNumber":10326600010001,"amount":200,"cardLink":"test.pineperks.in/rCard?c=uLn4vi4NGNkKpL8mDcHqKg2","responseCode":0,"responseMessage":"Success"}],"orderAmount":200,"netOrderAmount":200,"successCount":1,"failedCount":0,"responseCode":0,"responseMessage":"Success"}"
+2022-02-04_01:53:05.978 [main] DEBUG org.apache.http.wire -  << "[\r][\n]"
+2022-02-04_01:53:05.978 [main] DEBUG org.apache.http.wire -  << "0[\r][\n]"
+2022-02-04_01:53:05.979 [main] DEBUG org.apache.http.wire -  << "[\r][\n]"
+2022-02-04_01:53:05.979 [main] DEBUG o.a.h.i.c.BasicClientConnectionManager - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@3d8904f8
+2022-02-04_01:53:05.979 [main] DEBUG o.a.h.i.c.BasicClientConnectionManager - Connection can be kept alive for 60000 MILLISECONDS
+2022-02-04_01:53:05.981 [main] INFO  com.qc.BaseAPI - Response :{
+    "externalRequestId": "wyM1A9I",
+    "orderId": 103267,
+    "orderStatus": 6,
+    "cardDetailResponseList": [
+        {
+            "referenceNumber": 6431621255,
+            "serialNumber": 10326600010001,
+            "amount": 200,
+            "cardLink": "test.pineperks.in/rCard?c=uLn4vi4NGNkKpL8mDcHqKg2",
+            "responseCode": 0,
+            "responseMessage": "Success"
+        }
+    ],
+    "orderAmount": 200,
+    "netOrderAmount": 200,
+    "successCount": 1,
+    "failedCount": 0,
+    "responseCode": 0,
+    "responseMessage": "Success"
+}
+2022-02-04_01:53:05.981 [main] INFO  com.qc.BaseAPI -  **** POST call Response time 624 ms
+2022-02-04_01:53:05.982 [main] INFO  pl.rest.service.CardReload - Time Taken to perform https://apitest.pineperks.in/card/order/V1/instant/reload transaction: 624
+2022-02-04_01:53:05.989 [main] INFO  com.qc.qa.utils.TestDataReader - Reading Json data authorizeHeaders
+2022-02-04_01:53:05.994 [main] INFO  com.qc.qa.utils.TestDataReader - Reading json data from file @ testData/api/devAPIData.json
+2022-02-04_01:53:05.998 [main] INFO  p.r.service.CorporateAndCardDetails - CardIssue Rest API URL :- https://apitest.pineperks.in/card/profile/V1/detail
+2022-02-04_01:53:05.999 [main] INFO  com.qc.BaseAPI - POST call to URL https://apitest.pineperks.in/card/profile/V1/detail
+2022-02-04_01:53:06.005 [main] INFO  com.qc.BaseAPI - ********************REQUEST********************
+2022-02-04_01:53:06.016 [main] DEBUG o.a.h.i.c.BasicClientConnectionManager - Get connection for route {s}->https://apitest.pineperks.in:443
+2022-02-04_01:53:06.016 [main] DEBUG o.a.h.i.c.DefaultClientConnectionOperator - Connecting to apitest.pineperks.in:443
+2022-02-04_01:53:06.133 [main] DEBUG o.a.h.c.protocol.RequestAddCookies - CookieSpec selected: ignoreCookies
+2022-02-04_01:53:06.134 [main] DEBUG o.a.h.c.protocol.RequestAuthCache - Auth cache not set in the context
+2022-02-04_01:53:06.134 [main] DEBUG o.a.h.c.p.RequestTargetAuthentication - Target auth state: UNCHALLENGED
+2022-02-04_01:53:06.134 [main] DEBUG o.a.h.c.p.RequestProxyAuthentication - Proxy auth state: UNCHALLENGED
+2022-02-04_01:53:06.134 [main] DEBUG o.a.h.impl.client.DefaultHttpClient - Attempt 1 to execute request
+2022-02-04_01:53:06.134 [main] DEBUG o.a.h.i.conn.DefaultClientConnection - Sending request: POST /card/profile/V1/detail HTTP/1.1
+2022-02-04_01:53:06.134 [main] DEBUG org.apache.http.wire -  >> "POST /card/profile/V1/detail HTTP/1.1[\r][\n]"
+2022-02-04_01:53:06.134 [main] DEBUG org.apache.http.wire -  >> "Accept: */*[\r][\n]"
+2022-02-04_01:53:06.134 [main] DEBUG org.apache.http.wire -  >> "userName: A0aCcnPzDANtKmvSLPKcaw==[\r][\n]"
+2022-02-04_01:53:06.134 [main] DEBUG org.apache.http.wire -  >> "token: d1fccbeb11474f9596fee26e1f4823cb[\r][\n]"
+2022-02-04_01:53:06.134 [main] DEBUG org.apache.http.wire -  >> "Content-Type: application/json; charset=UTF-8[\r][\n]"
+2022-02-04_01:53:06.134 [main] DEBUG org.apache.http.wire -  >> "Content-Length: 40[\r][\n]"
+2022-02-04_01:53:06.135 [main] DEBUG org.apache.http.wire -  >> "Host: apitest.pineperks.in[\r][\n]"
+2022-02-04_01:53:06.135 [main] DEBUG org.apache.http.wire -  >> "Connection: Keep-Alive[\r][\n]"
+2022-02-04_01:53:06.135 [main] DEBUG org.apache.http.wire -  >> "User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_202)[\r][\n]"
+2022-02-04_01:53:06.135 [main] DEBUG org.apache.http.wire -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2022-02-04_01:53:06.135 [main] DEBUG org.apache.http.wire -  >> "[\r][\n]"
+2022-02-04_01:53:06.135 [main] DEBUG org.apache.http.headers - >> POST /card/profile/V1/detail HTTP/1.1
+2022-02-04_01:53:06.135 [main] DEBUG org.apache.http.headers - >> Accept: */*
+2022-02-04_01:53:06.135 [main] DEBUG org.apache.http.headers - >> userName: A0aCcnPzDANtKmvSLPKcaw==
+2022-02-04_01:53:06.136 [main] DEBUG org.apache.http.headers - >> token: d1fccbeb11474f9596fee26e1f4823cb
+2022-02-04_01:53:06.136 [main] DEBUG org.apache.http.headers - >> Content-Type: application/json; charset=UTF-8
+2022-02-04_01:53:06.136 [main] DEBUG org.apache.http.headers - >> Content-Length: 40
+2022-02-04_01:53:06.136 [main] DEBUG org.apache.http.headers - >> Host: apitest.pineperks.in
+2022-02-04_01:53:06.136 [main] DEBUG org.apache.http.headers - >> Connection: Keep-Alive
+2022-02-04_01:53:06.136 [main] DEBUG org.apache.http.headers - >> User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_202)
+2022-02-04_01:53:06.136 [main] DEBUG org.apache.http.headers - >> Accept-Encoding: gzip,deflate
+2022-02-04_01:53:06.136 [main] DEBUG org.apache.http.wire -  >> "{"cardDetailRequestList":["6431621255"]}"
+2022-02-04_01:53:06.166 [main] DEBUG org.apache.http.wire -  << "HTTP/1.1 200 [\r][\n]"
+2022-02-04_01:53:06.167 [main] DEBUG org.apache.http.wire -  << "Access-Control-Allow-Methods: GET, POST[\r][\n]"
+2022-02-04_01:53:06.167 [main] DEBUG org.apache.http.wire -  << "Access-Control-Allow-Origin: *[\r][\n]"
+2022-02-04_01:53:06.167 [main] DEBUG org.apache.http.wire -  << "Content-Security-Policy: default-src 'none'[\r][\n]"
+2022-02-04_01:53:06.167 [main] DEBUG org.apache.http.wire -  << "Feature-Policy: 'none'[\r][\n]"
+2022-02-04_01:53:06.167 [main] DEBUG org.apache.http.wire -  << "Referrer-Policy: no-referrer[\r][\n]"
+2022-02-04_01:53:06.167 [main] DEBUG org.apache.http.wire -  << "Strict-Transport-Security: max-age=31536000 ; includeSubDomains[\r][\n]"
+2022-02-04_01:53:06.167 [main] DEBUG org.apache.http.wire -  << "Date: Thu, 03 Feb 2022 20:23:05 GMT[\r][\n]"
+2022-02-04_01:53:06.168 [main] DEBUG org.apache.http.wire -  << "Keep-Alive: timeout=60[\r][\n]"
+2022-02-04_01:53:06.168 [main] DEBUG org.apache.http.wire -  << "Content-Type: application/json[\r][\n]"
+2022-02-04_01:53:06.168 [main] DEBUG org.apache.http.wire -  << "Transfer-Encoding: chunked[\r][\n]"
+2022-02-04_01:53:06.168 [main] DEBUG org.apache.http.wire -  << "Connection: keep-alive[\r][\n]"
+2022-02-04_01:53:06.168 [main] DEBUG org.apache.http.wire -  << "[\r][\n]"
+2022-02-04_01:53:06.169 [main] DEBUG o.a.h.i.conn.DefaultClientConnection - Receiving response: HTTP/1.1 200 
+2022-02-04_01:53:06.169 [main] DEBUG org.apache.http.headers - << HTTP/1.1 200 
+2022-02-04_01:53:06.169 [main] DEBUG org.apache.http.headers - << Access-Control-Allow-Methods: GET, POST
+2022-02-04_01:53:06.169 [main] DEBUG org.apache.http.headers - << Access-Control-Allow-Origin: *
+2022-02-04_01:53:06.169 [main] DEBUG org.apache.http.headers - << Content-Security-Policy: default-src 'none'
+2022-02-04_01:53:06.169 [main] DEBUG org.apache.http.headers - << Feature-Policy: 'none'
+2022-02-04_01:53:06.169 [main] DEBUG org.apache.http.headers - << Referrer-Policy: no-referrer
+2022-02-04_01:53:06.169 [main] DEBUG org.apache.http.headers - << Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+2022-02-04_01:53:06.169 [main] DEBUG org.apache.http.headers - << Date: Thu, 03 Feb 2022 20:23:05 GMT
+2022-02-04_01:53:06.169 [main] DEBUG org.apache.http.headers - << Keep-Alive: timeout=60
+2022-02-04_01:53:06.169 [main] DEBUG org.apache.http.headers - << Content-Type: application/json
+2022-02-04_01:53:06.169 [main] DEBUG org.apache.http.headers - << Transfer-Encoding: chunked
+2022-02-04_01:53:06.169 [main] DEBUG org.apache.http.headers - << Connection: keep-alive
+2022-02-04_01:53:06.170 [main] DEBUG o.a.h.impl.client.DefaultHttpClient - Connection can be kept alive for 60000 MILLISECONDS
+2022-02-04_01:53:06.170 [main] DEBUG i.r.i.RequestSpecificationImpl$RestAssuredHttpBuilder - Parsing response as: application/json
+2022-02-04_01:53:06.170 [main] DEBUG i.r.i.RequestSpecificationImpl$RestAssuredHttpBuilder - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+2022-02-04_01:53:06.171 [main] INFO  com.qc.BaseAPI - Method :POST
+2022-02-04_01:53:06.173 [main] INFO  com.qc.BaseAPI - URI :https://apitest.pineperks.in/card/profile/V1/detail
+2022-02-04_01:53:06.173 [main] INFO  com.qc.BaseAPI - Headers :token=d1fccbeb11474f9596fee26e1f4823cb
+userName=A0aCcnPzDANtKmvSLPKcaw==
+Accept=*/*
+Content-Type=application/json; charset=UTF-8
+2022-02-04_01:53:06.173 [main] INFO  com.qc.BaseAPI - Body :{"cardDetailRequestList":["6431621255"]}
+2022-02-04_01:53:06.173 [main] INFO  com.qc.BaseAPI - ********************RESPONSE********************
+2022-02-04_01:53:06.173 [main] DEBUG org.apache.http.wire -  << "3e1[\r][\n]"
+2022-02-04_01:53:06.173 [main] DEBUG org.apache.http.wire -  << "{"cardDetailResponseList":[{"cardReferenceNumber":6431621255,"maskedCardNumber":"608363******1119","cardStatus":1,"kycStatus":2,"cardSchemeId":12,"pinMode":4,"cardName":"Holiday Reloadable card","cardVariant":2,"cardCategoryId":1,"loadAmount":1200,"redeemedAmount":0,"balance":1200,"issuedOn":"04-Feb-2022","expiryDate":"28-Feb-2025","isEcommTransactionEnabled":false,"ecommRedeemTransactionLimit":1000000,"isPOSTransactionEnabled":false,"posRedeemTransactionLimit":0,"monthlyCreditAmount":1200,"lastCreditedOn":"04-Feb-2022","activatedOn":"04-Feb-2022","activationName":"Afzal","activationMobileNumber":8284854535,"activationEmail":"afzal.ahmed@pinelabs.com","customerName":"Afzal ahmed","customerMobile":8284854535,"customerEmail":null,"blockedOn":null,"terminatedOn":null,"terminatedBy":null,"reason":null,"reIssuedOn":null,"reIssuedBy":null,"reIssuedByCardReferenceNumber":null,"reIssueCharges":0,"responseCode":0,"responseMessage":"Success"}],"responseCode":0,"responseMessage":"Success"}"
+2022-02-04_01:53:06.174 [main] DEBUG org.apache.http.wire -  << "[\r][\n]"
+2022-02-04_01:53:06.174 [main] DEBUG org.apache.http.wire -  << "0[\r][\n]"
+2022-02-04_01:53:06.174 [main] DEBUG org.apache.http.wire -  << "[\r][\n]"
+2022-02-04_01:53:06.175 [main] DEBUG o.a.h.i.c.BasicClientConnectionManager - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@54a336d8
+2022-02-04_01:53:06.175 [main] DEBUG o.a.h.i.c.BasicClientConnectionManager - Connection can be kept alive for 60000 MILLISECONDS
+2022-02-04_01:53:06.177 [main] INFO  com.qc.BaseAPI - Response :{
+    "cardDetailResponseList": [
+        {
+            "cardReferenceNumber": 6431621255,
+            "maskedCardNumber": "608363******1119",
+            "cardStatus": 1,
+            "kycStatus": 2,
+            "cardSchemeId": 12,
+            "pinMode": 4,
+            "cardName": "Holiday Reloadable card",
+            "cardVariant": 2,
+            "cardCategoryId": 1,
+            "loadAmount": 1200,
+            "redeemedAmount": 0,
+            "balance": 1200,
+            "issuedOn": "04-Feb-2022",
+            "expiryDate": "28-Feb-2025",
+            "isEcommTransactionEnabled": false,
+            "ecommRedeemTransactionLimit": 1000000,
+            "isPOSTransactionEnabled": false,
+            "posRedeemTransactionLimit": 0,
+            "monthlyCreditAmount": 1200,
+            "lastCreditedOn": "04-Feb-2022",
+            "activatedOn": "04-Feb-2022",
+            "activationName": "Afzal",
+            "activationMobileNumber": 8284854535,
+            "activationEmail": "afzal.ahmed@pinelabs.com",
+            "customerName": "Afzal ahmed",
+            "customerMobile": 8284854535,
+            "customerEmail": null,
+            "blockedOn": null,
+            "terminatedOn": null,
+            "terminatedBy": null,
+            "reason": null,
+            "reIssuedOn": null,
+            "reIssuedBy": null,
+            "reIssuedByCardReferenceNumber": null,
+            "reIssueCharges": 0,
+            "responseCode": 0,
+            "responseMessage": "Success"
+        }
+    ],
+    "responseCode": 0,
+    "responseMessage": "Success"
+}
+2022-02-04_01:53:06.178 [main] INFO  com.qc.BaseAPI -  **** POST call Response time 163 ms
+2022-02-04_01:53:06.178 [main] INFO  p.r.service.CorporateAndCardDetails - Time Taken to perform https://apitest.pineperks.in/card/profile/V1/detail transaction: 163

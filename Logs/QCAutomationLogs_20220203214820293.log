@@ -1,0 +1,9 @@
+2022-02-03_21:48:20.357 [main] INFO  pl.rest.CustomHooks - SCENARIO NAME: Validating the pin mode value on the response on issuing different PIN on SMS/ Physical PIN Mailer/ Customer generated PIN/ PIN Less pin mode card.
+2022-02-03_21:48:20.362 [main] INFO  pl.rest.CustomHooks - TAG NAMEs: [@Regression]
+2022-02-03_21:48:20.367 [main] INFO  pl.rest.CustomHooks - SCENARIO NAME: Validating the pin mode value on the response on issuing different PIN on SMS/ Physical PIN Mailer/ Customer generated PIN/ PIN Less pin mode card.
+2022-02-03_21:48:20.368 [main] INFO  pl.rest.CustomHooks - TAG NAMEs: [@Regression]
+2022-02-03_21:48:20.454 [main] INFO  pl.rest.CustomHooks - Index: 0, Size: 0
+2022-02-03_21:48:21.665 [main] INFO  com.qc.qa.utils.TestDataReader - Reading API Test Data config values from  testData/api/devAPITestData.properties
+2022-02-03_21:48:21.669 [main] INFO  pl.rest.service.Authorize - Authorize Rest API URL :- https://apitest.pineperks.in/auth/V1/generate/token
+2022-02-03_21:48:21.670 [main] INFO  com.qc.BaseAPI - GET call to URL https://apitest.pineperks.in/auth/V1/generate/token
+2022-02-03_21:48:21.950 [main] INFO  com.qc.BaseAPI - ********************REQUEST********************

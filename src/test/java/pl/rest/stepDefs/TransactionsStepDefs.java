@@ -1,7 +1,5 @@
 package pl.rest.stepDefs;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.google.gson.Gson;
 import com.qc.cuke.ScenarioContext;
 import com.qc.qa.ConfigPropertyException;
 import com.qc.qa.FrameworkException;
@@ -9,22 +7,31 @@ import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.restassured.mapper.ObjectMapperType;
+import io.restassured.module.jsv.JsonSchemaValidator;
 import io.restassured.path.json.JsonPath;
 import io.restassured.path.json.config.JsonPathConfig;
 import io.restassured.response.Response;
+import io.restassured.response.ResponseBody;
 import org.apache.commons.lang3.exception.ExceptionUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.Assert;
+import pl.rest.domain.response.AdminCardUpdateResponse;
 import pl.rest.domain.response.AuthorizeResponse;
-import pl.rest.domain.response.CardDetailResponse;
+import pl.rest.domain.response.AuthorizeResponseV2;
 import pl.rest.domain.response.CardIssueResponse;
 import pl.rest.utils.DBUtils;
 import pl.rest.utils.TestSetDataReader;
 import pl.rest.utils.Transaction;
 
 import java.sql.SQLException;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -98,19 +105,12 @@ public class TransactionsStepDefs {
 
     @And("i should see the following in the {string}")
     public void i_should_see_the_following_in_the_card_list(String listName, DataTable table) throws FrameworkException, ConfigPropertyException {
-//        List<Map<String, String>> map = table.asMaps();
-//        for (int i = 0; i < map.size(); i++) {
-//            for (String key: map.get(i).keySet()) {
-//
-//            }
-//        }
         Object actualValue = null;
         String responseKeyValue = "", key1 = "", expectedValue = "", cpgName = "", strActualValue = "";
         int intLength = 0, flag = 0;
         List<Map<String, String>> map = table.asMaps(String.class, String.class);
-//        JsonPath jsonPathEvaluator = context.previousResponse.jsonPath();
-//        ArrayList<Map<String, ?>> array = jsonPathEvaluator.getJsonObject("Cards");
         ArrayList<Map<String, ?>> array = JsonPath.with(context.previousResponse.asString()).using(new JsonPathConfig(JsonPathConfig.NumberReturnType.BIG_DECIMAL)).get(listName);
+
         for (int i = 0; i < map.size(); i++) {
             flag = 0;
             for (String key : map.get(i).keySet()) {
@@ -190,9 +190,12 @@ public class TransactionsStepDefs {
                         flag = 2;
                         break;
                     }
-                } else if (expectedValue.equalsIgnoreCase("Context") && key.equalsIgnoreCase("EmployeeId")) {
+                } else if (expectedValue.equalsIgnoreCase("Context") && key.equalsIgnoreCase("referenceNumber")) {
                     strActualValue = actualValue.toString();
-                    expectedValue = "Abcd";
+                    ResponseBody response = context.previousResponse.getBody();
+                    AdminCardUpdateResponse adminCardUpdateResponse = response.as(AdminCardUpdateResponse.class, ObjectMapperType.GSON);
+                    Long referenceNumber = adminCardUpdateResponse.getCardStatusUpdateResponseList().get(0).getReferenceNumber();
+                    expectedValue = String.valueOf(referenceNumber);
                     if (strActualValue.equalsIgnoreCase(expectedValue)) {
                         flag = 1;
                         System.out.println("Expected: " + expectedValue + " ::cardHolder::  " + "Actual Value: " + strActualValue);
@@ -239,31 +242,111 @@ public class TransactionsStepDefs {
         assertThat(response.statusCode()).isEqualTo(arg0);
     }
 
-    @And("i should see the following in the card list in the database")
-    public void iShouldSeeTheFollowingInTheCardListInTheDatabase(DataTable table) throws FrameworkException, ConfigPropertyException, SQLException {
-        //   ArrayList<Map<String, ?>> array = JsonPath.with(context.previousResponse.asString()).get("cardDetailResponseList");
-        Gson gson = new Gson();
-        CardIssueResponse cardIssueResponseObject = gson.fromJson(context.previousResponse.asString(), CardIssueResponse.class);
-        Long referenceNumber = cardIssueResponseObject.getCardDetailResponseList().get(0).getReferenceNumber();
-        String referenceNumberString = Long.toString((referenceNumber));
-        logger.info("referenceNumber is" + referenceNumberString);
-        Map<String, String> cardDetailMap = DBUtils.getCardDetails(referenceNumberString);
-        cardDetailMap.get("referenceNumber");
 
-        Response response = context.previousResponse;
-        CardIssueResponse a = response.as(CardIssueResponse.class, ObjectMapperType.GSON);
-        CardDetailResponse resp = a.getCardDetailResponseList().get(0);
-        ObjectMapper mapper = new ObjectMapper();
-        Map map = mapper.convertValue(resp, Map.class);
-
-        Map<String, String> tabletotest = table.asMap(String.class, String.class);
-
-        assertThat(tabletotest.get("email")).isEqualTo(map.get("ActivationEmail"));
-        assertThat(tabletotest.get("mobileNumber")).isEqualTo(map.get("ActivationMobileNumber"));
+    //@And("validate the JSON Schema using {string}")
+    @Then("validate the JSON Schema using {string}")
+    public void validatedTheJSONSchema(String arg0) {
+        Response body = context.previousResponse;
+        JsonSchemaValidator schema = JsonSchemaValidator.matchesJsonSchemaInClasspath(arg0);
+        logger.info("path");
+        body.then().assertThat().body(schema);
     }
 
-    @And("the values in the card detail list response for the card {string} should match the DB values")
-    public void theValuesInTheCardDetailListResponseForTheCardShouldMatchTheDBValues(String arg0) {
-        
+    @Then("the expiry date should be after {int} {string} from today in the V1 Response")
+    public void theExpiryDateShouldBeAfterDaysFromToday(int arg0, String arg1) {
+        LocalDateTime today = LocalDateTime.now();
+        LocalDateTime tomorrow = null;
+
+        if (arg1.equalsIgnoreCase("days")) {
+            tomorrow = today.plusDays(arg0);
+        } else if (arg1.equalsIgnoreCase("months")) {
+            tomorrow = today.plusMonths(arg0);
+        } else if (arg1.equalsIgnoreCase("years")) {
+            tomorrow = today.plusYears(arg0);
+        }
+        Date edate = Date.from(tomorrow.atZone(ZoneId.systemDefault()).toInstant());
+        SimpleDateFormat format = new SimpleDateFormat("dd-MMM-yyyy");
+        String expectedDate = format.format(edate);
+
+        logger.info("Expected date " + expectedDate);
+
+        AuthorizeResponse response = (AuthorizeResponse) context.getResponseFromTransactionMap(Transaction.AUTHORIZE.name());
+
+        String actualDate = response.getTokenExpiryTime();
+
+        logger.info("actual Date " + actualDate);
+
+        assertThat(actualDate).isEqualTo(expectedDate);
+
     }
+
+    @Then("the expiry date should be after {int} {string} from today in the V2 Response")
+    public void theExpiryDateShouldBeAfterDaysFromTodayV2(int arg0, String arg1) {
+        LocalDateTime today = LocalDateTime.now();
+        LocalDateTime tomorrow = null;
+
+        if (arg1.equalsIgnoreCase("days")) {
+            tomorrow = today.plusDays(arg0);
+        } else if (arg1.equalsIgnoreCase("months")) {
+            tomorrow = today.plusMonths(arg0);
+        } else if (arg1.equalsIgnoreCase("years")) {
+            tomorrow = today.plusYears(arg0);
+        }
+        Date edate = Date.from(tomorrow.atZone(ZoneId.systemDefault()).toInstant());
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+        String expectedDate = format.format(edate);
+
+        logger.info("Expected date " + expectedDate);
+
+        AuthorizeResponseV2 response = (AuthorizeResponseV2) context.getResponseFromTransactionMap(Transaction.AUTHORIZE.name());
+
+        String actualDate = response.getTokenExpiryTime();
+
+        logger.info("actual Date " + actualDate);
+
+        assertThat(actualDate).isEqualTo(expectedDate);
+    }
+
+    @And("the values in the {string} response for the card issued card should match the data in the card table")
+    public void theValuesInTheCardDetailListResponseForTheCardIssuedCardShouldMatchTheDataInTheCardTable(String listName, DataTable table) throws FrameworkException, ConfigPropertyException, SQLException, ParseException {
+        CardIssueResponse cardIssueResponse = (CardIssueResponse) context.getResponseFromTransactionMap(Transaction.CREATEANDISSUE.name());
+        Long referenceNumber = cardIssueResponse.getCardDetailResponseList().get(0).getReferenceNumber();
+        Map<String, String> cardDetailMap = DBUtils.getTableAsMap("Select * from Card where referenceNumber=" + referenceNumber + ";");
+
+        Map<String, String> map = table.asMap(String.class, String.class);
+
+        for (String key : map.keySet()) {
+            ArrayList<Map<String, ?>> array = JsonPath.with(context.previousResponse.asString()).using(new JsonPathConfig(JsonPathConfig.NumberReturnType.BIG_DECIMAL)).get(listName);
+
+            String expectedValue = array.get(0).get(key).toString();
+            String ActualValueFromDB = cardDetailMap.get(map.get(key));
+            if (key.equalsIgnoreCase("issuedOn") || key.equalsIgnoreCase("expiryDate")) {
+                String sDate1 = ActualValueFromDB;
+                Date date1 = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss").parse(sDate1);
+                DateFormat dateFormat = new SimpleDateFormat("dd-MMM-yyyy");
+                String strDate = dateFormat.format(date1);
+                ActualValueFromDB = strDate;
+            }
+
+            if (key.equalsIgnoreCase("isEcommTransactionEnabled"))
+                if (ActualValueFromDB.equalsIgnoreCase("1"))
+                    ActualValueFromDB = "true";
+                else if (ActualValueFromDB.equalsIgnoreCase("1"))
+                    ActualValueFromDB = "false";
+
+            if (key.equalsIgnoreCase("ecommRedeemTransactionLimit") || key.equalsIgnoreCase("posRedeemTransactionLimit"))
+                if (ActualValueFromDB == null)
+                    ActualValueFromDB = "0";
+
+            if (map.get(key).equalsIgnoreCase("NotNull")) {
+                Assert.assertNotNull(ActualValueFromDB);
+            } else {
+                assertThat(ActualValueFromDB)
+                        .as("Failed to verify transaction response parameter : %s has returned as: %s value instead of : %s", key,
+                                ActualValueFromDB, expectedValue)
+                        .isEqualTo(expectedValue);
+            }
+        }
+    }
+
 }

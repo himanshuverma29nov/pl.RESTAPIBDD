@@ -65,7 +65,17 @@ public class CardIssue extends BaseAPI {
         Response response = postAPI(headerMap, create, url);
         logger.info("Time Taken to perform " + url + " transaction: " + response.getTime());
         return response;
+    }
 
+    public Response cardIssueNonReloadablePhysical(Object create) throws ConfigPropertyException, FrameworkException {
+        Map<String, String> headerMap = null;
+        String url = null;
+        headerMap = header.getOldHeaderAsMap();
+        url = getAPIResourceURI("cardIssueNonReloadablePhysical");
+        logger.info("CardIssue Rest API URL :- " + url);
+        Response response = postAPI(headerMap, create, url);
+        logger.info("Time Taken to perform " + url + " transaction: " + response.getTime());
+        return response;
     }
 
     public Response cardIssueReloadableDigital(Object create, String headerType) throws ConfigPropertyException, FrameworkException {

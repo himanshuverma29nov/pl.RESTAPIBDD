@@ -14,13 +14,15 @@ import org.slf4j.LoggerFactory;
 import pl.rest.domain.response.CardIssueResponse;
 import pl.rest.service.CardUpdate;
 import pl.rest.utils.TestSetDataReader;
+import pl.rest.utils.Transaction;
 
+import java.util.List;
 import java.util.Map;
 
 public class CardUpdateStepDefs {
 
     private ScenarioContext context;
-    private static final Logger logger = LoggerFactory.getLogger(CardIssueStepDefs.class);
+    private static final Logger logger = LoggerFactory.getLogger(CardUpdateStepDefs.class);
     TestSetDataReader testSetDataReader;
     CardUpdate cardUpdate;
 
@@ -33,13 +35,44 @@ public class CardUpdateStepDefs {
     @When("i am changing the status with the following details:")
     @And("i am again changing the status with the following details:")
     public void iAmChangingTheStatusWithTheFollowingDetails(DataTable table) throws ConfigPropertyException, FrameworkException {
+        List<Map<String, String>> data = table.asMaps(String.class, String.class);
+
+        for (int i = 0; i < data.size(); i++) {
+
+            JSONObject cardUpdateRequestObject = new JSONObject();
+
+            if (data.get(i).get("referenceNumber").equalsIgnoreCase("context")) {
+                Gson gson = new Gson();
+                CardIssueResponse cardIssueResponseObject = (CardIssueResponse) context.getResponseFromTransactionMap(Transaction.CREATEANDISSUE.name());
+                Long referenceNumber1 = cardIssueResponseObject.getCardDetailResponseList().get(0).getReferenceNumber();
+                String referenceNumberString = Long.toString((referenceNumber1));
+                cardUpdateRequestObject.put("referenceNumber", referenceNumberString);
+            } else {
+                cardUpdateRequestObject.put("referenceNumber", data.get(i).get("referenceNumber"));
+            }
+            cardUpdateRequestObject.put("cardStatus", data.get(i).get("cardStatus"));
+            cardUpdateRequestObject.put("reason", data.get(i).get("reason"));
+
+            JSONArray array = new JSONArray();
+            array.put(cardUpdateRequestObject);
+
+            JSONObject adminCardUpdateRequestJSON = new JSONObject();
+            adminCardUpdateRequestJSON.put("cardStatusUpdateRequestList", array);
+            adminCardUpdateRequestJSON.put("remarks", data.get(i).get("remarks"));
+
+            cardUpdate.adminCardUpdate(adminCardUpdateRequestJSON.toString());
+        }
+    }
+
+    @When("i am changing the status with the following details with customer API:")
+    public void iAmChangingTheStatusWithTheFollowingDetailsWithCustomerAPI(DataTable table) throws ConfigPropertyException, FrameworkException {
         Map<String, String> data = table.asMap(String.class, String.class);
 
         JSONObject cardUpdateRequestObject = new JSONObject();
 
         if (data.get("referenceNumber").equalsIgnoreCase("context")) {
             Gson gson = new Gson();
-            CardIssueResponse cardIssueResponseObject = gson.fromJson(context.previousResponse.asString(), CardIssueResponse.class);
+            CardIssueResponse cardIssueResponseObject = (CardIssueResponse) context.getResponseFromTransactionMap(Transaction.CREATEANDISSUE.name());
             Long referenceNumber1 = cardIssueResponseObject.getCardDetailResponseList().get(0).getReferenceNumber();
             String referenceNumberString = Long.toString((referenceNumber1));
             cardUpdateRequestObject.put("referenceNumber", referenceNumberString);
@@ -56,6 +89,6 @@ public class CardUpdateStepDefs {
         adminCardUpdateRequestJSON.put("cardStatusUpdateRequestList", array);
         adminCardUpdateRequestJSON.put("remarks", data.get("remarks"));
 
-        cardUpdate.adminCardUpdate(adminCardUpdateRequestJSON.toString());
+        cardUpdate.customerCardUpdate(adminCardUpdateRequestJSON.toString());
     }
 }

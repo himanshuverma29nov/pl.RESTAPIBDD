@@ -1,0 +1,18 @@
+2022-01-19_11:28:07.690 [main] INFO  com.qc.CukeBase - Cucumber Before web scenario - Validating the expiry date field when updating the expiry duration as 7 days.
+2022-01-19_11:28:07.737 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Please answer the following questionnaire based on your experience with WebDriverManager. Thanks a lot!
+2022-01-19_11:28:07.737 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - ====> http://tiny.cc/wdm-survey <====
+2022-01-19_11:28:09.418 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 97.0.4692.71 (since Chrome 97 is installed in your machine)
+2022-01-19_11:28:09.454 [main] DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 97.0.4692.71 found in cache
+2022-01-19_11:28:09.454 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\afzal.ahmed\.m2\repository\webdriver\chromedriver\win32\97.0.4692.71\chromedriver.exe
+2022-01-19_11:28:10.627 [main] INFO  com.qc.qa.drivers.ChromeDriverManger - Chrome service started
+2022-01-19_11:28:13.816 [main] INFO  com.qc.CukeBase - Set new webDriver
+2022-01-19_11:28:13.817 [main] INFO  com.qc.CukeBase - Getting webDriver
+2022-01-19_11:28:14.274 [main] INFO  com.qc.CukeBase - Getting webDriver
+2022-01-19_11:28:14.279 [main] INFO  pl.rest.CustomHooks - SCENARIO NAME: Validating the expiry date field when updating the expiry duration as 7 days.
+2022-01-19_11:28:14.279 [main] INFO  pl.rest.CustomHooks - TAG NAMEs: [@Regression, @Web]
+2022-01-19_11:28:14.281 [main] INFO  pl.rest.CustomHooks - SCENARIO NAME: Validating the expiry date field when updating the expiry duration as 7 days.
+2022-01-19_11:28:14.281 [main] INFO  pl.rest.CustomHooks - TAG NAMEs: [@Regression, @Web]
+2022-01-19_11:28:14.281 [main] INFO  pl.rest.CustomHooks - Index: 0, Size: 0
+2022-01-19_11:28:14.285 [main] INFO  com.qc.qa.drivers.ChromeDriverManger - Exception is:- null
+2022-01-19_11:28:14.312 [main] DEBUG com.qc.qa.ui.BasePage - No Alert displayed
+2022-01-19_11:28:14.493 [main] INFO  com.qc.CukeBase - Closing driver

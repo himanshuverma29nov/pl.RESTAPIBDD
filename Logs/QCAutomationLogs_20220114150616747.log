@@ -1,0 +1,7 @@
+2022-01-14_15:06:16.818 [main] INFO  com.qc.CukeBase - Cucumber Before web scenario - Validating the expiry date field when updating the expiry duration as 7 days.
+2022-01-14_15:06:16.831 [main] INFO  pl.rest.CustomHooks - SCENARIO NAME: Validating the expiry date field when updating the expiry duration as 7 days.
+2022-01-14_15:06:16.832 [main] INFO  pl.rest.CustomHooks - TAG NAMEs: [@Web]
+2022-01-14_15:06:16.832 [main] INFO  pl.rest.CustomHooks - SCENARIO NAME: Validating the expiry date field when updating the expiry duration as 7 days.
+2022-01-14_15:06:16.832 [main] INFO  pl.rest.CustomHooks - TAG NAMEs: [@Web]
+2022-01-14_15:06:16.886 [main] INFO  pl.rest.CustomHooks - Index: 0, Size: 0
+2022-01-14_15:06:16.896 [main] INFO  com.qc.CukeBase - Getting webDriver

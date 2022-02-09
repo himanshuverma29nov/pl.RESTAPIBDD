@@ -2,7 +2,7 @@
 Feature: Instant Non Reloadable Digital Card Issuing API V1 & V2
 
   @DB
-  Scenario: Issuing a instant non reloadable card
+  Scenario: Issuing a instant non reloadable card using V1 API
     Given i am an authorized corporate user
     When i am issuing an Instant Non Reloadable Digital Card using "old" header with V1 of API
       | cardSchemeId           | 7                        |
@@ -22,12 +22,69 @@ Feature: Instant Non Reloadable Digital Card Issuing API V1 & V2
     And i should see the following in the "cardDetailResponseList"
       | customerName | mobileNumber | email                    | amount | responseCode | responseMessage |
       | afzal        | 8284854535   | afzal.ahmed@pinelabs.com | 1000   | 0            | Success         |
-    And i should see the following in the card list in the database
+    And i should see the following details in the ExternalRequestDetail table
+      | ExternalRequestId           | context     |
+      | ExternalAPIType             | 9           |
+      | CorporateId                 | 6           |
+      | ExternalRequestDetailStatus | 6           |
+      | ResponseCode                | 0           |
+      | ResponseMessage             | Success     |
+      | CreatedOn                   | CurrentDate |
+      | ModifiedOn                  | CurrentDate |
+    And i should see the following details in the ExternalRequestTimeLog table
+      | ServiceName     | /card/order                          |
+      | InstanceName    | /instant/issue/nonreloadable/digital |
+      | Version         | V1                                   |
+      | ExternalAPIType | 9                                    |
+      | ResponseMessage | Success                              |
+      | CreatedOn       | CurrentDate                          |
+    And i should see the following details in the ordersummary table
+      | AdminUserInfoId        | 6           |
+      | OrderAmount            | 1000        |
+      | NetOrderAmount         | 1100        |
+      | CorporateOrderQuantity | 1           |
+      | IsInstant              | 1           |
+      | AccountType            | 12          |
+      | CardNetwork            | 1           |
+      | IssuerId               | 1           |
+      | ModifiedOn             | CurrentDate |
+      | CreatedOn              | CurrentDate |
+    And i should see the following details in the giftcardtransaction table
+      | CorporateId     | 6    |
+      | AccountType     | 12   |
+      | Amount          | 1000 |
+      | TransactionType | 1    |
+      | IssuerId        | 1    |
+    And i should see the following details in the corporateaccounthistory table
+      | CorporateId | 6    |
+      | Amount      | 1100 |
+      | NetAmount   | 1100 |
+      | FundStatus  | 2    |
+      | AccountType | 12   |
+      | IssuerId    | 1    |
+    And i should see the following details in the card table
+      | CorporateId            | 6                        |
+      | CardSchemeId           | 7                        |
+      | AccountType            | 12                       |
       | ActivationEmail        | afzal.ahmed@pinelabs.com |
       | ActivationMobileNumber | 8284854535               |
 
+  Scenario: On issuing a new non reloadable card the corporate account balance should be deducted and debit amount should be increased.
+    Given i am an authorized corporate user
+    And i am getting the balance amount and the debit amount with account type 12 and cardcategoryId 4
+    When i am issuing an Instant Non Reloadable Digital Card using "old" header with V1 of API
+      | cardSchemeId           | 7                        |
+      | isLinkToBeSentOnMobile | true                     |
+      | customerName           | afzal                    |
+      | mobileNumber           | 8284854535               |
+      | email                  | afzal.ahmed@pinelabs.com |
+      | amount                 | 1000                     |
+    And i am getting the corporate account balance with account type 12 and cardcategoryId 4
+    Then the balance amount should 1000 less and debit amount should be 1000 more
+
+
   @DB
-  Scenario: Issuing a instant non reloadable card
+  Scenario: Issuing a instant non reloadable card using V2 API
     Given i am an authorized corporate user
     When i am issuing an Instant Non Reloadable Digital Card using "new" header with V2 of API
       | cardSchemeId           | 7                        |
@@ -47,9 +104,7 @@ Feature: Instant Non Reloadable Digital Card Issuing API V1 & V2
     And i should see the following in the "cardDetailResponseList"
       | customerName | mobileNumber | email                    | amount | responseCode | responseMessage |
       | afzal        | 8284854535   | afzal.ahmed@pinelabs.com | 1000   | 0            | Success         |
-    And i should see the following in the card list in the database
-      | ActivationEmail        | afzal.ahmed@pinelabs.com |
-      | ActivationMobileNumber | 8284854535               |
+
 
   Scenario Outline: Validating the response code and messages.
     Given i am an authorized corporate user

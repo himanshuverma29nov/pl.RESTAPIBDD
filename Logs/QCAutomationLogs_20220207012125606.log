@@ -1,0 +1,18 @@
+2022-02-07_01:21:25.707 [main] INFO  com.qc.CukeBase - Cucumber Before web scenario - Test
+2022-02-07_01:21:25.776 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Please answer the following questionnaire based on your experience with WebDriverManager. Thanks a lot!
+2022-02-07_01:21:25.776 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - ====> http://tiny.cc/wdm-survey <====
+2022-02-07_01:21:28.545 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 97.0.4692.71 (since Chrome 97 is installed in your machine)
+2022-02-07_01:21:28.574 [main] DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 97.0.4692.71 found in cache
+2022-02-07_01:21:28.574 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\afzal.ahmed\.m2\repository\webdriver\chromedriver\win32\97.0.4692.71\chromedriver.exe
+2022-02-07_01:21:30.956 [main] INFO  com.qc.qa.drivers.ChromeDriverManger - Chrome service started
+2022-02-07_01:21:36.576 [main] INFO  com.qc.CukeBase - Set new webDriver
+2022-02-07_01:21:36.577 [main] INFO  com.qc.CukeBase - Getting webDriver
+2022-02-07_01:21:37.149 [main] INFO  com.qc.CukeBase - Getting webDriver
+2022-02-07_01:21:37.155 [main] INFO  pl.rest.CustomHooks - SCENARIO NAME: Test
+2022-02-07_01:21:37.156 [main] INFO  pl.rest.CustomHooks - TAG NAMEs: [@Regression, @Web]
+2022-02-07_01:21:37.158 [main] INFO  pl.rest.CustomHooks - SCENARIO NAME: Test
+2022-02-07_01:21:37.159 [main] INFO  pl.rest.CustomHooks - TAG NAMEs: [@Regression, @Web]
+2022-02-07_01:21:37.160 [main] INFO  pl.rest.CustomHooks - Index: 0, Size: 0
+2022-02-07_01:22:27.064 [main] INFO  com.qc.qa.ui.BasePage - Navigating to  URL: https://shop.canadadrives.ca/cars/on
+2022-02-07_01:24:00.529 [main] DEBUG com.qc.qa.ui.BasePage - No Alert displayed
+2022-02-07_01:24:00.771 [main] INFO  com.qc.CukeBase - Closing driver

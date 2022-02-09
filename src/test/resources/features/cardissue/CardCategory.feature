@@ -29,4 +29,16 @@ Feature: Card Categories API
       | 3              | F&B Card         |
       | 4              | Universal Card   |
 
+  Scenario: Validate the response JSON schema for V1
+    Given i am an authorized corporate user
+    When i get the card category details with "old" header using V1 API
+    Then validate the JSON Schema using "CardCategory.json"
+
+  Scenario: Validate the response JSON schema for V2
+    Given i am an authorized corporate user
+    When i get the card category details with "old" header using V1 API
+    Then validate the JSON Schema using "CardCategoryV2.json"
+
+#Scenario: Validating the card categories for the one of the issuer 3 corporate
+
 

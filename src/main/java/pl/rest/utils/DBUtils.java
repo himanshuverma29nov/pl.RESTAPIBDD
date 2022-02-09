@@ -28,13 +28,17 @@ import static pl.rest.utils.TestSetDataReader.getAPITestSetData;
 public class DBUtils<query> {
 
     public static TestSetDataReader testSetDataReader;
+
     public DBUtils(ScenarioContext context) {
         testSetDataReader = new TestSetDataReader(context);
     }
-    public DBUtils() {}
-    public static String TESTDATASET ="";
-    public static String TESTCASEID ="";
-    public static String TESTCASESCENARIONAME ="";
+
+    public DBUtils() {
+    }
+
+    public static String TESTDATASET = "";
+    public static String TESTCASEID = "";
+    public static String TESTCASESCENARIONAME = "";
     private static final Logger logger = LoggerFactory.getLogger(DBUtils.class);
 
     private static final String CHINESE_LIST = "诶比西迪伊艾弗吉艾尺艾杰开艾勒艾马艾娜哦屁吉吾艾儿艾丝提伊吾维豆贝尔维艾克斯吾艾贼德";
@@ -358,7 +362,7 @@ public class DBUtils<query> {
         return retMap;
     }
 
-    public static Map<String, String> getxactiondetailsForReverseCNI(String transactionID,String xactionTypeId,String batchid) throws SQLException, ConfigPropertyException, FrameworkException {
+    public static Map<String, String> getxactiondetailsForReverseCNI(String transactionID, String xactionTypeId, String batchid) throws SQLException, ConfigPropertyException, FrameworkException {
         String query = "select top 1 * from QC_EGMS_XACTION_LOG with (nolock) where POSXACTIONID = '" + transactionID + "' and BATCHID = '" + batchid + "' and XACTIONTYPEID= '"
                 + xactionTypeId +
                 "' order by XACTIONID desc;";
@@ -549,12 +553,10 @@ public class DBUtils<query> {
     }
 
     public static String getOrgIdFromDB(String orgName) throws SQLException, ConfigPropertyException, FrameworkException {
-        Map<String, String> orgDetails=null;
-        if(orgName.equalsIgnoreCase("orgName"))
-        {
-            orgDetails=getQcOrgDetailsFromDB(orgName);
-        }
-        else {
+        Map<String, String> orgDetails = null;
+        if (orgName.equalsIgnoreCase("orgName")) {
+            orgDetails = getQcOrgDetailsFromDB(orgName);
+        } else {
             orgDetails = getOrgDetailsFromDB(orgName);
         }
         String orgId = orgDetails.get("ORGID");
@@ -1118,8 +1120,7 @@ public class DBUtils<query> {
         String merchantId = getMerchantIdFromDB(merchantName);
         String issuerId = getIssuerIdFromDB(cpgName);
         String query = "";
-        if (flag.equalsIgnoreCase("USEACTIVATINGMERCHANTSTIMEZONE"))
-        {
+        if (flag.equalsIgnoreCase("USEACTIVATINGMERCHANTSTIMEZONE")) {
             merchantName = getAPITestSetData("IssuerMerchant");
             cpgName = getAPITestSetData("cpg19");
             merchantId = getMerchantIdFromDB(merchantName);
@@ -2693,8 +2694,8 @@ public class DBUtils<query> {
     }
 
     public static void setDefaultValueInGlobalSetting(String settingValue, String settingId) throws SQLException, FrameworkException, ConfigPropertyException {
-        String query = "" ;
-        if(settingValue.equalsIgnoreCase("null") ){
+        String query = "";
+        if (settingValue.equalsIgnoreCase("null")) {
             query =
                     "UPDATE QC_EGMS_GLOBAL_SETTING_VALUE  SET SETTINGVALUE  = null"
                             + " WHERE "
@@ -2953,10 +2954,10 @@ public class DBUtils<query> {
         int result = DBConnectionManager.executeUpdateQuery(query);
     }
 
-    public static void updateEntityIdValueWithCpgIdInExtAttributeValueTable(String cpg,String extAttributeValueid) throws ConfigPropertyException, FrameworkException, SQLException {
+    public static void updateEntityIdValueWithCpgIdInExtAttributeValueTable(String cpg, String extAttributeValueid) throws ConfigPropertyException, FrameworkException, SQLException {
         String cpgName = getAPITestSetData(cpg);
-        String cpgId =getCpgIdFromDB(cpgName);
-        String query = "update QC_EGMS_EXT_ATTRIBUTE_VALUE SET ENTITYID = '" + cpgId + "' where  EXTATTRIBUTEVALUEID = '"+extAttributeValueid+"'";
+        String cpgId = getCpgIdFromDB(cpgName);
+        String query = "update QC_EGMS_EXT_ATTRIBUTE_VALUE SET ENTITYID = '" + cpgId + "' where  EXTATTRIBUTEVALUEID = '" + extAttributeValueid + "'";
         logger.info("Updating Ext Attribute Value Table at CPG Level: " + query);
         int result = DBConnectionManager.executeUpdateQuery(query);
     }
@@ -3065,23 +3066,23 @@ public class DBUtils<query> {
                     calendar.add(Calendar.DATE, value);
                     break;
                 case "MONTH":
-                    calendar.add(Calendar.MONTH,value);
+                    calendar.add(Calendar.MONTH, value);
                     break;
                 case "YEAR":
-                    calendar.add(Calendar.YEAR,value);
+                    calendar.add(Calendar.YEAR, value);
                     break;
                 case "HOUR":
-                    calendar.add(Calendar.HOUR,value);
+                    calendar.add(Calendar.HOUR, value);
                     break;
                 case "MINUTE":
-                    calendar.add(Calendar.MINUTE,value);
+                    calendar.add(Calendar.MINUTE, value);
                     break;
                 case "SECOND":
-                    calendar.add(Calendar.SECOND,value);
+                    calendar.add(Calendar.SECOND, value);
                     break;
                 default:
-                logger.info("Invalid TimeStamp");
-                break;
+                    logger.info("Invalid TimeStamp");
+                    break;
             }
             result = f.format(calendar.getTime());
 
@@ -3090,6 +3091,7 @@ public class DBUtils<query> {
         }
         return result;
     }
+
     public static void setAllowRedeemIfCardholderInInvoice(String cpg, String value)
             throws ConfigPropertyException, FrameworkException, SQLException {
         String cpgDesc = getAPITestSetData(cpg);
@@ -3138,7 +3140,7 @@ public class DBUtils<query> {
 
     public static Map<String, String> getQcOrgDetailsFromDB(String orgName) throws SQLException, FrameworkException, ConfigPropertyException {
         String query = "select * from QC_EGMS_ORGS with (nolock) where ORGNAME= '" + orgName +
-               "';";
+                "';";
         logger.info("Fetching org details from QC_EGMS_ORGS, using Query: " + query);
         logger.info("Orgname is " + orgName);
         Map<String, String> retMap = DBConnectionManager.getQueryResultAsStringMap(query);
@@ -3177,39 +3179,35 @@ public class DBUtils<query> {
         String time = "";
         String mins = "minutes";
         String hrs = "hours";
-        String Sec="Seconds";
+        String Sec = "Seconds";
 
         if (StringUtils.containsIgnoreCase(dateValue, "MINUTES+")) {
             dateValue = dateValue.toUpperCase().replace("MINUTES+", "");
-            time = getCurrentOrPastOrFutureTime(Integer.valueOf(dateValue), "yyyy-MM-dd-HH-mm",mins);
+            time = getCurrentOrPastOrFutureTime(Integer.valueOf(dateValue), "yyyy-MM-dd-HH-mm", mins);
         } else if (StringUtils.containsIgnoreCase(dateValue, "MINUTES-")) {
             dateValue = dateValue.toUpperCase().replace("MINUTES-", "");
-            time = getCurrentOrPastOrFutureTime((-1) * Integer.valueOf(dateValue), "yyyy-MM-dd-HH-mm",mins);
+            time = getCurrentOrPastOrFutureTime((-1) * Integer.valueOf(dateValue), "yyyy-MM-dd-HH-mm", mins);
         }
         return time;
     }
 
-    public static String getCurrentOrPastOrFutureTime(int unit, String format,String timeUnit) {
+    public static String getCurrentOrPastOrFutureTime(int unit, String format, String timeUnit) {
         String result = "";
         Date date = new Date();
         Calendar calender = Calendar.getInstance();
         calender.setTime(date);
-        if(timeUnit.equalsIgnoreCase("minutes"))
-        {
+        if (timeUnit.equalsIgnoreCase("minutes")) {
             calender.add(Calendar.MINUTE, unit);
-        }
-        else if(timeUnit.equalsIgnoreCase("seconds"))
-        {
+        } else if (timeUnit.equalsIgnoreCase("seconds")) {
             calender.add(Calendar.SECOND, unit);
-        }
-        else  if(timeUnit.equalsIgnoreCase("hours"))
-        {
+        } else if (timeUnit.equalsIgnoreCase("hours")) {
             calender.add(Calendar.HOUR, unit);
         }
         SimpleDateFormat sdf = new SimpleDateFormat(format);
         result = sdf.format(calender.getTime()).toString();
         return result;
     }
+
     public static void setValuesInUsersForOrg(String flag, String value, String OrgName)
             throws ConfigPropertyException, FrameworkException, SQLException {
 
@@ -3225,19 +3223,18 @@ public class DBUtils<query> {
         int result = DBConnectionManager.executeUpdateQuery(query);
     }
 
-    public static Map<String, String>  getExtCards(String key, String value) throws SQLException, ConfigPropertyException, FrameworkException {
+    public static Map<String, String> getExtCards(String key, String value) throws SQLException, ConfigPropertyException, FrameworkException {
         String cpgDesc = getAPITestSetData(value);
         Map<String, String> cardDetails = getCardProgramGroupsDetailsFromDB(cpgDesc);
         String cpgID = cardDetails.get("CARDPROGRAMGROUPID");
-        String query= "";
-        if(key.equalsIgnoreCase("CARDPROGRAMGROUPID")) {
-             query = "SELECT * FROM QC_EGMS_EXT_CARDS WHERE CARDPROGRAMGROUPID = '" + cpgID + "'";
-        }
-        else if(key.equalsIgnoreCase("CARDNUMBER")){
-            query = "SELECT * FROM QC_EGMS_EXT_CARDS WHERE CARDNUMBER = '"+value+"'";
+        String query = "";
+        if (key.equalsIgnoreCase("CARDPROGRAMGROUPID")) {
+            query = "SELECT * FROM QC_EGMS_EXT_CARDS WHERE CARDPROGRAMGROUPID = '" + cpgID + "'";
+        } else if (key.equalsIgnoreCase("CARDNUMBER")) {
+            query = "SELECT * FROM QC_EGMS_EXT_CARDS WHERE CARDNUMBER = '" + value + "'";
         }
         logger.info("Fetching CARDNUMBER by using QC_EGMS_EXT_CARDS table " + "" + query);
-        Map<String, String> retMap =  DBConnectionManager.getQueryResultAsStringMap(query);
+        Map<String, String> retMap = DBConnectionManager.getQueryResultAsStringMap(query);
         return retMap;
     }
 
@@ -3279,15 +3276,15 @@ public class DBUtils<query> {
         return retMap;
     }
 
-    public static void updateCostCentre(String flag, String value, String value1,String merchantId)
+    public static void updateCostCentre(String flag, String value, String value1, String merchantId)
             throws ConfigPropertyException, FrameworkException, SQLException {
-        String query ="UPDATE QC_EGMS_COST_CENTRES SET ISACTIVE= "+flag+" WHERE COSTCENTRE IN ('" + value + "','" + value1 + "') AND \n" +
+        String query = "UPDATE QC_EGMS_COST_CENTRES SET ISACTIVE= " + flag + " WHERE COSTCENTRE IN ('" + value + "','" + value1 + "') AND \n" +
                 "MERCHANTID='" + merchantId + "'";
         logger.info("update cost centre in QC_EGMS_COST_CENTRES table " + "" + query);
         int result = DBConnectionManager.executeUpdateQuery(query);
     }
 
-    public static void updateGeneralLedger(String flag, String value, String value1,String merchantId)
+    public static void updateGeneralLedger(String flag, String value, String value1, String merchantId)
             throws ConfigPropertyException, FrameworkException, SQLException {
         String query = "UPDATE QC_EGMS_GENERAL_LEDGERS SET ISACTIVE=" + flag + " WHERE GENERALLEDGER IN ('" + value + "','" + value1 + "') AND \n" +
                 "MERCHANTID='" + merchantId + "'";
@@ -3313,7 +3310,7 @@ public class DBUtils<query> {
         return retMap;
     }
 
-    public static  String getCurrentValueOfSequenceNumber()
+    public static String getCurrentValueOfSequenceNumber()
             throws SQLException, FrameworkException, ConfigPropertyException {
         String query = " SELECT\n" +
                 "Cast(ISNULL(seq.current_value,N'''') as INT) AS [CurrentValue]\n" +
@@ -3325,6 +3322,7 @@ public class DBUtils<query> {
         logger.info("database values: " + retMap);
         return sequenceNumber;
     }
+
     public static void setCanEnterCardNumberFlag(String flag, String orgName, String userRoleName) throws SQLException, ConfigPropertyException, FrameworkException {
         userRoleName = getAPITestSetData(userRoleName);
         String query = "SELECT ORGID FROM QC_EGMS_ORGS with (NOLOCK) WHERE ORGNAME = '" + orgName + "'";
@@ -3335,6 +3333,7 @@ public class DBUtils<query> {
         int result = DBConnectionManager.executeUpdateQuery(query3);
         logger.info("Updating the QC_EGMS_USER_ROLES using Query: " + query3);
     }
+
     public static void setOriginalActivationDateInDB(String originalactivationDate, String cardNumber)
             throws SQLException, FrameworkException, ConfigPropertyException {
         logger.info("Setting originalactivationDate in DB");
@@ -3417,20 +3416,19 @@ public class DBUtils<query> {
 
         logger.info("Setting DONOTVALIDATECARDFORMAT flag in QC_EGMS_CARD_PROGRAM_GROUPS table " + "" + query);
         int result = DBConnectionManager.executeUpdateQuery(query);
-}
+    }
 
-    public static void updateMerchantGroupMerchantMap(String flag, String value,String merchantId)
+    public static void updateMerchantGroupMerchantMap(String flag, String value, String merchantId)
             throws ConfigPropertyException, FrameworkException, SQLException {
-        String query = "UPDATE QC_EGMS_MERCHANT_GROUPS_MERCHANT_MAP SET "+flag+"=" + value + " WHERE MERCHANTID='" + merchantId + "'";
-        logger.info("update "+flag+" in QC_EGMS_MERCHANT_GROUPS_MERCHANT_MAP table " + "" + query);
+        String query = "UPDATE QC_EGMS_MERCHANT_GROUPS_MERCHANT_MAP SET " + flag + "=" + value + " WHERE MERCHANTID='" + merchantId + "'";
+        logger.info("update " + flag + " in QC_EGMS_MERCHANT_GROUPS_MERCHANT_MAP table " + "" + query);
         int result = DBConnectionManager.executeUpdateQuery(query);
     }
 
-    public static Map<String,String> getCardDetails(String referenceNumber) throws FrameworkException, ConfigPropertyException, SQLException {
-       // String query = "Select CorporateId,CardSchemeId from card AS bigint where cardid='59393';";
-        String query = " Select CorporateId,CardSchemeId,ActivationEmail,ActivationEmail,ActivationMobileNumber " +
-                "from card AS bigint where ReferenceNumber=convert(bigint, " +
-                "1789154895" +
+    public static Map<String, String> getCardDetails(String referenceNumber) throws FrameworkException, ConfigPropertyException, SQLException {
+        // String query = "Select CorporateId,CardSchemeId from card AS bigint where cardid='59393';";
+        String query = " Select * from card AS bigint where ReferenceNumber=convert(bigint, " +
+                referenceNumber +
                 ");";
         logger.info("Fetching card details from card table, using Query: " + query);
         Map<String, String> retMap = DBConnectionManager.getQueryResultAsStringMap(query);
@@ -3443,10 +3441,22 @@ public class DBUtils<query> {
         logger.info("Delinking mobile from Cards");
         String query =
                 "update card set CardStatus=4"
-                 +"where AccountType=18 " + "and ActivationMobileNumber in"
-                 +"(" + MobileNumber + ") and CardType=2 and cardstatus in (1,2);";
+                        + "where AccountType=18 " + "and ActivationMobileNumber in"
+                        + "(" + MobileNumber + ") and CardType=2 and cardstatus in (1,2);";
         logger.info("Executing the query " + query);
         int result = DBConnectionManager.executeUpdateQuery(query);
         logger.info("No. of rows affected on delinking mobile" + result);
+    }
+
+    public static Map<String, String> getTableAsMap(String query) throws FrameworkException, ConfigPropertyException, SQLException {
+        logger.info("Query being executed " + query);
+        return DBConnectionManager.getQueryResultAsStringMap(query);
+    }
+
+    public static void updateTokenExpiryDate(int expirydurationtype, int expirydurationvalue) throws SQLException {
+        String query = "update IssuerSystemVariable set value='{  \"expiryDurationType\" : " + expirydurationtype + ",   \"expiryDurationValue\" : " + expirydurationvalue + "  }' where name='API_TOKEN_EXPIRY_TIME';";
+        int rowsaffected = DBConnectionManager.executeUpdateQuery(query);
+        logger.info("query being executed " + query);
+        logger.info("number of rows affected "+rowsaffected);
     }
 }

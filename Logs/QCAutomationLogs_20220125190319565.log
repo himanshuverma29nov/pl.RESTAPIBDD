@@ -1,0 +1,122 @@
+2022-01-25_19:03:19.620 [main] INFO  com.qc.CukeBase - Cucumber Before web scenario - Validating the expiry date field when updating the expiry duration as 2 Year.
+2022-01-25_19:03:19.649 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Please answer the following questionnaire based on your experience with WebDriverManager. Thanks a lot!
+2022-01-25_19:03:19.650 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - ====> http://tiny.cc/wdm-survey <====
+2022-01-25_19:03:21.297 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 97.0.4692.71 (since Chrome 97 is installed in your machine)
+2022-01-25_19:03:21.327 [main] DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 97.0.4692.71 found in cache
+2022-01-25_19:03:21.328 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\afzal.ahmed\.m2\repository\webdriver\chromedriver\win32\97.0.4692.71\chromedriver.exe
+2022-01-25_19:03:22.471 [main] INFO  com.qc.qa.drivers.ChromeDriverManger - Chrome service started
+2022-01-25_19:03:26.424 [main] INFO  com.qc.CukeBase - Set new webDriver
+2022-01-25_19:03:26.425 [main] INFO  com.qc.CukeBase - Getting webDriver
+2022-01-25_19:03:27.094 [main] INFO  com.qc.CukeBase - Getting webDriver
+2022-01-25_19:03:27.103 [main] INFO  pl.rest.CustomHooks - SCENARIO NAME: Validating the expiry date field when updating the expiry duration as 2 Year.
+2022-01-25_19:03:27.104 [main] INFO  pl.rest.CustomHooks - TAG NAMEs: [@Regression, @Web]
+2022-01-25_19:03:27.104 [main] INFO  pl.rest.CustomHooks - SCENARIO NAME: Validating the expiry date field when updating the expiry duration as 2 Year.
+2022-01-25_19:03:27.104 [main] INFO  pl.rest.CustomHooks - TAG NAMEs: [@Regression, @Web]
+2022-01-25_19:03:27.105 [main] INFO  pl.rest.CustomHooks - Index: 0, Size: 0
+2022-01-25_19:03:27.187 [main] ERROR com.qc.qa.utils.LoadProperties - Missing MySQLDBEnvironment property value in system property or in config.properties files.Please add it if incase required
+2022-01-25_19:03:27.189 [main] INFO  com.qc.qa.dbutils.DBPoolProvider - Con pool Total - 400, idle - 0,  Num active - 0
+2022-01-25_19:03:27.190 [main] INFO  com.qc.qa.dbutils.DBPoolProvider - Retrieved connection
+2022-01-25_19:03:27.949 [main] INFO  c.qc.qa.dbutils.DBConnectionManager - DB Connected Successfully.
+2022-01-25_19:03:27.951 [main] INFO  c.qc.qa.dbutils.DBConnectionManager - Executing Query:::update IssuerSystemVariable set value='{  "expiryDurationType" : 3,   "expiryDurationValue" : 2  }' where name='API_TOKEN_EXPIRY_TIME';
+2022-01-25_19:03:27.970 [main] INFO  pl.rest.utils.DBUtils - query being executed update IssuerSystemVariable set value='{  "expiryDurationType" : 3,   "expiryDurationValue" : 2  }' where name='API_TOKEN_EXPIRY_TIME';
+2022-01-25_19:03:27.970 [main] INFO  pl.rest.utils.DBUtils - number of rows affected 1
+2022-01-25_19:03:30.140 [main] INFO  com.qc.qa.ui.BasePage - Navigating to  URL: https://admintest.pineperks.in/
+2022-01-25_19:03:30.141 [main] INFO  com.qc.qa.ui.BasePage - Waiting for page to be ready 
+2022-01-25_19:03:30.198 [main] INFO  gui.pages.UIActionPages - PinePerks|Login
+2022-01-25_19:03:30.264 [main] INFO  com.qc.qa.ui.BasePage - Entering the text -afzal.ahmed@pinelabs.com
+2022-01-25_19:03:30.269 [main] INFO  com.qc.qa.ui.BasePage - Waiting for element to clickable 
+2022-01-25_19:03:30.426 [main] INFO  com.qc.qa.ui.BasePage - Entering the text -Dashboard@DG1809
+2022-01-25_19:03:30.430 [main] INFO  com.qc.qa.ui.BasePage - Waiting for element to clickable 
+2022-01-25_19:03:30.590 [main] INFO  com.qc.qa.ui.BasePage - Clicking the element in page
+2022-01-25_19:03:30.592 [main] INFO  com.qc.qa.ui.BasePage - Waiting for element to clickable 
+2022-01-25_19:03:32.043 [main] INFO  com.qc.qa.ui.BasePage - Waiting for page to be ready 
+2022-01-25_19:03:32.071 [main] INFO  com.qc.qa.ui.BasePage - ClickingBy.xpath: //a[@href='/admin/clearCacheData']
+2022-01-25_19:03:32.091 [main] INFO  com.qc.qa.ui.BasePage - Waiting for element to clickable 
+2022-01-25_19:03:32.631 [main] INFO  com.qc.qa.ui.BasePage - Waiting for page to be ready 
+2022-01-25_19:03:32.768 [main] INFO  com.qc.qa.ui.BasePage - ClickingBy.id: pageSubmission
+2022-01-25_19:03:32.790 [main] INFO  com.qc.qa.ui.BasePage - Waiting for element to clickable 
+2022-01-25_19:03:32.946 [main] INFO  com.qc.qa.ui.BasePage - Waiting for element to be invisible
+2022-01-25_19:03:49.584 [main] INFO  com.qc.qa.utils.TestDataReader - Reading API Test Data config values from  testData/api/devAPITestData.properties
+2022-01-25_19:03:49.589 [main] INFO  pl.rest.service.Authorize - Authorize Rest API URL :- https://apitest.pineperks.in/auth/V1/generate/token
+2022-01-25_19:03:49.590 [main] INFO  com.qc.BaseAPI - GET call to URL https://apitest.pineperks.in/auth/V1/generate/token
+2022-01-25_19:03:49.834 [main] INFO  com.qc.BaseAPI - ********************REQUEST********************
+2022-01-25_19:03:50.296 [main] DEBUG o.a.h.i.c.BasicClientConnectionManager - Get connection for route {s}->https://apitest.pineperks.in:443
+2022-01-25_19:03:50.313 [main] DEBUG o.a.h.i.c.DefaultClientConnectionOperator - Connecting to apitest.pineperks.in:443
+2022-01-25_19:03:50.565 [main] DEBUG o.a.h.c.protocol.RequestAddCookies - CookieSpec selected: ignoreCookies
+2022-01-25_19:03:50.568 [main] DEBUG o.a.h.c.protocol.RequestAuthCache - Auth cache not set in the context
+2022-01-25_19:03:50.569 [main] DEBUG o.a.h.c.p.RequestTargetAuthentication - Target auth state: UNCHALLENGED
+2022-01-25_19:03:50.571 [main] DEBUG o.a.h.c.p.RequestProxyAuthentication - Proxy auth state: UNCHALLENGED
+2022-01-25_19:03:50.572 [main] DEBUG o.a.h.impl.client.DefaultHttpClient - Attempt 1 to execute request
+2022-01-25_19:03:50.573 [main] DEBUG o.a.h.i.conn.DefaultClientConnection - Sending request: GET /auth/V1/generate/token HTTP/1.1
+2022-01-25_19:03:50.573 [main] DEBUG org.apache.http.wire -  >> "GET /auth/V1/generate/token HTTP/1.1[\r][\n]"
+2022-01-25_19:03:50.576 [main] DEBUG org.apache.http.wire -  >> "Content-Type: application/json; charset=UTF-8[\r][\n]"
+2022-01-25_19:03:50.577 [main] DEBUG org.apache.http.wire -  >> "Accept: */*[\r][\n]"
+2022-01-25_19:03:50.577 [main] DEBUG org.apache.http.wire -  >> "userName: A0aCcnPzDANtKmvSLPKcaw==[\r][\n]"
+2022-01-25_19:03:50.577 [main] DEBUG org.apache.http.wire -  >> "Host: apitest.pineperks.in[\r][\n]"
+2022-01-25_19:03:50.577 [main] DEBUG org.apache.http.wire -  >> "Connection: Keep-Alive[\r][\n]"
+2022-01-25_19:03:50.578 [main] DEBUG org.apache.http.wire -  >> "User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_202)[\r][\n]"
+2022-01-25_19:03:50.578 [main] DEBUG org.apache.http.wire -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2022-01-25_19:03:50.579 [main] DEBUG org.apache.http.wire -  >> "[\r][\n]"
+2022-01-25_19:03:50.579 [main] DEBUG org.apache.http.headers - >> GET /auth/V1/generate/token HTTP/1.1
+2022-01-25_19:03:50.579 [main] DEBUG org.apache.http.headers - >> Content-Type: application/json; charset=UTF-8
+2022-01-25_19:03:50.579 [main] DEBUG org.apache.http.headers - >> Accept: */*
+2022-01-25_19:03:50.579 [main] DEBUG org.apache.http.headers - >> userName: A0aCcnPzDANtKmvSLPKcaw==
+2022-01-25_19:03:50.580 [main] DEBUG org.apache.http.headers - >> Host: apitest.pineperks.in
+2022-01-25_19:03:50.580 [main] DEBUG org.apache.http.headers - >> Connection: Keep-Alive
+2022-01-25_19:03:50.580 [main] DEBUG org.apache.http.headers - >> User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_202)
+2022-01-25_19:03:50.581 [main] DEBUG org.apache.http.headers - >> Accept-Encoding: gzip,deflate
+2022-01-25_19:03:50.617 [main] DEBUG org.apache.http.wire -  << "HTTP/1.1 200 [\r][\n]"
+2022-01-25_19:03:50.619 [main] DEBUG org.apache.http.wire -  << "Access-Control-Allow-Methods: GET, POST[\r][\n]"
+2022-01-25_19:03:50.619 [main] DEBUG org.apache.http.wire -  << "Access-Control-Allow-Origin: *[\r][\n]"
+2022-01-25_19:03:50.619 [main] DEBUG org.apache.http.wire -  << "Content-Security-Policy: default-src 'none'[\r][\n]"
+2022-01-25_19:03:50.619 [main] DEBUG org.apache.http.wire -  << "Feature-Policy: 'none'[\r][\n]"
+2022-01-25_19:03:50.619 [main] DEBUG org.apache.http.wire -  << "Referrer-Policy: no-referrer[\r][\n]"
+2022-01-25_19:03:50.620 [main] DEBUG org.apache.http.wire -  << "Strict-Transport-Security: max-age=31536000 ; includeSubDomains[\r][\n]"
+2022-01-25_19:03:50.620 [main] DEBUG org.apache.http.wire -  << "Date: Tue, 25 Jan 2022 13:33:50 GMT[\r][\n]"
+2022-01-25_19:03:50.620 [main] DEBUG org.apache.http.wire -  << "Keep-Alive: timeout=60[\r][\n]"
+2022-01-25_19:03:50.620 [main] DEBUG org.apache.http.wire -  << "Content-Type: application/json[\r][\n]"
+2022-01-25_19:03:50.620 [main] DEBUG org.apache.http.wire -  << "Transfer-Encoding: chunked[\r][\n]"
+2022-01-25_19:03:50.620 [main] DEBUG org.apache.http.wire -  << "Connection: keep-alive[\r][\n]"
+2022-01-25_19:03:50.620 [main] DEBUG org.apache.http.wire -  << "[\r][\n]"
+2022-01-25_19:03:50.621 [main] DEBUG o.a.h.i.conn.DefaultClientConnection - Receiving response: HTTP/1.1 200 
+2022-01-25_19:03:50.621 [main] DEBUG org.apache.http.headers - << HTTP/1.1 200 
+2022-01-25_19:03:50.621 [main] DEBUG org.apache.http.headers - << Access-Control-Allow-Methods: GET, POST
+2022-01-25_19:03:50.621 [main] DEBUG org.apache.http.headers - << Access-Control-Allow-Origin: *
+2022-01-25_19:03:50.621 [main] DEBUG org.apache.http.headers - << Content-Security-Policy: default-src 'none'
+2022-01-25_19:03:50.621 [main] DEBUG org.apache.http.headers - << Feature-Policy: 'none'
+2022-01-25_19:03:50.621 [main] DEBUG org.apache.http.headers - << Referrer-Policy: no-referrer
+2022-01-25_19:03:50.621 [main] DEBUG org.apache.http.headers - << Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+2022-01-25_19:03:50.621 [main] DEBUG org.apache.http.headers - << Date: Tue, 25 Jan 2022 13:33:50 GMT
+2022-01-25_19:03:50.621 [main] DEBUG org.apache.http.headers - << Keep-Alive: timeout=60
+2022-01-25_19:03:50.621 [main] DEBUG org.apache.http.headers - << Content-Type: application/json
+2022-01-25_19:03:50.621 [main] DEBUG org.apache.http.headers - << Transfer-Encoding: chunked
+2022-01-25_19:03:50.622 [main] DEBUG org.apache.http.headers - << Connection: keep-alive
+2022-01-25_19:03:50.628 [main] DEBUG o.a.h.impl.client.DefaultHttpClient - Connection can be kept alive for 60000 MILLISECONDS
+2022-01-25_19:03:50.660 [main] DEBUG i.r.i.RequestSpecificationImpl$RestAssuredHttpBuilder - Parsing response as: application/json
+2022-01-25_19:03:50.661 [main] DEBUG i.r.i.RequestSpecificationImpl$RestAssuredHttpBuilder - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+2022-01-25_19:03:50.692 [main] INFO  com.qc.BaseAPI - Method :GET
+2022-01-25_19:03:50.694 [main] INFO  com.qc.BaseAPI - URI :https://apitest.pineperks.in/auth/V1/generate/token
+2022-01-25_19:03:50.695 [main] INFO  com.qc.BaseAPI - Headers :userName=A0aCcnPzDANtKmvSLPKcaw==
+Accept=*/*
+Content-Type=application/json; charset=UTF-8
+2022-01-25_19:03:50.695 [main] INFO  com.qc.BaseAPI - Body :null
+2022-01-25_19:03:50.695 [main] INFO  com.qc.BaseAPI - ********************RESPONSE********************
+2022-01-25_19:03:50.719 [main] DEBUG org.apache.http.wire -  << "7f[\r][\n]"
+2022-01-25_19:03:50.720 [main] DEBUG org.apache.http.wire -  << "{"accessToken":"a7b7964bbdc34808af4c77505b1f0031","tokenExpiryTime":"25-Jan-2024","responseCode":0,"responseMessage":"Success"}"
+2022-01-25_19:03:50.722 [main] DEBUG org.apache.http.wire -  << "[\r][\n]"
+2022-01-25_19:03:50.722 [main] DEBUG org.apache.http.wire -  << "0[\r][\n]"
+2022-01-25_19:03:50.723 [main] DEBUG org.apache.http.wire -  << "[\r][\n]"
+2022-01-25_19:03:50.723 [main] DEBUG o.a.h.i.c.BasicClientConnectionManager - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@3caef656
+2022-01-25_19:03:50.724 [main] DEBUG o.a.h.i.c.BasicClientConnectionManager - Connection can be kept alive for 60000 MILLISECONDS
+2022-01-25_19:03:50.781 [main] INFO  com.qc.BaseAPI - Response :{
+    "accessToken": "a7b7964bbdc34808af4c77505b1f0031",
+    "tokenExpiryTime": "25-Jan-2024",
+    "responseCode": 0,
+    "responseMessage": "Success"
+}
+2022-01-25_19:03:50.785 [main] INFO  com.qc.BaseAPI -  **** GET call Response time 838 ms
+2022-01-25_19:03:50.785 [main] INFO  pl.rest.service.Authorize - Time Taken to perform https://apitest.pineperks.in/auth/V1/generate/token transaction: 838
+2022-01-25_19:03:50.911 [main] INFO  p.rest.stepDefs.TransactionsStepDefs - Expected date 25-Jan-2024
+2022-01-25_19:03:50.911 [main] INFO  p.rest.stepDefs.TransactionsStepDefs - actual Date 25-Jan-2024
+2022-01-25_19:03:50.961 [main] DEBUG com.qc.qa.ui.BasePage - No Alert displayed
+2022-01-25_19:03:51.182 [main] INFO  com.qc.CukeBase - Closing driver

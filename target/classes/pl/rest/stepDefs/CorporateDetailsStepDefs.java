@@ -7,14 +7,18 @@ import com.qc.qa.FrameworkException;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.When;
+import io.restassured.mapper.ObjectMapperType;
+import io.restassured.response.Response;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import pl.rest.domain.response.AdminCardUpdateResponse;
+import pl.rest.domain.response.CardDetailResponse;
 import pl.rest.domain.response.CardIssueResponse;
 import pl.rest.service.CorporateAndCardDetails;
 import pl.rest.utils.TestSetDataReader;
+import pl.rest.utils.Transaction;
 
 import java.util.List;
 import java.util.Map;
@@ -62,7 +66,7 @@ public class CorporateDetailsStepDefs {
         corporateAndCardDetails.CardDetail(arg0, object.toString());
     }
 
-    @And("i get the card detail using {string} header with V1 API for the previously issued card")
+    @When("i get the card detail using {string} header with V1 API for the previously issued card")
     public void iGetTheCardDetailUsingHeaderWithVAPIForTheFollowingCard(String arg0, DataTable table) throws ConfigPropertyException, FrameworkException {
 
         Map<String, String> referenceNumber = table.asMap(String.class, String.class);
@@ -71,8 +75,8 @@ public class CorporateDetailsStepDefs {
         JSONObject object = new JSONObject();
         if (referenceNumber.get("Reference Number").equalsIgnoreCase("context")) {
             Gson gson = new Gson();
-            AdminCardUpdateResponse adminCardUpdateResponse = gson.fromJson(context.previousResponse.asString(), AdminCardUpdateResponse.class);
-            Long referenceNumber1 = adminCardUpdateResponse.getCardStatusUpdateResponseList().get(0).getReferenceNumber();
+            CardIssueResponse cardIssueResponse = (CardIssueResponse) context.getResponseFromTransactionMap(Transaction.CREATEANDISSUE.name());
+            Long referenceNumber1 = cardIssueResponse.getCardDetailResponseList().get(0).getReferenceNumber();
             String referenceNumberString = Long.toString((referenceNumber1));
             jsonArray.put(referenceNumberString);
         } else {
@@ -80,7 +84,11 @@ public class CorporateDetailsStepDefs {
         }
         object.put("cardDetailRequestList", jsonArray);
 
-        corporateAndCardDetails.CardDetail(arg0, object.toString());
+        Response response = corporateAndCardDetails.CardDetail(arg0, object.toString());
+
+        CardDetailResponse cardDetailResponse=response.as(CardDetailResponse.class, ObjectMapperType.GSON);
+
+        context.addResponseInTransactionMap(Transaction.CARD_DETAIL.name(), cardDetailResponse);
     }
 
     @When("i get the card detail using {string} holder with V2 API for the following card")
