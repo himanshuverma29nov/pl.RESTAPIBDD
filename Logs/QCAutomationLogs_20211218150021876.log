@@ -1,9 +1,0 @@
-2021-12-18_15:00:27.884 [main] INFO  pl.rest.utils.TestSetDataReader - Reading API Test Data config values from  testData/api/_devAPITestData.properties
-2021-12-18_15:00:27.904 [main] ERROR com.qc.qa.utils.LoadProperties - Unable to find : testData/api/_devAPITestData.properties---testData\api\_devAPITestData.properties (The system cannot find the file specified)
-2021-12-18_15:00:27.904 [main] ERROR pl.rest.utils.TestSetDataReader - Unable to find ::CustomerMobileNumber in API test data properties file , Please add correct property values and check
-2021-12-18_15:02:18.273 [main] INFO  pl.rest.stepDefs.CardIssueStepDefs - Fetched mobile number Dataset null
-2021-12-18_15:02:18.300 [main] INFO  pl.rest.utils.DBUtils - Delinking mobile from Cards
-2021-12-18_15:02:18.300 [main] INFO  pl.rest.utils.DBUtils - Executing the query update card set CardStatus=4where AccountType=18 and ActivationMobileNumber in(null) and CardType=2 and cardstatus in (1,2);
-2021-12-18_15:02:18.370 [main] ERROR com.qc.qa.utils.LoadProperties - Missing MySQLDBEnvironment property value in system property or in config.properties files.Please add it if incase required
-2021-12-18_15:02:18.371 [main] INFO  com.qc.qa.dbutils.DBPoolProvider - Con pool Total - 400, idle - 0,  Num active - 0
-2021-12-18_15:02:18.372 [main] INFO  com.qc.qa.dbutils.DBPoolProvider - Retrieved connection

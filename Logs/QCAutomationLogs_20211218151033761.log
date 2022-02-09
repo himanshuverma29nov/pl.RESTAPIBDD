@@ -1,7 +1,0 @@
-2021-12-18_15:10:39.698 [main] INFO  com.qc.qa.utils.TestDataReader - Reading API Test Data config values from  testData/api/devAPITestData.properties
-2021-12-18_15:10:49.555 [main] INFO  pl.rest.stepDefs.CardIssueStepDefs - Fetched mobile number Dataset 8284854535
-2021-12-18_15:10:49.576 [main] INFO  pl.rest.utils.DBUtils - Delinking mobile from Cards
-2021-12-18_15:10:49.576 [main] INFO  pl.rest.utils.DBUtils - Executing the query update card set CardStatus=4where AccountType=18 and ActivationMobileNumber in(8284854535) and CardType=2 and cardstatus in (1,2);
-2021-12-18_15:10:49.645 [main] ERROR com.qc.qa.utils.LoadProperties - Missing MySQLDBEnvironment property value in system property or in config.properties files.Please add it if incase required
-2021-12-18_15:10:49.645 [main] INFO  com.qc.qa.dbutils.DBPoolProvider - Con pool Total - 400, idle - 0,  Num active - 0
-2021-12-18_15:10:49.645 [main] INFO  com.qc.qa.dbutils.DBPoolProvider - Retrieved connection

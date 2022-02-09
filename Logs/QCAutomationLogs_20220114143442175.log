@@ -1,6 +1,0 @@
-2022-01-14_14:34:42.236 [main] INFO  pl.rest.CustomHooks - SCENARIO NAME: Validating the expiry date field when updating the expiry duration as 7 days.
-2022-01-14_14:34:42.238 [main] INFO  pl.rest.CustomHooks - TAG NAMEs: []
-2022-01-14_14:34:42.241 [main] INFO  pl.rest.CustomHooks - SCENARIO NAME: Validating the expiry date field when updating the expiry duration as 7 days.
-2022-01-14_14:34:42.241 [main] INFO  pl.rest.CustomHooks - TAG NAMEs: []
-2022-01-14_14:34:42.291 [main] INFO  pl.rest.CustomHooks - Index: 0, Size: 0
-2022-01-14_14:34:43.602 [main] INFO  com.qc.qa.drivers.ChromeDriverManger - Exception is:- null

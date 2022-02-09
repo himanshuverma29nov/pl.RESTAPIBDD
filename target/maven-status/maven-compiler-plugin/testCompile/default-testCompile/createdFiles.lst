@@ -1,9 +1,0 @@
-pl\rest\stepDefs\CardUpdateStepDefs.class
-pl\rest\CustomHooks.class
-pl\rest\stepDefs\AuthorizeStepDefs.class
-pl\rest\stepDefs\PreCondition.class
-pl\rest\stepDefs\CardIssueStepDefs.class
-pl\rest\stepDefs\CorporateDetailsStepDefs.class
-pl\rest\testRunners\TestRunner.class
-pl\rest\testRunners\NonDBTestRunner.class
-pl\rest\stepDefs\TransactionsStepDefs.class
