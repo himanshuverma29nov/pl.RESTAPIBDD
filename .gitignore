@@ -1,0 +1,4 @@
+#Ignore everything in target folder
+/target/*
+/spark/*
+/Logs/*
