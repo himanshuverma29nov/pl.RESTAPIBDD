@@ -217,7 +217,6 @@ Feature: Admin Card Update API
       | TerminatedOn                | currentDate |
       | TerminatedByAdminUserInfoId | currentUser |
 
-  To be done
 
   Scenario: Validating the case of marking a card inactive which is blocked by the customer API
     Given i am an authorized corporate user
