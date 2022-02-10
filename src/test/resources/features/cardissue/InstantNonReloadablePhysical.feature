@@ -168,50 +168,50 @@ Feature: Issuing non reloadable digital physical card
     Then the status code should be 200
     And validate the JSON Schema using "instantNonReloadableDgital"
 
-  Scenario: Issuing a non reloadable card and validating that the amount is deducted from the corporate account balance.
-    Given i am an authorized corporate user
-    And i am getting the corporate account balance for account type 12 and card category id 4 and storing it in the following
-      | balanceAmount | CAB |
-      | debitAmount   | CAD |
-    When i am issuing an Instant Non Reloadable Digital Card using "old" header with V1 of API
-      | cardSchemeId     | 7          |
-      | pinMode          | 1          |
-      | cardIdentifier   | 1          |
-      | orderDescription | Test       |
-      | referenceNumber  | dataBase   |
-      | serialNumber     | null       |
-      | customerName     | APITestOne |
-      | mobileNumber     | 8284854535 |
-      | email            | null       |
-      | amount           | 1000       |
-    Then the status code should be 200
-    When i am getting the Corporate Account Balance using following details
-      | accountType    | 12 |
-      | cardCategoryId | 4  |
-    Then the entity balance details should be as follows
-      | balanceAmount | CAB-1000 |
-      | debitAmount   | CAD-1000 |
+#  Scenario: Issuing a non reloadable card and validating that the amount is deducted from the corporate account balance.
+#    Given i am an authorized corporate user
+#    And i am getting the corporate account balance for account type 12 and card category id 4 and storing it in the following
+#      | balanceAmount | CAB |
+#      | debitAmount   | CAD |
+#    When i am issuing an Instant Non Reloadable Digital Card using "old" header with V1 of API
+#      | cardSchemeId     | 7          |
+#      | pinMode          | 1          |
+#      | cardIdentifier   | 1          |
+#      | orderDescription | Test       |
+#      | referenceNumber  | dataBase   |
+#      | serialNumber     | null       |
+#      | customerName     | APITestOne |
+#      | mobileNumber     | 8284854535 |
+#      | email            | null       |
+#      | amount           | 1000       |
+#    Then the status code should be 200
+#    When i am getting the Corporate Account Balance using following details
+#      | accountType    | 12 |
+#      | cardCategoryId | 4  |
+#    Then the entity balance details should be as follows
+#      | balanceAmount | CAB-1000 |
+#      | debitAmount   | CAD-1000 |
 
-  Scenario: Issuing a non reloadable card and validating that the entry is created in the communication data table.
-    Given i am an authorized corporate user
-    When i am issuing an Instant Non Reloadable Digital Card using "old" header with V1 of API
-      | cardSchemeId     | 7          |
-      | pinMode          | 1          |
-      | cardIdentifier   | 1          |
-      | orderDescription | Test       |
-      | referenceNumber  | dataBase   |
-      | serialNumber     | null       |
-      | customerName     | APITestOne |
-      | mobileNumber     | 8284854535 |
-      | email            | null       |
-      | amount           | 1000       |
-    Then the status code should be 200
-    And i should see the following details in the communication data table
-      | Email                  | 6                        |
-      | CardSchemeId           | 7                        |
-      | AccountType            | 12                       |
-      | ActivationEmail        | afzal.ahmed@pinelabs.com |
-      | ActivationMobileNumber | 8284854535               |
+#  Scenario: Issuing a non reloadable card and validating that the entry is created in the communication data table.
+#    Given i am an authorized corporate user
+#    When i am issuing an Instant Non Reloadable Digital Card using "old" header with V1 of API
+#      | cardSchemeId     | 7          |
+#      | pinMode          | 1          |
+#      | cardIdentifier   | 1          |
+#      | orderDescription | Test       |
+#      | referenceNumber  | dataBase   |
+#      | serialNumber     | null       |
+#      | customerName     | APITestOne |
+#      | mobileNumber     | 8284854535 |
+#      | email            | null       |
+#      | amount           | 1000       |
+#    Then the status code should be 200
+#    And i should see the following details in the communication data table
+#      | Email                  | 6                        |
+#      | CardSchemeId           | 7                        |
+#      | AccountType            | 12                       |
+#      | ActivationEmail        | afzal.ahmed@pinelabs.com |
+#      | ActivationMobileNumber | 8284854535               |
 
 
 
