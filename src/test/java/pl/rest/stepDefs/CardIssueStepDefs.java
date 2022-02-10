@@ -18,6 +18,7 @@ import pl.rest.service.CardIssue;
 import pl.rest.utils.TestSetDataReader;
 import pl.rest.utils.Transaction;
 
+import java.util.List;
 import java.util.Map;
 
 public class CardIssueStepDefs {
@@ -216,5 +217,74 @@ public class CardIssueStepDefs {
         response = cardIssue.cardIssueNonReloadablePhysical(issuingCard);
         CardIssueResponse cardIssueResponse = response.as(CardIssueResponse.class, ObjectMapperType.GSON);
         context.addResponseInTransactionMap(Transaction.CREATEANDISSUE.name(),cardIssueResponse);
+    }
+
+    @When("i am issuing multiple instant physical non reloadable card with following details:")
+    public void iAmIssuingMultipleInstantPhysicalNonReloadableCardWithFollowingDetails(DataTable table) throws ConfigPropertyException, FrameworkException {
+        List<Map<String, String>> map = table.asMaps(String.class, String.class);
+
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("externalRequestId", Helper.generate_random_alphaNumeric(7));
+        jsonObject.put("checksum", "5x3GNrnStyS2PkMvV6EeAw==");
+
+        JSONArray cardDetailListArray = new JSONArray();
+
+        for (int i = 0; i < map.size(); i++) {
+            jsonObject.put("cardSchemeId", map.get(i).get("cardSchemeId"));
+            jsonObject.put("pinMode", map.get(i).get("pinMode"));
+            jsonObject.put("cardIdentifier", map.get(i).get("cardIdentifier"));
+
+            JSONObject cardDetailListObject = new JSONObject();
+
+            cardDetailListObject.put("customerName", map.get(i).get("customerName"));
+
+            if (map.get(i).get("referenceNumber").equalsIgnoreCase("null")) {
+                cardDetailListObject.put("referenceNumber", JSONObject.NULL);
+            } else {
+                List<Long> referenceNumberList;
+                if (map.get(i).get("referenceNumber").equalsIgnoreCase("database")) {
+                    referenceNumberList = (List<Long>) context.getResponseFromTransactionMap(Transaction.REFERENCE_NUMBER_LIST.name());
+                    cardDetailListObject.put("referenceNumber", String.valueOf(referenceNumberList.get(i)));
+                }
+                else
+                    cardDetailListObject.put("referenceNumber", map.get(i).get("referenceNumber"));
+            }
+
+            if (map.get(i).get("serialNumber").equalsIgnoreCase("null")) {
+                cardDetailListObject.put("serialNumber", JSONObject.NULL);
+            } else {
+                if (map.get(i).get("serialNumber").equalsIgnoreCase("database"))
+                    cardDetailListObject.put("serialNumber", context.getDataStore().get("serialNumber"));
+                else
+                    cardDetailListObject.put("serialNumber", map.get(i).get("serialNumber"));
+            }
+
+            if (map.get(i).containsKey("mobileNumber")) {
+                if (map.get(i).get("mobileNumber").equalsIgnoreCase("null")) {
+                    cardDetailListObject.put("mobileNumber", JSONObject.NULL);
+                } else {
+                    cardDetailListObject.put("mobileNumber", map.get(i).get("mobileNumber"));
+                }
+            } else {
+                cardDetailListObject.put("mobileNumber", "8010251243");
+            }
+
+            if (map.get(i).get("email").equalsIgnoreCase("null"))
+                cardDetailListObject.put("email", JSONObject.NULL);
+            else
+                cardDetailListObject.put("email", map.get(i).get("email"));
+
+            cardDetailListObject.put("amount", map.get(i).get("amount"));
+            cardDetailListArray.put(cardDetailListObject);
+        }
+        jsonObject.put("cardDetailList", cardDetailListArray);
+
+        System.out.println("This is the JSON" + jsonObject.toString());
+        Object issuingCard = jsonObject.toString();
+
+        Response response = null;
+        response = cardIssue.cardIssueNonReloadablePhysical(issuingCard);
+        CardIssueResponse cardIssueResponse = response.as(CardIssueResponse.class, ObjectMapperType.GSON);
+        context.addResponseInTransactionMap(Transaction.CREATEANDISSUE.name(), cardIssueResponse);
     }
 }

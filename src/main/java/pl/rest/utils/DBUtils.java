@@ -3450,13 +3450,22 @@ public class DBUtils<query> {
 
     public static Map<String, String> getTableAsMap(String query) throws FrameworkException, ConfigPropertyException, SQLException {
         logger.info("Query being executed " + query);
+        ResultSet rs = getQueryResults(query);
+        Map<String, List<Object>> map = DBConnectionManager.resultSetToMap(rs);
         return DBConnectionManager.getQueryResultAsStringMap(query);
+    }
+
+    public static Map<String, List<Object>> getTableAsListOfMap(String query) throws FrameworkException, ConfigPropertyException, SQLException {
+        logger.info("Query being executed " + query);
+        ResultSet rs = getQueryResults(query);
+        Map<String, List<Object>> map = DBConnectionManager.resultSetToMap(rs);
+        return map;
     }
 
     public static void updateTokenExpiryDate(int expirydurationtype, int expirydurationvalue) throws SQLException {
         String query = "update IssuerSystemVariable set value='{  \"expiryDurationType\" : " + expirydurationtype + ",   \"expiryDurationValue\" : " + expirydurationvalue + "  }' where name='API_TOKEN_EXPIRY_TIME';";
         int rowsaffected = DBConnectionManager.executeUpdateQuery(query);
         logger.info("query being executed " + query);
-        logger.info("number of rows affected "+rowsaffected);
+        logger.info("number of rows affected " + rowsaffected);
     }
 }

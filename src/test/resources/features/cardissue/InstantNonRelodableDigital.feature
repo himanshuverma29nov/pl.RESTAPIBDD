@@ -69,20 +69,6 @@ Feature: Instant Non Reloadable Digital Card Issuing API V1 & V2
       | ActivationEmail        | afzal.ahmed@pinelabs.com |
       | ActivationMobileNumber | 8284854535               |
 
-  Scenario: On issuing a new non reloadable card the corporate account balance should be deducted and debit amount should be increased.
-    Given i am an authorized corporate user
-    And i am getting the balance amount and the debit amount with account type 12 and cardcategoryId 4
-    When i am issuing an Instant Non Reloadable Digital Card using "old" header with V1 of API
-      | cardSchemeId           | 7                        |
-      | isLinkToBeSentOnMobile | true                     |
-      | customerName           | afzal                    |
-      | mobileNumber           | 8284854535               |
-      | email                  | afzal.ahmed@pinelabs.com |
-      | amount                 | 1000                     |
-    And i am getting the corporate account balance with account type 12 and cardcategoryId 4
-    Then the balance amount should 1000 less and debit amount should be 1000 more
-
-
   @DB
   Scenario: Issuing a instant non reloadable card using V2 API
     Given i am an authorized corporate user
@@ -182,11 +168,23 @@ Feature: Instant Non Reloadable Digital Card Issuing API V1 & V2
       | responseCode    | 305                    |
       | responseMessage | Invalid card scheme Id |
 
+    #  Scenario: On issuing a new non reloadable card the corporate account balance should be deducted and debit amount should be increased.
+#    Given i am an authorized corporate user
+#    And i am getting the balance amount and the debit amount with account type 12 and cardcategoryId 4
+#    When i am issuing an Instant Non Reloadable Digital Card using "old" header with V1 of API
+#      | cardSchemeId           | 7                        |
+#      | isLinkToBeSentOnMobile | true                     |
+#      | customerName           | afzal                    |
+#      | mobileNumber           | 8284854535               |
+#      | email                  | afzal.ahmed@pinelabs.com |
+#      | amount                 | 1000                     |
+#    And i am getting the corporate account balance with account type 12 and cardcategoryId 4
+#    Then the balance amount should 1000 less and debit amount should be 1000 more
 
   Scenario: Issuing card with amount more that available account balance.
 
 
-  Scenario: Validating the net order amount after changing the issuance charges
+  Scenario: Validating the net order amount after changing the issuance charges.
 
 
 

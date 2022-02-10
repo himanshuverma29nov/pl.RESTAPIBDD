@@ -37,14 +37,13 @@ public class CardUpdateStepDefs {
     public void iAmChangingTheStatusWithTheFollowingDetails(DataTable table) throws ConfigPropertyException, FrameworkException {
         List<Map<String, String>> data = table.asMaps(String.class, String.class);
 
+        JSONObject adminCardUpdateRequestJSON = new JSONObject();
+
         for (int i = 0; i < data.size(); i++) {
-
             JSONObject cardUpdateRequestObject = new JSONObject();
-
             if (data.get(i).get("referenceNumber").equalsIgnoreCase("context")) {
-                Gson gson = new Gson();
                 CardIssueResponse cardIssueResponseObject = (CardIssueResponse) context.getResponseFromTransactionMap(Transaction.CREATEANDISSUE.name());
-                Long referenceNumber1 = cardIssueResponseObject.getCardDetailResponseList().get(0).getReferenceNumber();
+                Long referenceNumber1 = cardIssueResponseObject.getCardDetailResponseList().get(i).getReferenceNumber();
                 String referenceNumberString = Long.toString((referenceNumber1));
                 cardUpdateRequestObject.put("referenceNumber", referenceNumberString);
             } else {
@@ -56,20 +55,16 @@ public class CardUpdateStepDefs {
             JSONArray array = new JSONArray();
             array.put(cardUpdateRequestObject);
 
-            JSONObject adminCardUpdateRequestJSON = new JSONObject();
             adminCardUpdateRequestJSON.put("cardStatusUpdateRequestList", array);
             adminCardUpdateRequestJSON.put("remarks", data.get(i).get("remarks"));
-
-            cardUpdate.adminCardUpdate(adminCardUpdateRequestJSON.toString());
         }
+        cardUpdate.adminCardUpdate(adminCardUpdateRequestJSON.toString());
     }
 
     @When("i am changing the status with the following details with customer API:")
     public void iAmChangingTheStatusWithTheFollowingDetailsWithCustomerAPI(DataTable table) throws ConfigPropertyException, FrameworkException {
         Map<String, String> data = table.asMap(String.class, String.class);
-
         JSONObject cardUpdateRequestObject = new JSONObject();
-
         if (data.get("referenceNumber").equalsIgnoreCase("context")) {
             Gson gson = new Gson();
             CardIssueResponse cardIssueResponseObject = (CardIssueResponse) context.getResponseFromTransactionMap(Transaction.CREATEANDISSUE.name());
@@ -80,15 +75,7 @@ public class CardUpdateStepDefs {
             cardUpdateRequestObject.put("referenceNumber", data.get("referenceNumber"));
         }
         cardUpdateRequestObject.put("cardStatus", data.get("cardStatus"));
-        cardUpdateRequestObject.put("reason", data.get("reason"));
-
-        JSONArray array = new JSONArray();
-        array.put(cardUpdateRequestObject);
-
-        JSONObject adminCardUpdateRequestJSON = new JSONObject();
-        adminCardUpdateRequestJSON.put("cardStatusUpdateRequestList", array);
-        adminCardUpdateRequestJSON.put("remarks", data.get("remarks"));
-
-        cardUpdate.customerCardUpdate(adminCardUpdateRequestJSON.toString());
+        cardUpdateRequestObject.put("remarks", data.get("remarks"));
+        cardUpdate.customerCardUpdate(cardUpdateRequestObject.toString());
     }
 }

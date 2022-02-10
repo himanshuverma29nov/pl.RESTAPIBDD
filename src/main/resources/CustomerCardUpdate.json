@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "referenceNumber": {
+      "type": "integer"
+    },
+    "cardStatus": {
+      "type": "integer"
+    },
+    "remarks": {
+      "type": "string"
+    },
+    "responseCode": {
+      "type": "integer"
+    },
+    "responseMessage": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "referenceNumber",
+    "cardStatus",
+    "remarks",
+    "responseCode",
+    "responseMessage"
+  ]
+}

@@ -27,7 +27,9 @@ import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 import static com.qc.BaseAPI.getResponseKeyValue;
+import static com.qc.qa.utils.TestDataReader.getAPITestData;
 import static org.assertj.core.api.Assertions.assertThat;
+import static pl.rest.utils.TestSetDataReader.getAPIKey;
 
 public class DatabaseValidationStepDefs {
 
@@ -275,6 +277,10 @@ public class DatabaseValidationStepDefs {
                 expectedValue = getCurrentDate();
                 ActualValueFromDB = DBDate(cardDetailMap.get(key));
                 System.out.println("Expected: " + expectedValue + " ::DateFromDB::  " + "Actual Value: " + ActualValueFromDB);
+            } else if (key.equalsIgnoreCase("InactiveByAdminUserInfoId") && map.get(key).equalsIgnoreCase("currentuser")) {
+                expectedValue = getAPITestData("corporateid");
+            } else if (key.equalsIgnoreCase("TerminatedByAdminUserInfoId") && map.get(key).equalsIgnoreCase("currentuser")) {
+                expectedValue = getAPITestData("corporateid");
             }
             if (map.get(key).equalsIgnoreCase("NotNull")) {
                 Assert.assertNotNull(ActualValueFromDB);

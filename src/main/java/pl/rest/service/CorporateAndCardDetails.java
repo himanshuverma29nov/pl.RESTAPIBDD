@@ -58,7 +58,7 @@ public class CorporateAndCardDetails extends BaseAPI {
             url = getAPIResourceURI("cardDetailV2");
         }
         logger.info("CardIssue Rest API URL :- " + url);
-        Response response = postAPI(headerMap,object,url);
+        Response response = postAPI(headerMap, object, url);
         logger.info("Time Taken to perform " + url + " transaction: " + response.getTime());
         return response;
     }
@@ -80,4 +80,20 @@ public class CorporateAndCardDetails extends BaseAPI {
         return response;
     }
 
+    public Response getCarTransactiondDetail(Object create, String headerType) throws ConfigPropertyException, FrameworkException {
+        Map<String, String> headerMap = null;
+        String url = null;
+
+        if (headerType.equalsIgnoreCase("old")) {
+            headerMap = header.getOldHeaderAsMap();
+            url = getAPIResourceURI("cardTransactionDetailV1");
+        } else if (headerType.equalsIgnoreCase("new")) {
+            headerMap = header.getNewHeaderAsMap();
+            url = getAPIResourceURI("cardTransactionDetailV2");
+        }
+        logger.info("CardIssue Rest API URL :- " + url);
+        Response response = postAPI(headerMap, create, url);
+        logger.info("Time Taken to perform " + url + " transaction: " + response.getTime());
+        return response;
+    }
 }

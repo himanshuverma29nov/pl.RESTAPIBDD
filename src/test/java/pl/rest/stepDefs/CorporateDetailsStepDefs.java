@@ -53,10 +53,9 @@ public class CorporateDetailsStepDefs {
 
         JSONObject object = new JSONObject();
         if (referenceNumber.get("Reference Number").equalsIgnoreCase("context")) {
-            Gson gson = new Gson();
-            CardIssueResponse cardIssueResponseObject = gson.fromJson(context.previousResponse.asString(), CardIssueResponse.class);
-            Long referenceNumber1 = cardIssueResponseObject.getCardDetailResponseList().get(0).getReferenceNumber();
-            String referenceNumberString = Long.toString((referenceNumber1));
+            CardIssueResponse cardIssueResponse = (CardIssueResponse) context.getResponseFromTransactionMap(Transaction.CREATEANDISSUE.name());
+            Long ref = cardIssueResponse.getCardDetailResponseList().get(0).getReferenceNumber();
+            String referenceNumberString = Long.toString((ref));
             jsonArray.put(referenceNumberString);
         } else {
             jsonArray.put(referenceNumber.get("Reference Number"));
@@ -86,7 +85,7 @@ public class CorporateDetailsStepDefs {
 
         Response response = corporateAndCardDetails.CardDetail(arg0, object.toString());
 
-        CardDetailResponse cardDetailResponse=response.as(CardDetailResponse.class, ObjectMapperType.GSON);
+        CardDetailResponse cardDetailResponse = response.as(CardDetailResponse.class, ObjectMapperType.GSON);
 
         context.addResponseInTransactionMap(Transaction.CARD_DETAIL.name(), cardDetailResponse);
     }

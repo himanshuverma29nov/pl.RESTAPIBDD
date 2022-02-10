@@ -60,15 +60,71 @@ Feature: Instant Reload API
 
   Scenario: Validating case on reloading a blocked card.
     Given i am an authorized corporate user
-    And i am fetching a physical "reloadable" dummy card from database
+    And i am fetching a physical "non reloadable" dummy card with "customer generated" pin from database
+    When i am issuing an instant physical non reloadable card with following detail
+      | cardNetwork     | 1       |
+      | cardCategoryId  | 1       |
+      | cardIdentifier  | 1       |
+      | referenceNumber | context |
+      | serialNumber    | null    |
+      | amount          | 1000    |
+    When i am changing the status with the following details with customer API:
+      | referenceNumber | context |
+      | cardStatus      | 3       |
+      | remarks         | Test    |
+    When i am reloading the issued card with following details
+      | cardNetwork     | 1       |
+      | cardCategoryId  | 1       |
+      | cardIdentifier  | 1       |
+      | referenceNumber | context |
+      | serialNumber    | null    |
+      | amount          | 1000    |
+    Then the status code should be 200
 
 
   Scenario: Validating a case of reloading an terminated card.
+    Given i am an authorized corporate user
+    And i am fetching a physical "non reloadable" dummy card with "customer generated" pin from database
+    When i am issuing an instant physical non reloadable card with following detail
+      | cardNetwork     | 1       |
+      | cardCategoryId  | 1       |
+      | cardIdentifier  | 1       |
+      | referenceNumber | context |
+      | serialNumber    | null    |
+      | amount          | 1000    |
+    When i am changing the status with the following details:
+      | referenceNumber | context |
+      | cardStatus      | 3       |
+      | remarks         | Test    |
+    When i am reloading the issued card with following details
+      | cardNetwork     | 1       |
+      | cardCategoryId  | 1       |
+      | cardIdentifier  | 1       |
+      | referenceNumber | context |
+      | serialNumber    | null    |
+
 
   Scenario: Validating case of Reloading a card more than its limit.
 
   Scenario: Validating corporate balance deduction on reloading the card.
 
   Scenario Validating the entries in the ExternalRequestDetail,ExternalRequestTimeLog,ordersummary, giftcardtransaction, corporateaccounthistory
+    Given i am an authorized corporate user
+    When i am issuing an Instant Reloadable Digital Card using "old" header with V1 of API
+      | cardSchemeId           | 12                       |
+      | isLinkToBeSentOnMobile | true                     |
+      | customerName           | afzal                    |
+      | mobileNumber           | context                  |
+      | email                  | afzal.ahmed@pinelabs.com |
+      | amount                 | 1000                     |
+    When i am reloading the issued card with following details
+      | cardNetwork     | 1       |
+      | cardCategoryId  | 1       |
+      | cardIdentifier  | 1       |
+      | referenceNumber | context |
+      | serialNumber    | null    |
+      | amount          | 1000    |
+    Then the status code should be 200
+
 
 

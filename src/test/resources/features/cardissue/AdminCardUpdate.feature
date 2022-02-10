@@ -1,12 +1,12 @@
-@Regression
+@Regression @Ready
 Feature: Admin Card Update API
 
   Scenario: Updating the card status to inactive
     Given i am an authorized corporate user
-    And i am fetching a physical "non reloadable" dummy card from database
+    And i am fetching a physical "non reloadable" dummy card with "customer generated" pin from database
     When i am issuing an instant physical non reloadable card with following detail
       | cardSchemeId     | 7          |
-      | pinMode          | 1          |
+      | pinMode          | 3          |
       | cardIdentifier   | 1          |
       | orderDescription | Test       |
       | referenceNumber  | dataBase   |
@@ -31,10 +31,9 @@ Feature: Admin Card Update API
       | InactiveOn                | currentDate |
       | InactiveByAdminUserInfoId | currentuser |
 
-
   Scenario: Updating the card status to blocked
     Given i am an authorized corporate user
-    And i am fetching a physical "non reloadable" dummy card from database
+    And i am fetching a physical "non reloadable" dummy card with "customer generated" pin from database
     When i am issuing an instant physical non reloadable card with following detail
       | cardSchemeId     | 7          |
       | pinMode          | 1          |
@@ -60,7 +59,7 @@ Feature: Admin Card Update API
 
   Scenario: Updating the card status from active to active
     Given i am an authorized corporate user
-    And i am fetching a physical "non reloadable" dummy card from database
+    And i am fetching a physical "non reloadable" dummy card with "customer generated" pin from database
     When i am issuing an instant physical non reloadable card with following detail
       | cardSchemeId     | 7          |
       | pinMode          | 1          |
@@ -85,9 +84,9 @@ Feature: Admin Card Update API
       | context         | 267          | Card is already in this state. Please choose different status to update |
 
 
-  Scenario: Validating the case on marking an card terminated.
+  Scenario: Validating the case on marking a card terminated.
     Given i am an authorized corporate user
-    And i am fetching a physical "non reloadable" dummy card from database
+    And i am fetching a physical "non reloadable" dummy card with "customer generated" pin from database
     When i am issuing an instant physical non reloadable card with following detail
       | cardSchemeId     | 7          |
       | pinMode          | 1          |
@@ -117,7 +116,7 @@ Feature: Admin Card Update API
 
   Scenario: Validating the case of marking an terminated card again active.
     Given i am an authorized corporate user
-    And i am fetching a physical "non reloadable" dummy card from database
+    And i am fetching a physical "non reloadable" dummy card with "customer generated" pin from database
     When i am issuing an instant physical non reloadable card with following detail
       | cardSchemeId     | 7          |
       | pinMode          | 1          |
@@ -149,7 +148,7 @@ Feature: Admin Card Update API
 
   Scenario: Validating the case of marking an inactive card terminated.
     Given i am an authorized corporate user
-    And i am fetching a physical "non reloadable" dummy card from database
+    And i am fetching a physical "non reloadable" dummy card with "customer generated" pin from database
     When i am issuing an instant physical non reloadable card with following detail
       | cardSchemeId     | 7          |
       | pinMode          | 1          |
@@ -184,7 +183,7 @@ Feature: Admin Card Update API
 
   Scenario: Validating the case of a marking a card terminated which is marked blocked by customer API.
     Given i am an authorized corporate user
-    And i am fetching a physical "non reloadable" dummy card from database
+    And i am fetching a physical "non reloadable" dummy card with "customer generated" pin from database
     When i am issuing an instant physical non reloadable card with following detail
       | cardSchemeId     | 7          |
       | pinMode          | 1          |
@@ -220,7 +219,7 @@ Feature: Admin Card Update API
 
   Scenario: Validating the case of marking a card inactive which is blocked by the customer API
     Given i am an authorized corporate user
-    And i am fetching a physical "non reloadable" dummy card from database
+    And i am fetching a physical "non reloadable" dummy card with "customer generated" pin from database
     When i am issuing an instant physical non reloadable card with following detail
       | cardSchemeId     | 7          |
       | pinMode          | 1          |
@@ -249,15 +248,13 @@ Feature: Admin Card Update API
       | referenceNumber | responseCode | responseMessage |
       | context         | 0            | Success         |
     And i should see the following card status in the card table
-      | CardStatus                  | 1           |
-      | TerminatedOn                | currentDate |
-      | TerminatedByAdminUserInfoId | currentUser |
+      | CardStatus                | 2           |
+      | InactiveOn                | currentDate |
+      | InactiveByAdminUserInfoId | currentUser |
 
   Scenario:Validating a case of marking a blocked card active.
-
-  Scenario: Validating the case of marking a card inactive which is blocked by the customer API
     Given i am an authorized corporate user
-    And i am fetching a physical "non reloadable" dummy card from database
+    And i am fetching a physical "non reloadable" dummy card with "customer generated" pin from database
     When i am issuing an instant physical non reloadable card with following detail
       | cardSchemeId     | 7          |
       | pinMode          | 1          |
@@ -286,14 +283,12 @@ Feature: Admin Card Update API
       | referenceNumber | responseCode | responseMessage |
       | context         | 0            | Success         |
     And i should see the following card status in the card table
-      | CardStatus                  | 1           |
-      | TerminatedOn                | currentDate |
-      | TerminatedByAdminUserInfoId | currentUser |
-
+      | CardStatus | 1 |
+#      | BlockedOn                 | currentDate |
 
   Scenario: Validating the response JSON schema
     Given i am an authorized corporate user
-    And i am fetching a physical "non reloadable" dummy card from database
+    And i am fetching a physical "non reloadable" dummy card with "customer generated" pin from database
     When i am issuing an instant physical non reloadable card with following detail
       | cardSchemeId     | 7          |
       | pinMode          | 1          |
@@ -311,6 +306,31 @@ Feature: Admin Card Update API
     Then validate the JSON Schema using "AdminCardUpdate.json"
 
   Scenario: Validating the case of marking the multiple cards terminated.
-#    Given
+    Given i am an authorized corporate user
+    And i am fetching a list of physical "non reloadable" dummy card with "customer generated" pin from database
+    When i am issuing multiple instant physical non reloadable card with following details:
+      | cardSchemeId | pinMode | cardIdentifier | orderDescription | referenceNumber | serialNumber | customerName | mobileNumber | email | amount |
+      | 7            | 1       | 1              | Test             | dataBase        | null         | APITestOne   | 8284854535   | null  | 1000   |
+      | 7            | 1       | 1              | Test             | dataBase        | null         | APITestTwo   | 8141437466   | null  | 1000   |
+      | 7            | 1       | 1              | Test             | dataBase        | null         | APITesThree  | 8284854535   | null  | 1000   |
+    Then the status code should be 200
+    When i am changing the status with the following details:
+      | referenceNumber | cardStatus | reason | remarks |
+      | context         | 4          | 1      | Test    |
+      | context         | 2          | 1      | Test    |
+      | context         | 4          | 1      | Test    |
+    Then the status code should be 200
+    And i should see the following in the header level
+      | remarks         | Test    |
+      | responseCode    | 0       |
+      | responseMessage | Success |
+    And i should see the following in the "cardStatusUpdateResponseList"
+      | referenceNumber | responseCode | responseMessage |
+      | context         | 0            | Success         |
+      | context         | 0            | Success         |
+      | context         | 0            | Success         |
+
+
+
 
 

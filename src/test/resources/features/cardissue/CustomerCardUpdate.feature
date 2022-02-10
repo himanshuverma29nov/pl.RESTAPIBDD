@@ -1,9 +1,9 @@
-@Regression
+@Regression @Ready
 Feature: Customer Card Update API
 
   Scenario: Updating the card status to blocked
     Given i am an authorized corporate user
-    And i am fetching a physical "non reloadable" dummy card from database
+    And i am fetching a physical "non reloadable" dummy card with "customer generated" pin from database
     When i am issuing an instant physical non reloadable card with following detail
       | cardSchemeId     | 7          |
       | pinMode          | 1          |
@@ -18,7 +18,6 @@ Feature: Customer Card Update API
     When i am changing the status with the following details with customer API:
       | referenceNumber | context |
       | cardStatus      | 3       |
-      | reason          | 1       |
       | remarks         | Test    |
     Then the status code should be 200
     And i should see the following in the header level
@@ -31,10 +30,9 @@ Feature: Customer Card Update API
       | CardStatus | 3           |
       | BlockedOn  | currentDate |
 
-
   Scenario: Updating the card status from active to active
     Given i am an authorized corporate user
-    And i am fetching a physical "non reloadable" dummy card from database
+    And i am fetching a physical "non reloadable" dummy card with "customer generated" pin from database
     When i am issuing an instant physical non reloadable card with following detail
       | cardSchemeId     | 7          |
       | pinMode          | 1          |
@@ -49,7 +47,6 @@ Feature: Customer Card Update API
     When i am changing the status with the following details with customer API:
       | referenceNumber | context |
       | cardStatus      | 1       |
-      | reason          | 1       |
       | remarks         | Test    |
     Then the status code should be 200
     And i should see the following in the header level
@@ -61,7 +58,7 @@ Feature: Customer Card Update API
 
   Scenario: Validating the response JSON schema
     Given i am an authorized corporate user
-    And i am fetching a physical "non reloadable" dummy card from database
+    And i am fetching a physical "non reloadable" dummy card with "customer generated" pin from database
     When i am issuing an instant physical non reloadable card with following detail
       | cardSchemeId     | 7          |
       | pinMode          | 1          |
@@ -73,16 +70,16 @@ Feature: Customer Card Update API
       | mobileNumber     | 8284854535 |
       | email            | null       |
       | amount           | 1000       |
-    When i am changing the status with the following details:
+    When i am changing the status with the following details with customer API:
       | referenceNumber | context |
-      | cardStatus      | 2       |
-      | reason          | 1       |
+      | cardStatus      | 3       |
       | remarks         | Test    |
-    Then validate the JSON Schema using "CustomerCardUpdate"
+    Then the status code should be 200
+    Then validate the JSON Schema using "CustomerCardUpdate.json"
 
   Scenario: Validating the case on marking a card terminated.
     Given i am an authorized corporate user
-    And i am fetching a physical "non reloadable" dummy card from database
+    And i am fetching a physical "non reloadable" dummy card with "customer generated" pin from database
     When i am issuing an instant physical non reloadable card with following detail
       | cardSchemeId     | 7          |
       | pinMode          | 1          |
@@ -97,7 +94,6 @@ Feature: Customer Card Update API
     When i am changing the status with the following details with customer API:
       | referenceNumber | context |
       | cardStatus      | 4       |
-      | reason          | 1       |
       | remarks         | Test    |
     Then the status code should be 200
     And i should see the following in the header level
@@ -109,7 +105,7 @@ Feature: Customer Card Update API
 
   Scenario: Validating the case on marking a terminated card again active.
     Given i am an authorized corporate user
-    And i am fetching a physical "non reloadable" dummy card from database
+    And i am fetching a physical "non reloadable" dummy card with "customer generated" pin from database
     When i am issuing an instant physical non reloadable card with following detail
       | cardSchemeId     | 7          |
       | pinMode          | 1          |
@@ -127,7 +123,6 @@ Feature: Customer Card Update API
     When i am changing the status with the following details with customer API:
       | referenceNumber | context |
       | cardStatus      | 1       |
-      | reason          | 1       |
       | remarks         | Test    |
     Then the status code should be 200
     And i should see the following in the header level
@@ -140,7 +135,7 @@ Feature: Customer Card Update API
 
   Scenario: Validating the case of marking an inactive card blocked.
     Given i am an authorized corporate user
-    And i am fetching a physical "non reloadable" dummy card from database
+    And i am fetching a physical "non reloadable" dummy card with "customer generated" pin from database
     When i am issuing an instant physical non reloadable card with following detail
       | cardSchemeId     | 7          |
       | pinMode          | 1          |
@@ -158,7 +153,6 @@ Feature: Customer Card Update API
     When i am changing the status with the following details with customer API:
       | referenceNumber | context |
       | cardStatus      | 3       |
-      | reason          | 1       |
       | remarks         | Test    |
     Then the status code should be 200
     And i should see the following in the header level

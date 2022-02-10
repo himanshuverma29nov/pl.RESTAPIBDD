@@ -30,6 +30,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -37,7 +38,6 @@ import java.util.Map;
 
 import static com.qc.BaseAPI.getResponseKeyValue;
 import static org.assertj.core.api.Assertions.assertThat;
-import static pl.rest.utils.TestSetDataReader.getAPITestSetData;
 
 
 public class TransactionsStepDefs {
@@ -74,9 +74,9 @@ public class TransactionsStepDefs {
                 JsonPath jsonPathEvaluator = context.previousResponse.jsonPath().using(new JsonPathConfig(JsonPathConfig.NumberReturnType.BIG_DECIMAL));
 //            JsonPath jsonPathEvaluator = context.previousResponse.jsonPath();
                 String expectedValue = map.get(key);
-                if (key.equalsIgnoreCase("CurrentBatchNumber") && map.get(key).equalsIgnoreCase("context")) {
-                    AuthorizeResponse authorizeResponse = (AuthorizeResponse) context.getResponseFromTransactionMap(Transaction.valueOf("AUTHORIZE").toString());
-                    expectedValue = authorizeResponse.getAccessToken().toString();
+                if (key.equalsIgnoreCase("referenceNumber") && map.get(key).equalsIgnoreCase("context")) {
+                    CardIssueResponse cardIssueResponse = (CardIssueResponse) context.getResponseFromTransactionMap(Transaction.CREATEANDISSUE.name());
+                    expectedValue = String.valueOf(cardIssueResponse.getCardDetailResponseList().get(0).getReferenceNumber());
                 } else if (key.equalsIgnoreCase("CurrentBatchNumber") && map.get(key).equalsIgnoreCase("PreviousBatch")) {
 //                    XNPPreAuthAndPreAuthCompleteResponse xnpResponse = (XNPPreAuthAndPreAuthCompleteResponse) context.getResponseFromTransactionMap(map.get("PreviousTxn"));
 //                    expectedValue = xnpResponse.getCurrentBatchNumber().toString();
@@ -109,6 +109,7 @@ public class TransactionsStepDefs {
         String responseKeyValue = "", key1 = "", expectedValue = "", cpgName = "", strActualValue = "";
         int intLength = 0, flag = 0;
         List<Map<String, String>> map = table.asMaps(String.class, String.class);
+
         ArrayList<Map<String, ?>> array = JsonPath.with(context.previousResponse.asString()).using(new JsonPathConfig(JsonPathConfig.NumberReturnType.BIG_DECIMAL)).get(listName);
 
         for (int i = 0; i < map.size(); i++) {
@@ -127,10 +128,11 @@ public class TransactionsStepDefs {
                 }
                 strActualValue = actualValue.toString();
                 expectedValue = map.get(i).get(key);
-                if (key.equalsIgnoreCase("CPG")) {
-                    cpgName = getAPITestSetData(map.get(i).get("CPG"));
-                    expectedValue = cpgName;
-                    actualValue = array.get(i).get("CardType").toString();
+                if (key.equalsIgnoreCase("terminatedOn") && map.get(i).get(key).equalsIgnoreCase("currentDate")) {
+                    DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd-MMM-yyyy");
+                    LocalDateTime now = LocalDateTime.now();
+                    expectedValue = dtf.format(now);
+                    actualValue = array.get(i).get("terminatedOn");
                     if (actualValue.equals(expectedValue)) {
                         flag = 1;
                         System.out.println("Expected: " + expectedValue + " ::carddetails::  " + "Actual Value: " + actualValue);
