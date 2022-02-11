@@ -5,7 +5,7 @@ import io.cucumber.testng.CucumberOptions;
 import org.testng.annotations.DataProvider;
 
 @CucumberOptions(
-        features = "classpath:features", glue = "classpath:pl.rest", tags = "@Regression,@Web,@Web_01",
+        features = "classpath:features", glue ={"classpath:pl.rest","classpath:com.qc"}, tags = "(@Web and @Regression) and ( not @Manual)",
         plugin = {"pretty", "html:target/cucumber", "json:target/cucumber.json"}
 )
 public class TestRunner extends AbstractTestNGCucumberTests {

@@ -1,4 +1,4 @@
-@Web @Regression @Web_1
+@TestSet0 @Regression @Web
 Feature: Access token generation API
 
   Scenario: Validating the expiry date field when updating the expiry duration as 7 days for V1.
@@ -23,11 +23,11 @@ Feature: Access token generation API
     When i am generating the token with the old header
     Then validate the JSON Schema using "accesstoken.json"
 
-  Scenario: Validating the old token usage on cardCategory API after token regeneration V1.
-
-
-  Scenario: Validating token generated for a corporate and being used with another corporate for V1.
-
+#  Scenario: Validating the old token usage on cardCategory API after token regeneration V1.
+#
+#
+#  Scenario: Validating token generated for a corporate and being used with another corporate for V1.
+#
 
   Scenario: Validating the expiry date field when updating the expiry duration as 7 days for V2.
     Given i set the expiry duration value as 7 and expiry duration type as 1 in database
@@ -51,9 +51,9 @@ Feature: Access token generation API
     When i am generating the token with the new header
     Then validate the JSON Schema using "accesstokenV2.json"
 
-  Scenario: Validating token generated for a corporate and being used with another corporate for V2.
-
-  Scenario: Validating the old token usage on cardCategory API after token regeneration V2.
+#  Scenario: Validating token generated for a corporate and being used with another corporate for V2.
+#
+#  Scenario: Validating the old token usage on cardCategory API after token regeneration V2.
 
 #  Scenario: Test
 #    Given i test UI

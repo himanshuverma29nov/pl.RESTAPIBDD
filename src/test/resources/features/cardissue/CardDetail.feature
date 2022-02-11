@@ -158,8 +158,8 @@ Feature: Card Details API V1&V2
       | balance | loadAmount |
       | 1200    | 1200       |
 
-Scenario: Validating card status blocked on field on blocking the card.
-  Given i am an authorized corporate user
+#Scenario: Validating card status blocked on field on blocking the card.
+#  Given i am an authorized corporate user
 
 
   Scenario: Validating the card status terminatedOn ,terminated by and reason field on terminating a card.
@@ -186,7 +186,7 @@ Scenario: Validating card status blocked on field on blocking the card.
       | terminatedOn | terminatedBy  | reason |
       | currentDate  | Order Service | Lost   |
 
-  Scenario: Validating the reissued on,reissued by,reissued by card reference number and reissue charges field on reissuing an card.
+#  Scenario: Validating the reissued on,reissued by,reissued by card reference number and reissue charges field on reissuing an card.
 
 
 

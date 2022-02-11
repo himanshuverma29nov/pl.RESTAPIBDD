@@ -181,10 +181,10 @@ Feature: Instant Non Reloadable Digital Card Issuing API V1 & V2
 #    And i am getting the corporate account balance with account type 12 and cardcategoryId 4
 #    Then the balance amount should 1000 less and debit amount should be 1000 more
 
-  Scenario: Issuing card with amount more that available account balance.
-
-
-  Scenario: Validating the net order amount after changing the issuance charges.
+#  Scenario: Issuing card with amount more that available account balance.
+#
+#
+#  Scenario: Validating the net order amount after changing the issuance charges.
 
 
 

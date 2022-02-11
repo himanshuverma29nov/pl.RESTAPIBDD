@@ -94,9 +94,9 @@ Feature: Instant Reloadable Digital card Issuing API V1&V2
     And i should see the following in the "cardDetailResponseList"
       | customerName | mobileNumber | email                    | amount | responseCode | responseMessage |
       | afzal        | 8284854535   | afzal.ahmed@pinelabs.com | 1000   | 0            | Success         |
-    And i should see the following in the card list in the database
-      | ActivationEmail        | afzal.ahmed@pinelabs.com |
-      | ActivationMobileNumber | context                  |
+#    And i should see the following in the card list in the database
+#      | ActivationEmail        | afzal.ahmed@pinelabs.com |
+#      | ActivationMobileNumber | context                  |
 
   Scenario Outline: Validating the response code and messages for V1 API.
     Given i am an authorized corporate user
