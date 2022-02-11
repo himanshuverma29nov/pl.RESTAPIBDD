@@ -1,4 +1,4 @@
-@Regression
+@Regression @Ready
 Feature: Card Transaction Details for the V1 & V2 API
 
   Scenario: Issuing a card and then reloading should create a entry in the in the details for V1 API

@@ -1,3 +1,4 @@
+@Regression @Ready
 Feature: Instant Reload API
 
   Background:

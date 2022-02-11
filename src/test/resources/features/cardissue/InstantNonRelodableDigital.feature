@@ -1,4 +1,4 @@
-@Regression
+@Regression @Ready
 Feature: Instant Non Reloadable Digital Card Issuing API V1 & V2
 
   @DB

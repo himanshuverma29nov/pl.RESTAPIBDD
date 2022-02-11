@@ -28,6 +28,7 @@ public class UIActionStepDefs {
     private WebDriver driver;
     private UIActionPages uiActionPages;
 
+
     public UIActionStepDefs(ScenarioContext context) {
         this.context = context;
         this.driver = context.webDriver;
@@ -43,7 +44,7 @@ public class UIActionStepDefs {
 
     @And("i am clearing the IssuerSystemVariable cache from UI")
     public void iAmClearingTheIssuerSystemVariableCacheFromUI() throws FrameworkException, InterruptedException {
-        uiActionPages.navigateToAppUrl("https://admintest.pineperks.in/");
+        uiActionPages.navigateTo("https://admintest.pineperks.in/");
         WebElement usernameField = driver.findElement(By.name("userName"));
         WebElement passwordFiled = driver.findElement(By.name("password"));
         uiActionPages.enterUserName("afzal.ahmed@pinelabs.com", usernameField);

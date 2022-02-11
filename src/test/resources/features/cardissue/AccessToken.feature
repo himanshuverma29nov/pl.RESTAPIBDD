@@ -1,4 +1,4 @@
-@Web @Regression @Ready
+@Web @Regression @Web_1
 Feature: Access token generation API
 
   Scenario: Validating the expiry date field when updating the expiry duration as 7 days for V1.
@@ -55,5 +55,5 @@ Feature: Access token generation API
 
   Scenario: Validating the old token usage on cardCategory API after token regeneration V2.
 
-  Scenario: Test
-    Given i test UI
+#  Scenario: Test
+#    Given i test UI

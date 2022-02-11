@@ -1,4 +1,4 @@
-@TestSet0 @Regression @DB
+@TestSet0 @Regression @DB @Ready
 Feature: Instant Reloadable Digital card Issuing API V1&V2
 
   Background:

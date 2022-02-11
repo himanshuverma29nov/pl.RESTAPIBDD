@@ -1,4 +1,4 @@
-@Regression
+@Regression @Ready
 Feature: Issuing non reloadable digital physical card
 
   Scenario: Issuing a non reloadable physical card
